@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="Contact Nikita Paralkar" />
+    <title>Contact | Nikita Paralkar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/owl-carousel.css" rel="stylesheet">
+    <link href="css/reset-grids.css" rel="stylesheet">
+    <link href="css/resume.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
+
+    <style>
+        body.diag {
+            background:
+                radial-gradient(circle at 14% 20%, #8ea2ff1c 0%, transparent 32%),
+                radial-gradient(circle at 84% 12%, #79c8ff17 0%, transparent 28%),
+                radial-gradient(circle at 78% 76%, #a5b4fc14 0%, transparent 26%),
+                linear-gradient(180deg, #090d18 0%, #0d1324 100%);
+        }
+
+        .contact-page-shell {
+            max-width: 1180px;
+            margin: 18px auto 36px;
+            padding: 0 12px;
+        }
+
+        .contact-page-nav {
+            margin-bottom: 18px;
+        }
+
+        .contact-page-nav .modern-navbar {
+            position: relative;
+        }
+
+        .contact-page-nav .nav-menu a[aria-current="page"] {
+            color: #f3f7ff;
+            background: #8ea2ff12;
+            border-color: #8ea2ff99;
+            box-shadow: 0 0 14px #8ea2ff33;
+        }
+
+        .contact-page-header {
+            margin-bottom: 14px;
+            padding: 18px 22px;
+            border-radius: 18px;
+            border: 1.5px solid #8ea2ff66;
+            background: linear-gradient(120deg, #151b31 0%, #1b2240 55%, #12182d 100%);
+            box-shadow: 0 0 20px #8ea2ff22;
+            color: #eaf2ff;
+        }
+
+        .contact-page-header h1 {
+            margin: 0 0 6px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            background: linear-gradient(90deg, #8ea2ff 0%, #a5b4fc 45%, #79c8ff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-page-header p {
+            margin: 0;
+            color: #dbe7ff;
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 760px;
+        }
+
+        .contact-page .contact-info-col,
+        .contact-page .contact-form-col {
+            border: 1px solid #8ea2ff55;
+            background: linear-gradient(145deg, rgba(19, 26, 49, 0.96), rgba(16, 23, 45, 0.96));
+            border-radius: 18px;
+            box-shadow: 0 10px 28px rgba(79, 102, 181, 0.2);
+            padding: 20px;
+        }
+
+        .contact-page .contact-info {
+            list-style: none;
+            margin: 0 0 14px;
+            padding: 0;
+        }
+
+        .contact-page .contact-info li,
+        .contact-page .contact-info a {
+            color: #dbe7ff;
+            line-height: 1.9;
+        }
+
+        .contact-page .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .contact-page .social-icons a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #eaf2ff;
+            border: 1px solid #8ea2ff77;
+            background: #8ea2ff12;
+            transition: 0.2s ease;
+        }
+
+        .contact-page .social-icons a:hover {
+            color: #0b1220;
+            background: linear-gradient(135deg, #8ea2ff, #79c8ff);
+            box-shadow: 0 0 14px #79c8ff70;
+        }
+
+        .contact-page .contact-form-col h5 {
+            color: #f3f7ff;
+            margin-bottom: 14px;
+        }
+
+        .contact-page .form-help {
+            color: #c9d6f3;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin: -4px 0 14px;
+        }
+
+        .contact-page .form-status {
+            display: none;
+            margin: 0 0 12px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            border: 1px solid transparent;
+        }
+
+        .contact-page .form-status.show {
+            display: block;
+        }
+
+        .contact-page .form-status.success {
+            color: #cbffe8;
+            background: #00c27a1a;
+            border-color: #00d18a66;
+        }
+
+        .contact-page .form-status.error {
+            color: #ffe1e1;
+            background: #ff5a5a1a;
+            border-color: #ff8b8b6e;
+        }
+
+        .contact-page .field-label {
+            display: block;
+            margin-bottom: 6px;
+            color: #dbe7ff;
+            font-size: 0.86rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .contact-page .form-inp,
+        .contact-page textarea.required {
+            width: 100%;
+            border: 1px solid #8ea2ff55;
+            border-radius: 12px;
+            background: #0f162d;
+            color: #eaf2ff;
+            padding: 12px 14px;
+        }
+
+        .contact-page .form-inp:focus,
+        .contact-page textarea.required:focus {
+            outline: none;
+            border-color: #a5b4fc;
+            box-shadow: 0 0 0 3px #8ea2ff2e;
+        }
+
+        .contact-page textarea.required {
+            resize: vertical;
+        }
+
+        .contact-page .btn.btn-primary {
+            margin-top: 6px;
+            border: 1px solid #8ea2ff88;
+            background: linear-gradient(90deg, #8ea2ff 0%, #79c8ff 100%);
+            color: #fff;
+            box-shadow: 0 10px 24px #79c8ff33;
+            border-radius: 999px;
+            padding: 10px 20px;
+            min-height: 44px;
+        }
+
+        .contact-back-link {
+            margin-top: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #dbe7ff;
+            text-decoration: none;
+        }
+
+        .contact-back-link:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 860px) {
+            .contact-page-shell {
+                padding: 0 10px;
+            }
+        }
+
+        .contact-page-header {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+            padding: 18px 22px;
+            border-radius: 18px;
+            border: 1.5px solid #8ea2ff66;
+            background: linear-gradient(120deg, #151b31 0%, #1b2240 55%, #12182d 100%);
+            box-shadow: 0 0 20px #8ea2ff22;
+            color: #eaf2ff;
+        }
+
+        .contact-page-header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(142, 162, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(121, 200, 255, 0.08) 1px, transparent 1px);
+            background-size: 34px 34px;
+            opacity: 0.38;
+        }
+
+        .contact-page-header h1 {
+            margin: 0 0 6px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            background: linear-gradient(90deg, #8ea2ff 0%, #a5b4fc 45%, #79c8ff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-page-header p {
+            margin: 0;
+            color: #dbe7ff;
+            line-height: 1.7;
+            max-width: 760px;
+        }
+
+        .contact-tag-row {
+            margin-top: 12px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .contact-tag {
+            padding: 5px 10px;
+            border-radius: 999px;
+            border: 1px solid #8ea2ff66;
+            background: #8ea2ff14;
+            color: #dbe7ff;
+            font-size: 0.8rem;
+            font-family: 'Fira Mono', monospace;
+        }
+
+        .contact-page .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(260px, 360px) minmax(320px, 1fr);
+            gap: 18px;
+            align-items: start;
+        }
+
+        .contact-page .contact-block-title {
+            margin: 0 0 12px;
+            color: #f3f7ff;
+            font-size: 1rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-family: 'Fira Mono', monospace;
+        }
+
+        .contact-page .contact-methods {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .contact-page .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #8ea2ff4f;
+            border-radius: 12px;
+            padding: 10px 12px;
+            background: #8ea2ff12;
+            color: #dbe7ff;
+            text-decoration: none;
+            line-height: 1.35;
+            transition: 0.2s ease;
+        }
+
+        .contact-page .contact-method i {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #8ea2ff22;
+            border: 1px solid #8ea2ff55;
+            color: #eaf2ff;
+            flex-shrink: 0;
+        }
+
+        .contact-page .contact-method:hover {
+            border-color: #a5b4fccc;
+            background: #8ea2ff20;
+            transform: translateY(-1px);
+            color: #fff;
+        }
+
+        .contact-page .contact-form {
+            margin-top: 0;
+        }
+
+        .contact-page .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .contact-page textarea.required {
+            min-height: 150px;
+        }
+
+        .contact-page .contact-form-note {
+            margin: 10px 0 0;
+            color: #b9c7e6;
+            font-size: 0.88rem;
+        }
+
+        .contact-page .quick-actions {
+            margin-top: 12px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .contact-page .quick-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            border: 1px solid #8ea2ff66;
+            color: #dbe7ff;
+            text-decoration: none;
+            background: #8ea2ff10;
+            font-size: 0.83rem;
+            transition: 0.2s ease;
+        }
+
+        .contact-page .quick-action:hover {
+            color: #fff;
+            background: #8ea2ff24;
+            border-color: #a5b4fc;
+        }
+
+        @media (max-width: 960px) {
+            .contact-page .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-page .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Hard overrides to neutralize legacy global form rules */
+        .contact-page .contact-form {
+            width: 100% !important;
+            display: block !important;
+            justify-content: initial !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            transform: none !important;
+        }
+
+        .contact-page .contact-form:hover {
+            background: transparent !important;
+            border-radius: 0 !important;
+            transform: none !important;
+        }
+
+        .contact-page .contact-form > * {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .contact-page .contact-form .form-group {
+            margin-bottom: 12px !important;
+        }
+
+        .contact-page .contact-form input,
+        .contact-page .contact-form textarea {
+            width: 100% !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .contact-page .btn.btn-primary {
+            border-radius: 12px !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-page .hp-field {
+            position: absolute !important;
+            left: -5000px !important;
+            width: 1px !important;
+            height: 1px !important;
+            overflow: hidden !important;
+        }
+    </style>
+</head>
+<body class="diag index-engineering contact-engineering">
+    <div class="contact-page-shell">
+        <div class="contact-page-nav">
+            <header>
+                <nav class="modern-navbar" aria-label="Main Navigation">
+                    <div class="logo">
+                        <a href="index.html#home" aria-label="Home">
+                            <img src="images/Logo-np.png" alt="NP logo" class="header-logo-img">
+                        </a>
+                    </div>
+                    <div class="nav-menu" role="menubar">
+                        <a href="index.html#home" role="menuitem">Home</a>
+                        <a href="about.html" role="menuitem">About Me</a>
+                        
+                        <a href="resume.html" role="menuitem">Resume</a>
+                        <a href="work.html" role="menuitem">Projects</a>
+                        <a href="contact.html" role="menuitem" aria-current="page">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/nikitaparalkar/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/paralkarniki?tab=repositories" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <section class="contact engineering-section contact-page" id="contact" style="position:relative;z-index:1;">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info-col">
+                        <h5 class="contact-block-title">Contact Channels</h5>
+                        <div class="contact-methods">
+                            <a class="contact-method" href="mailto:paralkarnikita@gmail.com">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span>paralkarnikita@gmail.com</span>
+                            </a>
+                            <a class="contact-method" href="tel:+16475189623">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <span>+1 (647) 518-9623</span>
+                            </a>
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span>Toronto, Canada</span>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://github.com/paralkarniki?tab=repositories" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/nikitaparalkar/" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="quick-actions">
+                            <a class="quick-action" href="mailto:paralkarnikita@gmail.com"><i class="fas fa-envelope"></i> Email Now</a>
+                            <a class="quick-action" href="tel:+16475189623"><i class="fas fa-phone"></i> Call</a>
+                        </div>
+                    </div>
+                    <div class="contact-form-col">
+                        <h5>Connect with Me</h5>
+                        <p class="form-help">Please share your name and message. Email and subject are optional but helpful.</p>
+                        <div id="formStatus" class="form-status" aria-live="polite"></div>
+                        <form class="contact-form" method="POST" action="mail.php">
+                            <input class="hp-field" type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="field-label" for="con_name">Your Name *</label>
+                                    <input id="con_name" name="con_name" class="form-inp required" type="text" placeholder="Your Name" autocomplete="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="con_email">Email Address</label>
+                                    <input id="con_email" name="con_email" class="form-inp" type="email" placeholder="Email Address" autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="field-label" for="con_subject">Subject</label>
+                                <input id="con_subject" name="con_subject" class="form-inp" type="text" placeholder="Subject (Optional)">
+                            </div>
+                            <div class="form-group">
+                                <label class="field-label" for="con_message">Message *</label>
+                                <textarea name="con_message" id="con_message" class="required" placeholder="Tell me about your project, role, or collaboration idea..." rows="6" required></textarea>
+                            </div>
+                            <button class="btn btn-primary" type="submit">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+
+        <div class="container">
+            <div class="social site-footer-links">
+                <a href="https://www.linkedin.com/in/nikitaparalkar/"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                <a href="https://github.com/paralkarniki?tab=repositories"><i class="fab fa-github"></i><span>GitHub</span></a>
+                <a href="mailto:paralkarnikita@gmail.com"><i class="fas fa-envelope"></i><span>paralkarnikita@gmail.com</span></a>
+            </div>
+
+        </div>
+
+        <div class="social site-footer-meta">
+
+            <p>Copyright © 2026, All rights Reserved. <br />
+                Created by Nikita Paralkar</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        (function () {
+            var statusEl = document.getElementById('formStatus');
+            if (!statusEl) return;
+
+            var params = new URLSearchParams(window.location.search);
+            var status = params.get('status');
+            if (!status) return;
+
+            var messages = {
+                success: 'Thanks! Your message was sent successfully.',
+                invalid: 'Please fill in your name and message. If email is provided, use a valid email address.',
+                method: 'Invalid request method. Please submit the form normally.',
+                spam: 'Your request could not be processed.',
+                failed: 'Sorry, your message could not be sent right now. Please try again or email me directly.'
+            };
+
+            statusEl.textContent = messages[status] || messages.failed;
+            statusEl.classList.add('show', status === 'success' ? 'success' : 'error');
+
+            var cleanUrl = window.location.pathname;
+            window.history.replaceState({}, document.title, cleanUrl);
+        })();
+    </script>
+</body>
+</html>

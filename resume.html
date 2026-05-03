@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Resume of Nikita Paralkar" />
+    <title>Resume | Nikita Paralkar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/owl-carousel.css" rel="stylesheet">
+    <link href="css/reset-grids.css" rel="stylesheet">
+    <link href="css/resume.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
+
+    <style>
+        /* ===== TOOLKIT BALL DESCRIPTION ENHANCED ===== */
+        #toolkitBallDescription {
+            margin-top: 18px;
+            min-height: 44px;
+            font-size: 1.08rem;
+            color: #eaf6ff;
+            background: linear-gradient(90deg, #101a31 0%, #18224a 60%, #0e1830 100%);
+            border: 1.5px solid #00e6ff88;
+            border-radius: 14px;
+            box-shadow: 0 0 18px #00e6ff33, 0 2px 12px #8ea2ff22;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 22px;
+            position: relative;
+            transition: background 0.22s, border-color 0.22s, box-shadow 0.22s;
+            animation: fadeInDesc 0.5s cubic-bezier(.22, 1, .36, 1);
+        }
+
+        @keyframes fadeInDesc {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #toolkitBallDescription .desc-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00e6ff44 0%, #8ea2ff33 100%);
+            box-shadow: 0 0 10px #00e6ff33;
+            margin-right: 6px;
+            font-size: 1.3rem;
+            color: #00e6ff;
+        }
+
+        #toolkitBallDescription .desc-skill {
+            font-size: 1.13rem;
+            font-weight: 700;
+            color: #00e6ff;
+            margin-right: 7px;
+            letter-spacing: 0.01em;
+        }
+
+        #toolkitBallDescription .desc-text {
+            color: #eaf6ff;
+            font-size: 1.01rem;
+            font-weight: 400;
+        }
+
+        /* Make Education section title white */
+        article.interactive-panel>h2 {
+            color: #fff !important;
+        }
+
+        /* ===== BODY & BACKGROUND ===== */
+        body.diag {
+            position: relative;
+            background:
+                radial-gradient(circle at 14% 20%, #8ea2ff1c 0%, transparent 32%),
+                radial-gradient(circle at 84% 12%, #79c8ff17 0%, transparent 28%),
+                radial-gradient(circle at 78% 76%, #a5b4fc14 0%, transparent 26%),
+                linear-gradient(180deg, #090d18 0%, #0d1324 100%) !important;
+            color: #eaf2ff;
+        }
+
+        .resume-page-shell {
+            max-width: 1180px;
+            margin: 18px auto 36px;
+            padding: 0 12px;
+        }
+
+        .resume-page-nav {
+            margin-bottom: 18px;
+        }
+
+        .resume-page-nav .modern-navbar {
+            width: min(1180px, 94%);
+            margin: 0 auto;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            border-radius: 18px;
+            border: 1.5px solid #00e6ff99;
+            background: linear-gradient(120deg, #0b1220 0%, #101a31 55%, #0a1324 100%);
+            box-shadow: 0 0 18px #00e6ff2a, 0 10px 28px #00e6761a;
+            position: relative;
+            z-index: 4;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .header-logo-img {
+            height: 44px;
+            width: auto;
+            margin-right: 12px;
+            background: #0b1220;
+            border-radius: 18px;
+            padding: 6px;
+            border: 1px solid #00e6ff99;
+            box-shadow: 0 0 14px #00e6ff66;
+        }
+
+        .modern-navbar .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modern-navbar .nav-menu a {
+            color: #d7efff;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 8px 12px;
+            white-space: nowrap;
+            transition: color 0.14s ease, background-color 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+            will-change: transform;
+        }
+
+        .modern-navbar .nav-menu a::before {
+            content: '';
+        }
+
+        .modern-navbar .nav-menu a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #00e6ff, #00e676);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.22s ease;
+            margin-top: 2px;
+        }
+
+        .modern-navbar .nav-menu a:hover::after,
+        .modern-navbar .nav-menu a:focus::after {
+            transform: scaleX(1);
+        }
+
+        .modern-navbar .nav-menu a:hover,
+        .modern-navbar .nav-menu a:focus {
+            color: #00e6ff;
+            border-color: transparent;
+            background: #00e6ff12;
+            transform: translateY(-1px);
+        }
+
+        .modern-navbar .social {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modern-navbar .social a {
+            color: #00e6ff;
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #00e6ff77;
+            background: #0b1220;
+            box-shadow: 0 0 6px #00e6ff26;
+            transition: transform 0.14s ease, color 0.14s ease, background-color 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
+            will-change: transform;
+        }
+
+        .modern-navbar .social a:hover {
+            transform: translateY(-2px);
+            color: #0b1220;
+            background: #00e6ff;
+            box-shadow: 0 0 10px #00e6ff70;
+        }
+
+        .resume-page-nav .nav-menu a[aria-current="page"] {
+            color: #f3f7ff;
+            background: #8ea2ff12;
+            border-color: #8ea2ff99;
+            box-shadow: 0 0 14px #8ea2ff33;
+        }
+
+        .resume-page-hero {
+            margin-bottom: 18px;
+            padding: 22px 24px;
+            border-radius: 20px;
+            border: 1.5px solid #8ea2ff66;
+            background: linear-gradient(120deg, #151b31 0%, #1b2240 55%, #12182d 100%);
+            box-shadow: 0 0 20px #8ea2ff22;
+            color: #eaf2ff;
+        }
+
+        .resume-page-hero h1 {
+            margin: 0 0 8px;
+            font-size: clamp(2rem, 4.8vw, 3.3rem);
+            background: linear-gradient(90deg, #8ea2ff 0%, #a5b4fc 45%, #79c8ff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .resume-page-hero p {
+            margin: 0;
+            color: #dbe7ff;
+            line-height: 1.7;
+            max-width: 760px;
+        }
+
+        .resume-summary-card,
+        .resume-detail-card,
+        .resume-preview-card {
+            border-radius: 20px;
+            border: 1px solid #8ea2ff55;
+            background: linear-gradient(145deg, rgba(19, 26, 49, 0.96), rgba(16, 23, 45, 0.96));
+            box-shadow: 0 10px 28px rgba(79, 102, 181, 0.2);
+        }
+
+        .resume-summary-card {
+            padding: 24px;
+            margin-bottom: 18px;
+        }
+
+        .resume-top {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .resume-avatar-img {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #8ea2ff88;
+            box-shadow: 0 0 24px #8ea2ff33;
+        }
+
+        .resume-name {
+            margin: 0 0 6px;
+            font-size: 1.8rem;
+            color: #f4f7ff;
+        }
+
+        .resume-contact-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 14px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            color: #dbe7ff;
+        }
+
+        .resume-contact-list a {
+            color: #dbe7ff;
+            text-decoration: none;
+        }
+
+        .resume-contact-list a:hover {
+            color: #ffffff;
+        }
+
+        .resume-download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            background: linear-gradient(90deg, #8ea2ff 0%, #79c8ff 100%);
+            color: #fff;
+            box-shadow: 0 10px 24px #79c8ff33;
+        }
+
+        .resume-download-btn:hover {
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .resume-profile-text {
+            margin: 18px 0 0;
+            color: #dbe7ff;
+            line-height: 1.8;
+            max-width: 900px;
+        }
+
+        .resume-preview-card {
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+
+        .resume-preview-card h2,
+        .resume-grid h2,
+        .resume-grid h3 {
+            color: #f3f7ff;
+        }
+
+        .resume-iframe {
+            width: 100%;
+            min-height: 580px;
+            border: 1px solid #8ea2ff44;
+            border-radius: 16px;
+            background: #0f162d;
+            box-shadow: 0 10px 26px rgba(8, 17, 31, 0.45);
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .resume-detail-card {
+            padding: 22px;
+        }
+
+        .resume-detail-card h2 {
+            margin: 0 0 14px;
+            font-size: 1.25rem;
+        }
+
+        .resume-detail-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
+        }
+
+        .resume-list,
+        .resume-timeline-list {
+            margin: 0;
+            padding-left: 18px;
+            color: #dce7ff;
+            line-height: 1.8;
+        }
+
+        .resume-columns {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .resume-chip-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 6px;
+        }
+
+        .resume-chip {
+            padding: 7px 12px;
+            border-radius: 999px;
+            border: 1px solid #8ea2ff66;
+            background: rgba(142, 162, 255, 0.1);
+            color: #e6eeff;
+            font-size: 0.88rem;
+        }
+
+        /* ===== INTERACTIVE RESUME GRID ===== */
+        .interactive-panel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(circle at 85% 15%, rgba(121, 200, 255, 0.12), transparent 42%);
+            opacity: 0.9;
+        }
+
+        .interactive-panel>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .resume-column-card {
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1.5px solid rgba(142, 162, 255, 0.24);
+            background: linear-gradient(145deg, rgba(142, 162, 255, 0.13), rgba(121, 200, 255, 0.09));
+            box-shadow: 0 2px 8px rgba(121, 200, 255, 0.10);
+            transition: transform 0.18s cubic-bezier(.22, 1, .36, 1), box-shadow 0.18s, border-color 0.18s;
+            min-width: 220px;
+            max-width: 320px;
+            font-size: 0.93rem;
+        }
+
+        .resume-column-card.education-card {
+            min-width: 180px;
+            max-width: 260px;
+            font-size: 0.89rem;
+        }
+
+
+
+        .education-card-header h3 {
+            font-size: 1.01rem !important;
+            margin: 10px 0 6px !important;
+        }
+
+        .education-card-header span.education-years {
+            font-size: 0.93rem;
+        }
+
+        .education-card-body {
+            padding-top: 4px;
+        }
+
+        .edu-toggle {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            background: linear-gradient(90deg, #00e6ff22 0%, #8ea2ff22 100%);
+            color: #00e6ff;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 13px;
+            font-size: 0.93rem;
+            font-weight: 600;
+            margin-bottom: 7px;
+            cursor: pointer;
+            transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+            box-shadow: 0 2px 8px #00e6ff11;
+        }
+
+        .edu-toggle:focus,
+        .edu-toggle:hover {
+            background: linear-gradient(90deg, #00e6ff44 0%, #8ea2ff44 100%);
+            color: #fff;
+            box-shadow: 0 4px 18px #00e6ff33;
+        }
+
+        .edu-toggle i {
+            transition: transform 0.25s cubic-bezier(.22, 1, .36, 1);
+        }
+
+        .edu-toggle[aria-expanded="true"] i {
+            transform: rotate(180deg);
+        }
+
+        .education-course-wrap {
+            transition: max-height 0.35s cubic-bezier(.22, 1, .36, 1), opacity 0.25s;
+            overflow: hidden;
+        }
+
+        .education-course-wrap.show {
+            opacity: 1;
+            max-height: 800px;
+        }
+
+        .education-course-wrap:not(.show) {
+            opacity: 0;
+            max-height: 0;
+        }
+
+        .resume-list li,
+        .resume-timeline-list li {
+            transition: color 0.16s ease, transform 0.16s ease;
+        }
+
+        .resume-list li:hover,
+        .resume-timeline-list li:hover {
+            color: #f1f6ff;
+            transform: translateX(2px);
+        }
+
+        .resume-chip-btn {
+            appearance: none;
+            border: 1px solid #8ea2ff66;
+            background: rgba(142, 162, 255, 0.1);
+            color: #e6eeff;
+            border-radius: 999px;
+            padding: 7px 12px;
+            font-size: 0.88rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+        }
+
+        .resume-chip-btn:hover,
+        .resume-chip-btn:focus {
+            transform: translateY(-2px);
+            border-color: #79c8ff;
+            background: rgba(121, 200, 255, 0.18);
+            box-shadow: 0 8px 18px rgba(8, 17, 31, 0.28);
+            outline: none;
+        }
+
+        .resume-chip-btn.active {
+            border-color: #79c8ff;
+            background: linear-gradient(90deg, rgba(142, 162, 255, 0.34), rgba(121, 200, 255, 0.26));
+            color: #ffffff;
+            box-shadow: 0 0 0 1px rgba(121, 200, 255, 0.42) inset, 0 10px 22px rgba(121, 200, 255, 0.2);
+        }
+
+        .resume-interaction-bar {
+            margin-top: 14px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(121, 200, 255, 0.3);
+            background: rgba(121, 200, 255, 0.09);
+            color: #d7e9ff;
+            font-size: 0.86rem;
+            min-height: 42px;
+            display: flex;
+            align-items: center;
+        }
+
+        .recruiter-signal {
+            margin-top: 14px;
+            padding: 14px;
+            border-radius: 14px;
+            border: 1px solid rgba(121, 200, 255, 0.35);
+            background: linear-gradient(135deg, rgba(142, 162, 255, 0.14), rgba(121, 200, 255, 0.1));
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .recruiter-signal strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #f2f7ff;
+            font-size: 0.96rem;
+            letter-spacing: 0.02em;
+        }
+
+        .recruiter-signal p {
+            margin: 0;
+            color: #dceaff;
+            line-height: 1.75;
+            font-size: 0.9rem;
+        }
+
+        .role-fit-list {
+            margin: 14px 0 0;
+            padding-left: 18px;
+            color: #dce8ff;
+            line-height: 1.75;
+            font-size: 0.91rem;
+        }
+
+        .role-fit-list li+li {
+            margin-top: 5px;
+        }
+
+        .role-fit-list li::marker {
+            color: #79c8ff;
+        }
+
+        .resume-grid .resume-detail-card {
+            animation: float-up 0.5s ease both;
+        }
+
+        .resume-grid .resume-detail-card:nth-child(1) {
+            animation-delay: 0.04s;
+        }
+
+        .resume-grid .resume-detail-card:nth-child(2) {
+            animation-delay: 0.12s;
+        }
+
+        /* Remove inherited template whitespace/background from this block */
+        .resume-page-shell .resume-grid {
+            padding: 0 !important;
+            margin: 0 0 16px !important;
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .resume-page-shell .resume-grid>.resume-detail-card {
+            margin: 0 !important;
+        }
+
+        .resume-job+.resume-job {
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(142, 162, 255, 0.14);
+        }
+
+        .resume-job-meta {
+            margin: 4px 0 10px;
+            color: #b9c7e6;
+            font-size: 0.94rem;
+        }
+
+        .resume-back-link {
+            margin-top: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #dbe7ff;
+            text-decoration: none;
+        }
+
+        .resume-back-link:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 991px) {
+
+            .resume-top,
+            .resume-grid,
+            .resume-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes avatar-glow-ring {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 #8ea2ff55, 0 0 24px #8ea2ff33;
+            }
+
+            50% {
+                box-shadow: 0 0 0 7px #8ea2ff1a, 0 0 38px #8ea2ff55;
+            }
+        }
+
+        @keyframes btn-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px #00e6ff44, 0 6px 20px #00e6ff22;
+            }
+
+            50% {
+                box-shadow: 0 0 24px #00e6ff99, 0 6px 28px #00e6ff44;
+            }
+        }
+
+        @keyframes bar-fill {
+            from {
+                width: 0 !important;
+            }
+        }
+
+        @keyframes float-up {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes neon-line-grow {
+            from {
+                transform: scaleY(0);
+            }
+
+            to {
+                transform: scaleY(1);
+            }
+        }
+
+        @keyframes stat-pop {
+            0% {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+
+            65% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes cursor-blink {
+
+            0%,
+            100% {
+                border-color: #00e6ff;
+            }
+
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* ===== SHELL ===== */
+        .resume-page-shell {
+            max-width: 1180px;
+            margin: 18px auto 36px;
+            padding: 0 12px;
+        }
+
+        .resume-page-nav {
+            margin-bottom: 18px;
+        }
+
+        /* ===== NAVBAR ===== */
+        .resume-page-nav .modern-navbar {
+            width: min(1180px, 94%);
+            margin: 0 auto;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            border-radius: 18px;
+            border: 1.5px solid #00e6ff99;
+            background: linear-gradient(120deg, #0b1220 0%, #101a31 55%, #0a1324 100%);
+            box-shadow: 0 0 18px #00e6ff2a, 0 10px 28px #00e6761a;
+            position: relative;
+            z-index: 4;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .header-logo-img {
+            height: 44px;
+            width: auto;
+            margin-right: 12px;
+            background: #0b1220;
+            border-radius: 18px;
+            padding: 6px;
+            border: 1px solid #00e6ff99;
+            box-shadow: 0 0 14px #00e6ff66;
+        }
+
+        .modern-navbar .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modern-navbar .nav-menu a {
+            color: #d7efff;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 8px 12px;
+            white-space: nowrap;
+            transition: color .14s, background-color .14s, border-color .14s, transform .14s;
+            will-change: transform;
+        }
+
+        .modern-navbar .nav-menu a::before {
+            content: '';
+        }
+
+        .modern-navbar .nav-menu a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #00e6ff, #00e676);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .22s ease;
+            margin-top: 2px;
+        }
+
+        .modern-navbar .nav-menu a:hover::after,
+        .modern-navbar .nav-menu a:focus::after {
+            transform: scaleX(1);
+        }
+
+        .modern-navbar .nav-menu a:hover,
+        .modern-navbar .nav-menu a:focus {
+            color: #00e6ff;
+            background: #00e6ff12;
+            transform: translateY(-1px);
+        }
+
+        .modern-navbar .social {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modern-navbar .social a {
+            color: #00e6ff;
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #00e6ff77;
+            background: #0b1220;
+            box-shadow: 0 0 6px #00e6ff26;
+            transition: transform .14s, color .14s, background-color .14s, box-shadow .14s;
+        }
+
+        .modern-navbar .social a:hover {
+            transform: translateY(-2px);
+            color: #0b1220;
+            background: #00e6ff;
+            box-shadow: 0 0 10px #00e6ff70;
+        }
+
+        .resume-page-nav .nav-menu a[aria-current="page"] {
+            color: #f3f7ff;
+            background: #8ea2ff12;
+            border-color: #8ea2ff99;
+            box-shadow: 0 0 14px #8ea2ff33;
+        }
+
+        /* ===== HERO BANNER ===== */
+        .resume-hero-banner {
+            margin-bottom: 16px;
+            padding: 40px 36px 32px;
+            border-radius: 22px;
+            border: 1.5px solid #00e6ff44;
+            background: linear-gradient(135deg, #0b1526 0%, #111d38 60%, #0d1931 100%);
+            box-shadow: 0 0 48px #00e6ff12, 0 18px 48px #00000044;
+            position: relative;
+            overflow: hidden;
+            animation: float-up 0.65s ease both;
+        }
+
+        .resume-hero-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 65% 45% at 88% 14%, #00e6ff0e, transparent),
+                radial-gradient(ellipse 45% 65% at 8% 88%, #8ea2ff0e, transparent);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            font-family: 'Fira Mono', monospace;
+            font-size: 0.77rem;
+            color: #00e6ff;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin: 0 0 12px;
+            opacity: 0.78;
+        }
+
+        .hero-name {
+            font-family: 'Fira Mono', monospace;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 700;
+            background: linear-gradient(90deg, #ffffff 0%, #a8ccff 40%, #00e6ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0 0 14px;
+            line-height: 1.1;
+        }
+
+        .hero-title-typewriter {
+            font-family: 'Fira Mono', monospace;
+            font-size: 1.1rem;
+            color: #79c8ff;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2.5px solid #00e6ff;
+            animation: typewriter 2.4s steps(38) 0.4s both,
+                cursor-blink 0.85s step-end 0.4s infinite;
+            max-width: 460px;
+            margin-bottom: 20px;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .hero-tag {
+            padding: 5px 14px;
+            border-radius: 999px;
+            border: 1px solid #00e6ff2e;
+            background: rgba(0, 230, 255, 0.055);
+            color: #a6cbde;
+            font-size: 0.82rem;
+            font-family: 'Fira Mono', monospace;
+            transition: border-color .15s, background .15s, color .15s;
+        }
+
+        .hero-tag:hover {
+            border-color: #00e6ff88;
+            background: rgba(0, 230, 255, 0.12);
+            color: #d2f0ff;
+        }
+
+        /* ===== STATS ROW ===== */
+        .resume-stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .resume-stat-card {
+            padding: 22px 16px 20px;
+            border-radius: 18px;
+            border: 1px solid rgba(142, 162, 255, 0.22);
+            background: linear-gradient(145deg, #111826, #0e1a30);
+            box-shadow: 0 8px 24px #00000033;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+            animation: float-up 0.6s ease both;
+        }
+
+        .resume-stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 34px #00000042, 0 0 20px rgba(142, 162, 255, 0.15);
+            border-color: rgba(142, 162, 255, 0.5);
+        }
+
+        .resume-stat-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2.5px;
+            background: linear-gradient(90deg, transparent, var(--stat-color, #8ea2ff), transparent);
+        }
+
+        .stat-icon {
+            font-size: 1.55rem;
+            margin-bottom: 10px;
+            color: var(--stat-color, #8ea2ff);
+            filter: drop-shadow(0 0 7px var(--stat-color, #8ea2ff));
+        }
+
+        .stat-number {
+            font-family: 'Fira Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f0f6ff;
+            line-height: 1;
+            margin-bottom: 6px;
+            animation: stat-pop 0.85s cubic-bezier(.22, 1, .36, 1) both;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: #6a88a8;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* ===== PROFILE CARD ===== */
+        .resume-summary-card {
+            padding: 26px;
+            margin-bottom: 16px;
+            border-radius: 20px;
+            border: 1px solid #8ea2ff44;
+            background: linear-gradient(145deg, rgba(14, 22, 44, .97), rgba(10, 18, 38, .97));
+            box-shadow: 0 10px 28px rgba(0, 0, 0, .3);
+        }
+
+        .resume-top {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .resume-avatar-wrap {
+            position: relative;
+            display: inline-block;
+        }
+
+        .resume-avatar-img {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #8ea2ff88;
+            animation: avatar-glow-ring 3s ease-in-out infinite;
+            display: block;
+        }
+
+        .avatar-status-dot {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #22d970;
+            border: 2.5px solid #0e1830;
+            box-shadow: 0 0 9px #22d97099;
+        }
+
+        .resume-name {
+            margin: 0 0 8px;
+            font-size: 1.8rem;
+            color: #f4f7ff;
+        }
+
+        .resume-contact-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 14px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            color: #dbe7ff;
+        }
+
+        .resume-contact-list a {
+            color: #dbe7ff;
+            text-decoration: none;
+        }
+
+        .resume-contact-list a:hover {
+            color: #fff;
+        }
+
+        .resume-download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 13px 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Fira Mono', monospace;
+            font-size: 0.9rem;
+            background: linear-gradient(90deg, #8ea2ff 0%, #00e6ff 100%);
+            color: #05111f;
+            animation: btn-pulse 2.2s ease-in-out infinite;
+            transition: transform .15s ease;
+            white-space: nowrap;
+        }
+
+        .resume-download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px #00e6ffaa, 0 8px 26px #00e6ff44;
+            color: #05111f;
+        }
+
+        .resume-profile-text {
+            margin: 20px 0 0;
+            color: #c2d8ef;
+            line-height: 1.85;
+            max-width: 900px;
+            font-size: 0.97rem;
+        }
+
+        /* ===== TERMINAL LABELS ===== */
+        .terminal-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 0.73rem;
+            color: #00e6ff77;
+            letter-spacing: 0.14em;
+            text-transform: lowercase;
+            margin-bottom: 6px;
+        }
+
+        .terminal-label::before {
+            content: '//';
+            color: #00e6ffaa;
+            font-weight: 700;
+        }
+
+        .section-heading {
+            margin: 0 0 20px;
+            font-size: 1.2rem;
+            color: #f3f7ff;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(142, 162, 255, 0.12);
+            position: relative;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 44px;
+            height: 2px;
+            background: linear-gradient(90deg, #00e6ff, #8ea2ff);
+            border-radius: 2px;
+        }
+
+        /* ===== SKILL BARS ===== */
+        .skill-bar-group {
+            margin-bottom: 16px;
+        }
+
+        .skill-bar-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 7px;
+            font-size: 0.89rem;
+            color: #d0e2ff;
+        }
+
+        .skill-bar-pct {
+            font-family: 'Fira Mono', monospace;
+            font-size: 0.78rem;
+            color: #00e6ffaa;
+        }
+
+        .skill-bar-track {
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(142, 162, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .resume-balls-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px 14px;
+            align-items: flex-end;
+            margin-top: 10px;
+        }
+
+        .skill-bar-fill {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fira Mono', monospace;
+            font-size: 1.01rem;
+            color: #1a2333;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            text-shadow: 0 1px 6px #fff8, 0 0 2px #fff8;
+            text-align: center;
+            line-height: 1.1;
+            user-select: none;
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 65% 30%, var(--ball-main, #8ea2ff) 60%, var(--ball-accent, #00e6ff) 100%),
+                linear-gradient(120deg, #fff8 0%, #8ea2ff33 100%),
+                linear-gradient(145deg, #eaf6ff22 0%, #00e6ff11 100%),
+                radial-gradient(circle at 50% 60%, #fff6 0%, transparent 70%);
+            box-shadow:
+                0 12px 32px #00e6ff44,
+                0 2px 12px #8ea2ff77,
+                0 0 0 2px #fff3 inset,
+                0 0 22px #00e6ff33 inset,
+                0 0 18px 2px #0b1220 inset,
+                0 0 0 3px var(--ball-rim, #79c8ff44),
+                0 0 0 8px #00e6ff11 inset;
+            animation: bounce-ball-real 1.35s cubic-bezier(.68, -0.55, .27, 1.55) infinite;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 18px;
+            overflow: visible;
+            transition: transform 0.18s cubic-bezier(.22, 1, .36, 1), box-shadow 0.18s;
+        }
+
+        /* Glass refraction highlight */
+        .skill-bar-fill .ball-refraction {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 16px;
+            width: 18px;
+            height: 8px;
+            border-radius: 60% 40% 60% 40%/60% 60% 40% 40%;
+            background: linear-gradient(120deg, #fff9 0%, #fff0 100%);
+            opacity: 0.22;
+            pointer-events: none;
+            z-index: 4;
+            filter: blur(0.7px);
+            transform: rotate(-18deg);
+        }
+
+        /* Animated sparkle overlay */
+        .skill-bar-fill .ball-sparkle {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 38px;
+            height: 38px;
+            pointer-events: none;
+            z-index: 5;
+            background: url('data:image/svg+xml;utf8,<svg width="38" height="38" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="10" r="1.2" fill="white" opacity="0.7"/><circle cx="30" cy="18" r="0.7" fill="white" opacity="0.5"/><circle cx="19" cy="30" r="0.9" fill="white" opacity="0.4"/><circle cx="28" cy="8" r="0.5" fill="white" opacity="0.3"/></svg>');
+            opacity: 0.18;
+            animation: sparkle-move 2.2s linear infinite;
+        }
+
+        @keyframes sparkle-move {
+            0% {
+                opacity: 0.18;
+                filter: blur(0.2px);
+                background-position: 0 0;
+            }
+
+            40% {
+                opacity: 0.32;
+                filter: blur(0.7px);
+                background-position: 4px 6px;
+            }
+
+            80% {
+                opacity: 0.18;
+                filter: blur(0.2px);
+                background-position: 0 0;
+            }
+
+            100% {
+                opacity: 0.18;
+                filter: blur(0.2px);
+                background-position: 0 0;
+            }
+        }
+
+        /* Inner glow for depth */
+        .skill-bar-fill .ball-inner-glow {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 60% 40%, #fff3 0%, transparent 80%);
+            opacity: 0.22;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .skill-bar-fill:hover,
+        .skill-bar-fill:focus {
+            transform: scale(1.13);
+            box-shadow:
+                0 12px 32px #00e6ff55,
+                0 4px 14px #8ea2ff77,
+                0 0 0 2.5px #fff6 inset,
+                0 0 22px #00e6ff33 inset,
+                0 0 0 5px var(--ball-rim, #79c8ff77);
+        }
+
+        /* Color variation for each ball */
+        .resume-balls-row .skill-bar-fill:nth-child(1) {
+            --ball-main: #8ea2ff;
+            --ball-accent: #00e6ff;
+            --ball-rim: #79c8ff44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(2) {
+            --ball-main: #79c8ff;
+            --ball-accent: #00e6ff;
+            --ball-rim: #8ea2ff55;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(3) {
+            --ball-main: #00e6ff;
+            --ball-accent: #8ea2ff;
+            --ball-rim: #a5b4fc44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(4) {
+            --ball-main: #a5b4fc;
+            --ball-accent: #79c8ff;
+            --ball-rim: #00e6ff44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(5) {
+            --ball-main: #8ea2ff;
+            --ball-accent: #a5b4fc;
+            --ball-rim: #79c8ff44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(6) {
+            --ball-main: #79c8ff;
+            --ball-accent: #a5b4fc;
+            --ball-rim: #00e6ff44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(7) {
+            --ball-main: #00e6ff;
+            --ball-accent: #8ea2ff;
+            --ball-rim: #a5b4fc44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(8) {
+            --ball-main: #a5b4fc;
+            --ball-accent: #00e6ff;
+            --ball-rim: #8ea2ff55;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(9) {
+            --ball-main: #8ea2ff;
+            --ball-accent: #79c8ff;
+            --ball-rim: #00e6ff44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(10) {
+            --ball-main: #79c8ff;
+            --ball-accent: #00e6ff;
+            --ball-rim: #a5b4fc44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(11) {
+            --ball-main: #00e6ff;
+            --ball-accent: #8ea2ff;
+            --ball-rim: #8ea2ff55;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(12) {
+            --ball-main: #a5b4fc;
+            --ball-accent: #79c8ff;
+            --ball-rim: #00e6ff44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(13) {
+            --ball-main: #8ea2ff;
+            --ball-accent: #a5b4fc;
+            --ball-rim: #79c8ff44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(14) {
+            --ball-main: #79c8ff;
+            --ball-accent: #a5b4fc;
+            --ball-rim: #00e6ff44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(15) {
+            --ball-main: #00e6ff;
+            --ball-accent: #8ea2ff;
+            --ball-rim: #a5b4fc44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(16) {
+            --ball-main: #a5b4fc;
+            --ball-accent: #00e6ff;
+            --ball-rim: #8ea2ff55;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(17) {
+            --ball-main: #8ea2ff;
+            --ball-accent: #79c8ff;
+            --ball-rim: #00e6ff44;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(18) {
+            --ball-main: #79c8ff;
+            --ball-accent: #00e6ff;
+            --ball-rim: #a5b4fc44;
+        }
+
+        /* Animated caustic/glow under each ball */
+        .skill-bar-fill .ball-caustic {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -18px;
+            width: 38px;
+            height: 16px;
+            pointer-events: none;
+            transform: translateX(-50%);
+            z-index: 0;
+            background: radial-gradient(ellipse at center, var(--ball-accent, #00e6ff) 40%, transparent 100%);
+            opacity: 0.38;
+            filter: blur(2.5px);
+            animation: caustic-glow 1.35s cubic-bezier(.68, -0.55, .27, 1.55) infinite;
+        }
+
+        @keyframes caustic-glow {
+
+            0%,
+            100% {
+                opacity: 0.38;
+                width: 38px;
+            }
+
+            20% {
+                opacity: 0.52;
+                width: 44px;
+            }
+
+            50% {
+                opacity: 0.28;
+                width: 32px;
+            }
+
+            80% {
+                opacity: 0.38;
+                width: 38px;
+            }
+        }
+
+        /* Moving reflection sweep */
+        .skill-bar-fill .ball-reflection {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 8px;
+            width: 24px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, #fff8 0%, #fff2 100%);
+            opacity: 0.22;
+            pointer-events: none;
+            z-index: 3;
+            filter: blur(1.2px);
+            animation: reflection-move 1.35s cubic-bezier(.68, -0.55, .27, 1.55) infinite;
+        }
+
+        @keyframes reflection-move {
+
+            0%,
+            100% {
+                left: 7px;
+                top: 8px;
+                opacity: 0.22;
+            }
+
+            18% {
+                left: 13px;
+                top: 4px;
+                opacity: 0.32;
+            }
+
+            50% {
+                left: 4px;
+                top: 13px;
+                opacity: 0.13;
+            }
+
+            80% {
+                left: 7px;
+                top: 8px;
+                opacity: 0.22;
+            }
+        }
+
+        .skill-bar-fill::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 7px;
+            width: 16px;
+            height: 10px;
+            border-radius: 50%;
+            background: linear-gradient(120deg, #fff 0%, #eaf6ff88 100%);
+            opacity: 0.45;
+            filter: blur(0.5px);
+            pointer-events: none;
+            z-index: 2;
+            transition: left 0.3s, top 0.3s;
+            animation: ball-highlight-move 1.35s cubic-bezier(.68, -0.55, .27, 1.55) infinite;
+        }
+
+        .skill-bar-fill::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -13px;
+            margin: auto;
+            width: 26px;
+            height: 10px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse at center, #00e6ff44 60%, transparent 100%);
+            opacity: 0.7;
+            z-index: 0;
+            filter: blur(0.5px);
+            transition: width 0.18s, height 0.18s, opacity 0.18s;
+            animation: shadow-squash 1.35s cubic-bezier(.68, -0.55, .27, 1.55) infinite;
+        }
+
+        @keyframes ball-highlight-move {
+
+            0%,
+            100% {
+                left: 8px;
+                top: 7px;
+                opacity: 0.45;
+            }
+
+            20% {
+                left: 13px;
+                top: 3px;
+                opacity: 0.62;
+            }
+
+            50% {
+                left: 7px;
+                top: 10px;
+                opacity: 0.32;
+            }
+
+            80% {
+                left: 8px;
+                top: 7px;
+                opacity: 0.45;
+            }
+        }
+
+        .skill-bar-fill {
+            box-shadow:
+                0 8px 22px #00e6ff33,
+                0 2px 8px #8ea2ff55,
+                0 0 0 2px #fff3 inset,
+                0 0 18px #00e6ff22 inset,
+                0 0 10px 2px #0b1220 inset;
+        }
+
+        /* Random bounce: unique duration and delay for each ball */
+        .resume-balls-row .skill-bar-fill:nth-child(1) {
+            animation-duration: 1.32s;
+            animation-delay: 0.08s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(2) {
+            animation-duration: 1.18s;
+            animation-delay: 0.21s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(3) {
+            animation-duration: 1.44s;
+            animation-delay: 0.13s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(4) {
+            animation-duration: 1.27s;
+            animation-delay: 0.29s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(5) {
+            animation-duration: 1.39s;
+            animation-delay: 0.17s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(6) {
+            animation-duration: 1.23s;
+            animation-delay: 0.33s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(7) {
+            animation-duration: 1.36s;
+            animation-delay: 0.11s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(8) {
+            animation-duration: 1.41s;
+            animation-delay: 0.25s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(9) {
+            animation-duration: 1.19s;
+            animation-delay: 0.19s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(10) {
+            animation-duration: 1.34s;
+            animation-delay: 0.27s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(11) {
+            animation-duration: 1.22s;
+            animation-delay: 0.15s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(12) {
+            animation-duration: 1.38s;
+            animation-delay: 0.31s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(13) {
+            animation-duration: 1.25s;
+            animation-delay: 0.09s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(14) {
+            animation-duration: 1.42s;
+            animation-delay: 0.23s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(15) {
+            animation-duration: 1.16s;
+            animation-delay: 0.35s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(16) {
+            animation-duration: 1.29s;
+            animation-delay: 0.12s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(17) {
+            animation-duration: 1.37s;
+            animation-delay: 0.28s;
+        }
+
+        .resume-balls-row .skill-bar-fill:nth-child(18) {
+            animation-duration: 1.21s;
+            animation-delay: 0.18s;
+        }
+
+        .skill-bar-fill::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 7px;
+            width: 16px;
+            height: 10px;
+            border-radius: 50%;
+            background: linear-gradient(120deg, #fff 0%, #eaf6ff88 100%);
+            opacity: 0.45;
+            filter: blur(0.5px);
+            pointer-events: none;
+        }
+
+        .skill-bar-fill::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -13px;
+            margin: auto;
+            width: 26px;
+            height: 10px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse at center, #00e6ff44 60%, transparent 100%);
+            opacity: 0.7;
+            z-index: 0;
+            filter: blur(0.5px);
+            transition: width 0.18s, height 0.18s, opacity 0.18s;
+        }
+
+        @keyframes bounce-ball-real {
+
+            0%,
+            100% {
+                transform: translateY(0) scaleY(1) scaleX(1);
+            }
+
+            10% {
+                transform: translateY(-30px) scaleY(1.08) scaleX(0.96);
+            }
+
+            18% {
+                transform: translateY(-38px) scaleY(1.12) scaleX(0.93);
+            }
+
+            22% {
+                transform: translateY(-42px) scaleY(1.13) scaleX(0.92);
+            }
+
+            28% {
+                transform: translateY(-38px) scaleY(1.09) scaleX(0.95);
+            }
+
+            38% {
+                transform: translateY(-18px) scaleY(0.98) scaleX(1.03);
+            }
+
+            50% {
+                transform: translateY(0) scaleY(0.88) scaleX(1.12);
+            }
+
+            60% {
+                transform: translateY(0) scaleY(1.05) scaleX(0.97);
+            }
+
+            80% {
+                transform: translateY(0) scaleY(1) scaleX(1);
+            }
+        }
+
+        /* .skill-bar-fill.bouncing was used for JS toggled effect, but is now removed to resolve lint error. */
+
+        .skill-bar-fill::after {
+            animation: shadow-squash 1.35s cubic-bezier(.68, -0.55, .27, 1.55) infinite;
+        }
+
+        @keyframes shadow-squash {
+
+            0%,
+            100% {
+                width: 26px;
+                height: 10px;
+                opacity: 0.7;
+            }
+
+            22% {
+                width: 18px;
+                height: 7px;
+                opacity: 0.45;
+            }
+
+            50% {
+                width: 34px;
+                height: 13px;
+                opacity: 0.85;
+            }
+
+            80% {
+                width: 26px;
+                height: 10px;
+                opacity: 0.7;
+            }
+        }
+
+        .resume-ball-tooltip {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .resume-ball-tooltiptext {
+            visibility: hidden;
+            width: max-content;
+            background: #0b1220;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 6px 12px;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.18s, visibility 0.18s;
+            font-size: 0.92rem;
+            box-shadow: 0 4px 18px #00e6ff33;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .resume-ball-tooltip:hover .resume-ball-tooltiptext,
+        .resume-ball-tooltip:focus .resume-ball-tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Ball shadow for realism */
+        .resume-ball-tooltip::after {
+            content: '';
+            display: block;
+            width: 22px;
+            height: 7px;
+            background: radial-gradient(ellipse at center, #00e6ff33 60%, transparent 100%);
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            filter: blur(0.5px);
+        }
+
+        /* ===== TECH CHIPS ===== */
+        .resume-chip-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(142, 162, 255, 0.28);
+            background: rgba(142, 162, 255, 0.07);
+            color: #c8d8f4;
+            font-size: 0.86rem;
+            font-family: 'Fira Mono', monospace;
+            border-color: var(--chip-border, rgba(142, 162, 255, 0.28));
+            color: var(--chip-text, #c8d8f4);
+            background: var(--chip-bg, rgba(142, 162, 255, 0.07));
+            transition: transform .15s ease, box-shadow .15s ease;
+            cursor: default;
+        }
+
+        .tech-chip:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== EXPERIENCE TIMELINE ===== */
+        .resume-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .resume-timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 10px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #00e6ff 0%, #8ea2ff 55%, transparent 100%);
+            border-radius: 2px;
+            transform-origin: top;
+            animation: neon-line-grow 1.2s cubic-bezier(.4, 0, .2, 1) both;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 7px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #00e6ff;
+            border: 2.5px solid #0b1526;
+            box-shadow: 0 0 14px #00e6ffcc;
+        }
+
+        .timeline-title {
+            font-size: 1.06rem;
+            color: #f0f6ff;
+            margin: 0 0 4px;
+            font-weight: 600;
+        }
+
+        .timeline-company {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 0.82rem;
+            color: #00e6ff;
+            margin: 4px 0;
+        }
+
+        .tl-badge {
+            padding: 2px 9px;
+            border-radius: 999px;
+            background: rgba(0, 230, 255, 0.09);
+            border: 1px solid #00e6ff33;
+            font-size: 0.72rem;
+            color: #00e6ffbb;
+        }
+
+        .timeline-duration {
+            font-size: 0.8rem;
+            color: #5e7a98;
+            font-family: 'Fira Mono', monospace;
+            margin-bottom: 6px;
+        }
+
+        .timeline-list {
+            margin: 8px 0 0;
+            padding-left: 16px;
+            color: #b0c8e8;
+            line-height: 1.9;
+            font-size: 0.93rem;
+        }
+
+        /* ===== CARDS ===== */
+        .resume-detail-card {
+            border-radius: 20px;
+            border: 1px solid rgba(142, 162, 255, 0.26);
+            background: linear-gradient(145deg, rgba(14, 22, 44, .97), rgba(10, 18, 38, .97));
+            box-shadow: 0 10px 28px rgba(0, 0, 0, .3);
+            padding: 24px;
+            transition: border-color .2s ease, box-shadow .2s ease;
+        }
+
+        .resume-detail-card:hover {
+            border-color: rgba(142, 162, 255, 0.46);
+            box-shadow: 0 14px 36px rgba(0, 0, 0, .36), 0 0 22px rgba(142, 162, 255, 0.09);
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        /* ===== PDF PREVIEW ===== */
+        .resume-preview-card {
+            border-radius: 20px;
+            border: 1px solid rgba(142, 162, 255, 0.26);
+            background: linear-gradient(145deg, rgba(14, 22, 44, .97), rgba(10, 18, 38, .97));
+            box-shadow: 0 10px 28px rgba(0, 0, 0, .3);
+            padding: 22px;
+            margin-bottom: 16px;
+            transition: border-color .2s ease, box-shadow .2s ease;
+        }
+
+        .resume-preview-card:hover {
+            border-color: rgba(142, 162, 255, 0.46);
+            box-shadow: 0 14px 36px rgba(0, 0, 0, .36), 0 0 22px rgba(142, 162, 255, 0.09);
+        }
+
+        .resume-iframe {
+            width: 100%;
+            min-height: 580px;
+            border: 1px solid rgba(142, 162, 255, 0.22);
+            border-radius: 14px;
+            background: #0f162d;
+            box-shadow: 0 8px 22px rgba(8, 17, 31, .45);
+            display: block;
+        }
+
+        /* ===== BACK LINK ===== */
+        .resume-back-link {
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #8ea2ff;
+            text-decoration: none;
+            font-family: 'Fira Mono', monospace;
+            font-size: 0.9rem;
+            transition: color .14s, transform .14s;
+        }
+
+        .resume-back-link:hover {
+            color: #00e6ff;
+            transform: translateX(-4px);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 991px) {
+            .resume-stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .resume-top {
+                grid-template-columns: auto 1fr;
+            }
+
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .resume-page-shell {
+                padding: 0 10px;
+            }
+
+            .resume-hero-banner {
+                padding: 26px 18px 22px;
+            }
+
+            .hero-name {
+                font-size: 2rem;
+            }
+
+            .hero-title-typewriter {
+                font-size: 0.88rem;
+                max-width: 290px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .resume-stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .resume-top {
+                grid-template-columns: 1fr;
+            }
+
+            .resume-top .resume-download-btn {
+                justify-self: start;
+            }
+
+            .modern-navbar .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="diag index-engineering resume-engineering">
+    <div class="resume-page-shell">
+        <div class="resume-page-nav">
+            <header>
+                <nav class="modern-navbar" aria-label="Main Navigation">
+                    <div class="logo">
+                        <a href="index.html#home" aria-label="Home">
+                            <img src="images/Logo-np.png" alt="NP logo" class="header-logo-img">
+                        </a>
+                    </div>
+                    <div class="nav-menu" role="menubar">
+                        <a href="index.html#home" role="menuitem">Home</a>
+                        <a href="about.html" role="menuitem">About Me</a>
+
+                        <a href="resume.html" role="menuitem" aria-current="page">Resume</a>
+                        <a href="work.html" role="menuitem">Projects</a>
+                        <a href="contact.html" role="menuitem">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/nikitaparalkar/" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/paralkarniki?tab=repositories" target="_blank"
+                            aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <section class="resume-summary-card">
+            <div class="resume-top">
+                <img src="images/nikita.jpg" alt="Nikita Paralkar" class="resume-avatar-img">
+                <div>
+                    <h2 class="resume-name">Nikita Paralkar</h2>
+                    <ul class="resume-contact-list">
+                        <li><i class="fas fa-envelope"></i> <a
+                                href="mailto:paralkarnikita@gmail.com">paralkarnikita@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> (647)-518-9623</li>
+                    </ul>
+                </div>
+                <a href="resume/Resume_Nikita_Paralkar.pdf" class="resume-download-btn" target="_blank" rel="noopener">
+                    <i class="fas fa-file-pdf"></i> Download PDF
+                </a>
+            </div>
+            <p class="resume-profile-text" id="typewriterProfile"></p>
+            <div class="resume-stats-row">
+                <div class="resume-stat-card">
+                    <div class="stat-icon"><i class="fas fa-code"></i></div>
+                    <div class="stat-number" id="statExp">6+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="resume-stat-card">
+                    <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                    <div class="stat-number" id="statProj">7</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="resume-stat-card">
+                    <div class="stat-icon"><i class="fas fa-language"></i></div>
+                    <div class="stat-number" id="statLang">5</div>
+                    <div class="stat-label">Languages</div>
+                </div>
+            </div>
+            <div class="recruiter-signal">
+                <strong>Recruiter Snapshot</strong>
+                <p>Open to software development and IT support roles. Brings strong ownership, fast learning, bilingual
+                    communication (English/French), and practical delivery experience across web, mobile, and
+                    database-backed applications.</p>
+            </div>
+        </section>
+
+        <section class="resume-preview-card">
+            <h2>PDF Preview</h2>
+            <iframe src="resume/Resume_Nikita_Paralkar.pdf" class="resume-iframe" title="Resume PDF preview"></iframe>
+        </section>
+
+        <div class="resume-grid">
+        </div>
+        </article>
+        <article class="resume-detail-card interactive-panel">
+            <h2>Core Strengths</h2>
+            <div class="resume-columns" style="flex-wrap: wrap; display: flex; gap: 18px;">
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">Programming Languages</h3>
+                    <ul class="resume-list">
+                        <li>Apex, Java, Python, JavaScript (ES6+), TypeScript, PHP, C#, HTML5, CSS3</li>
+                    </ul>
+                </div>
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">Frameworks & Libraries</h3>
+                    <ul class="resume-list">
+                        <li>React, React Native, Angular (2–9), Node.js, ASP.NET MVC, Spring Boot, Bootstrap, SCSS/SASS
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">Salesforce Development</h3>
+                    <ul class="resume-list">
+                        <li>Apex, Lightning Web Components (LWC), SOQL, Salesforce APIs, Salesforce Mobile Development
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">Databases</h3>
+                    <ul class="resume-list">
+                        <li>MySQL, Oracle, Microsoft SQL Server, Firebase, NoSQL</li>
+                    </ul>
+                </div>
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">API & Integration</h3>
+                    <ul class="resume-list">
+                        <li>RESTful APIs, GraphQL, JSON, XML, Swagger, Postman</li>
+                    </ul>
+                </div>
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">DevOps & Tools</h3>
+                    <ul class="resume-list">
+                        <li>Git, Docker, CI/CD Pipelines, Webpack, JUnit</li>
+                    </ul>
+                </div>
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">Platforms & CMS</h3>
+                    <ul class="resume-list">
+                        <li>WordPress, Unqork</li>
+                    </ul>
+                </div>
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">Mobile Development</h3>
+                    <ul class="resume-list">
+                        <li>Android Studio, iOS (Xcode), React Native</li>
+                    </ul>
+                </div>
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">Software Engineering</h3>
+                    <ul class="resume-list">
+                        <li>Data Structures & Algorithms, Software Testing & Validation, Performance Optimization, API
+                            Design & Development, Software Documentation Control</li>
+                    </ul>
+                </div>
+                <div class="resume-column-card" style="min-width:220px;flex:1;">
+                    <h3 style="color: hwb(0 69% 17%);">Analytics & Other Technologies</h3>
+                    <ul class="resume-list">
+                        <li>Google Analytics, Google Conversational Applications</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article class="resume-detail-card interactive-panel">
+            <h2>Technical Toolkit</h2>
+            <style>
+                /* Make balls smaller and text appear below each ball */
+                .resume-balls-row {
+                    flex-wrap: wrap;
+                    gap: 24px 18px !important;
+                    justify-content: flex-start;
+                }
+                .resume-ball-tooltip {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 70px;
+                    margin-bottom: 8px;
+                }
+                .resume-ball-tooltip .skill-bar-fill {
+                    width: 38px !important;
+                    height: 38px !important;
+                    min-width: 38px !important;
+                    min-height: 38px !important;
+                    font-size: 1.1rem !important;
+                    margin-bottom: 6px !important;
+                }
+                .resume-ball-tooltip .ball-label {
+                    color: #fff !important;
+                    font-weight: 600;
+                    font-size: 0.93rem;
+                    text-shadow: 0 2px 8px #000a, 0 0 2px #000a;
+                    letter-spacing: 0.01em;
+                    margin: 0 !important;
+                    display: none; /* Hide inline label in ball */
+                }
+                .resume-ball-tooltip .ball-label-text {
+                    color: #eaf6ff;
+                    font-weight: 600;
+                    font-size: 0.93rem;
+                    text-align: center;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    line-height: 1.2;
+                    text-shadow: 0 2px 8px #000a, 0 0 2px #000a;
+                    word-break: break-word;
+                }
+            </style>
+            <div class="resume-chip-list" style="flex-wrap: wrap; gap: 18px 12px; justify-content: flex-start;">
+                <div class="resume-balls-row">
+                    <!-- Salesforce -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #00e6ff55;" data-skill="Salesforce"
+                            data-description="CRM platform development, automation, and integration expertise.">
+                            <span class="ball-label"><i class="fab fa-salesforce" style="color:#00e6ff;"></i></span>
+                        </div>
+                        <span class="ball-label-text">Salesforce</span>
+                    </div>
+                    <!-- React -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #61dafb77;" data-skill="React"
+                            data-description="Modern UI development with reusable components and hooks.">
+                            <span class="ball-label"><i class="fab fa-react" style="color:#61dafb;"></i></span>
+                        </div>
+                        <span class="ball-label-text">React</span>
+                    </div>
+                    <!-- JavaScript -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #f7df1e77;" data-skill="JavaScript"
+                            data-description="Interactive client-side logic and reusable UI behavior.">
+                            <span class="ball-label"><i class="fab fa-js-square" style="color:#f7df1e;"></i></span>
+                        </div>
+                        <span class="ball-label-text">JavaScript</span>
+                    </div>
+                    <!-- HTML -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #e34c2677;" data-skill="HTML"
+                            data-description="Frontend structure and semantic, accessible UI implementation.">
+                            <span class="ball-label"><i class="fab fa-html5" style="color:#e34c26;"></i></span>
+                        </div>
+                        <span class="ball-label-text">HTML</span>
+                    </div>
+                    <!-- CSS -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #1572b677;" data-skill="CSS"
+                            data-description="Responsive layout styling and component-level visual polish.">
+                            <span class="ball-label"><i class="fab fa-css3-alt" style="color:#1572b6;"></i></span>
+                        </div>
+                        <span class="ball-label-text">CSS</span>
+                    </div>
+                    <!-- Java -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #00739677;" data-skill="Java"
+                            data-description="Core OOP development used across academic and practical projects.">
+                            <span class="ball-label"><i class="fab fa-java" style="color:#007396;"></i></span>
+                        </div>
+                        <span class="ball-label-text">Java</span>
+                    </div>
+                    <!-- Python -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #3776ab77;" data-skill="Python"
+                            data-description="General scripting, logic building, and problem-solving tasks.">
+                            <span class="ball-label"><i class="fab fa-python" style="color:#3776ab;"></i></span>
+                        </div>
+                        <span class="ball-label-text">Python</span>
+                    </div>
+                    <!-- SQL -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #00758f77;" data-skill="SQL"
+                            data-description="Query writing, relational data modeling, and reporting logic.">
+                            <span class="ball-label"><i class="fas fa-database" style="color:#00758f;"></i></span>
+                        </div>
+                        <span class="ball-label-text">SQL</span>
+                    </div>
+                    <!-- jQuery -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #0769ad77;" data-skill="jQuery"
+                            data-description="Fast DOM workflows for legacy and rapid-prototype interfaces.">
+                            <span class="ball-label"><i class="fas fa-code" style="color:#0769ad;"></i></span>
+                        </div>
+                        <span class="ball-label-text">jQuery</span>
+                    </div>
+                    <!-- PHP -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #777bb477;" data-skill="PHP"
+                            data-description="Server-side scripting and form/data handling fundamentals.">
+                            <span class="ball-label"><i class="fab fa-php" style="color:#777bb4;"></i></span>
+                        </div>
+                        <span class="ball-label-text">PHP</span>
+                    </div>
+                    <!-- C -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #55555577;" data-skill="C"
+                            data-description="Strong base in memory-aware procedural programming fundamentals.">
+                            <span class="ball-label"><i class="fas fa-terminal" style="color:#555;"></i></span>
+                        </div>
+                        <span class="ball-label-text">C</span>
+                    </div>
+                    <!-- C++ -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #00599c77;" data-skill="C++"
+                            data-description="Object-oriented and performance-oriented programming concepts.">
+                            <span class="ball-label"><i class="fas fa-code-branch" style="color:#00599c;"></i></span>
+                        </div>
+                        <span class="ball-label-text">C++</span>
+                    </div>
+                    <!-- C# -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #68217a77;" data-skill="C#"
+                            data-description="Application development experience in the .NET ecosystem.">
+                            <span class="ball-label"><i class="fab fa-microsoft" style="color:#68217a;"></i></span>
+                        </div>
+                        <span class="ball-label-text">C#</span>
+                    </div>
+                    <!-- SQL Server -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #cc2927aa;" data-skill="SQL Server"
+                            data-description="Database design and query experience with SQL Server tools.">
+                            <span class="ball-label"><i class="fas fa-database" style="color:#cc2927;"></i></span>
+                        </div>
+                        <span class="ball-label-text">SQL Server</span>
+                    </div>
+                    <!-- MySQL Workbench -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #4479a177;" data-skill="MySQL Workbench"
+                            data-description="Schema management and SQL workflow execution.">
+                            <span class="ball-label"><i class="fas fa-database" style="color:#4479a1;"></i></span>
+                        </div>
+                        <span class="ball-label-text">MySQL Workbench</span>
+                    </div>
+                    <!-- Bootstrap -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #7952b377;" data-skill="Bootstrap"
+                            data-description="Rapid responsive UI development with grid/component systems.">
+                            <span class="ball-label"><i class="fab fa-bootstrap" style="color:#7952b3;"></i></span>
+                        </div>
+                        <span class="ball-label-text">Bootstrap</span>
+                    </div>
+                    <!-- Visual Studio -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #5c2d91aa;" data-skill="Visual Studio"
+                            data-description="IDE-based development, debugging, and project organization.">
+                            <span class="ball-label"><i class="fab fa-microsoft" style="color:#5c2d91;"></i></span>
+                        </div>
+                        <span class="ball-label-text">Visual Studio</span>
+                    </div>
+                    <!-- Android Studio -->
+                    <div class="resume-ball-tooltip">
+                        <div class="skill-bar-fill" style="box-shadow: 0 0 0 3px #3ddc8477;" data-skill="Android Studio"
+                            data-description="Native mobile development and emulator/debug workflows.">
+                            <span class="ball-label"><i class="fab fa-android" style="color:#3ddc84;"></i></span>
+                        </div>
+                        <span class="ball-label-text">Android Studio</span>
+                    </div>
+                </div>
+            </div>
+            <div id="toolkitBallDescription">
+                <span class="desc-icon"><i class="fas fa-info-circle"></i></span>
+                <span class="desc-text" style="color:#8ea2ff;">Hover or tap a ball to see its description.</span>
+            </div>
+        </article>
+
+    </div>
+
+    </a>
+    </div>
+    <br>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+
+        <div class="container">
+            <div class="social site-footer-links">
+                <a href="https://www.linkedin.com/in/nikitaparalkar/"><i
+                        class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                <a href="https://github.com/paralkarniki?tab=repositories"><i
+                        class="fab fa-github"></i><span>GitHub</span></a>
+                <a href="mailto:paralkarnikita@gmail.com"><i
+                        class="fas fa-envelope"></i><span>paralkarnikita@gmail.com</span></a>
+            </div>
+
+        </div>
+
+        <div class="social site-footer-meta">
+
+            <p>Copyright © 2026, All rights Reserved. <br />
+                Created by Nikita Paralkar</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var balls = document.querySelectorAll('.resume-balls-row .skill-bar-fill');
+            var desc = document.getElementById('toolkitBallDescription');
+            if (!balls.length || !desc) return;
+            function showDesc(e) {
+                var skill = this.getAttribute('data-skill');
+                var description = this.getAttribute('data-description');
+                desc.innerHTML = '<span class="desc-icon"><i class="fas fa-info-circle"></i></span>' +
+                    '<span class="desc-skill">' + skill + ':</span>' +
+                    '<span class="desc-text">' + description + '</span>';
+            }
+            function resetDesc() {
+                desc.innerHTML = '<span class="desc-icon"><i class="fas fa-info-circle"></i></span>' +
+                    '<span class="desc-text" style="color:#8ea2ff;">Hover or tap a ball to see its description.</span>';
+            }
+            balls.forEach(function (ball) {
+                ball.addEventListener('mouseenter', showDesc);
+                ball.addEventListener('focus', showDesc);
+                ball.addEventListener('touchstart', showDesc);
+                ball.addEventListener('mouseleave', resetDesc);
+                ball.addEventListener('blur', resetDesc);
+            });
+        })();
+        // Typewriter effect for profile summary
+        (function typewriterProfile() {
+            var text = "Software Developer with 5+ years of experience building scalable, high-performance applications and enterprise systems. Expert in full-stack development, system architecture, and performance optimization, delivering reliable and efficient solutions. Brings deep expertise in Java, C++, C, and SQL, supported by strong command of modern development tools. Known for solving complex challenges, collaborating across teams, and rapidly adapting to new technologies. Bilingual in English and French.";
+            var el = document.getElementById('typewriterProfile');
+            var i = 0;
+            function type() {
+                if (el && i <= text.length) {
+                    el.textContent = text.slice(0, i++);
+                    setTimeout(type, 18);
+                }
+            }
+            type();
+        })();
+
+        // Animated stats counters
+        (function animateStats() {
+            var exp = 6, proj = 7, lang = 5;
+            var e = document.getElementById('statExp'), p = document.getElementById('statProj'), l = document.getElementById('statLang');
+            var vals = [0, 0, 0], targets = [exp, proj, lang];
+            var els = [e, p, l];
+            var step = [0.1, 0.2, 0.13];
+            function animate() {
+                var done = true;
+                for (var i = 0; i < 3; i++) {
+                    if (vals[i] < targets[i]) {
+                        vals[i] += step[i];
+                        if (vals[i] > targets[i]) vals[i] = targets[i];
+                        els[i].textContent = Math.floor(vals[i]);
+                        done = false;
+                    }
+                }
+                if (!done) requestAnimationFrame(animate);
+                else for (var i = 0; i < 3; i++) els[i].textContent = targets[i];
+            }
+            animate();
+        })();
+
+        // Animated skill bars
+        (function animateSkillBars() {
+            var skills = [
+                { id: 'barJava', pct: 'barJavaPct', val: 90 },
+                { id: 'barPython', pct: 'barPythonPct', val: 85 },
+                { id: 'barSQL', pct: 'barSQLPct', val: 80 }
+            ];
+            skills.forEach(function (skill) {
+                var fill = document.getElementById(skill.id);
+                var pct = document.getElementById(skill.pct);
+                var cur = 0;
+                function animate() {
+                    if (cur < skill.val) {
+                        cur++;
+                        fill.style.width = cur + '%';
+                        pct.textContent = cur + '%';
+                        setTimeout(animate, 10);
+                    } else {
+                        fill.style.width = skill.val + '%';
+                        pct.textContent = skill.val + '%';
+                    }
+                }
+                animate();
+            });
+        })();
+        (function () {
+            var chips = document.querySelectorAll('.resume-chip-btn');
+            var feedback = document.getElementById('toolkitFeedback');
+            if (!chips.length || !feedback) return;
+
+            var skillNotes = {
+                'HTML': 'Frontend structure and semantic, accessible UI implementation.',
+                'CSS': 'Responsive layout styling and component-level visual polish.',
+                'JavaScript': 'Interactive client-side logic and reusable UI behavior.',
+                'jQuery': 'Fast DOM workflows for legacy and rapid-prototype interfaces.',
+                'PHP': 'Server-side scripting and form/data handling fundamentals.',
+                'Python': 'General scripting, logic building, and problem-solving tasks.',
+                'Java': 'Core OOP development used across academic and practical projects.',
+                'C': 'Strong base in memory-aware procedural programming fundamentals.',
+                'C++': 'Object-oriented and performance-oriented programming concepts.',
+                'C#': 'Application development experience in the .NET ecosystem.',
+                'SQL': 'Query writing, relational data modeling, and reporting logic.',
+                'SQL Server': 'Database design and query experience with SQL Server tools.',
+                'MySQL Workbench': 'Schema management and SQL workflow execution.',
+                'Bootstrap': 'Rapid responsive UI development with grid/component systems.',
+                'Visual Basics': 'Legacy application familiarity and structured coding principles.',
+                'Visual Studio': 'IDE-based development, debugging, and project organization.',
+                'Android': 'Mobile app feature implementation with user-centric flows.',
+                'Android Studio': 'Native mobile development and emulator/debug workflows.'
+            };
+
+            chips.forEach(function (chip) {
+                chip.addEventListener('click', function () {
+                    chips.forEach(function (c) { c.classList.remove('active'); });
+                    chip.classList.add('active');
+
+                    var skill = chip.getAttribute('data-skill') || chip.textContent.trim();
+                    var note = skillNotes[skill] || 'Actively used in portfolio projects and practical work.';
+                    feedback.textContent = 'Focus skill: ' + skill + ' — ' + note;
+                });
+            });
+        })();
+    </script>
+    <a class="resume-back-link" href="index.html#home">
+        <i class="fas fa-arrow-left"></i>
+        Back to Homepage
+    </a>
+</body>
+</html>

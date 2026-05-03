@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="About Nikita Paralkar" />
+    <title>About | Nikita Paralkar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/owl-carousel.css" rel="stylesheet">
+    <link href="css/reset-grids.css" rel="stylesheet">
+    <link href="css/resume.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/devicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
+
+        <!-- Add AOS (Animate On Scroll) CSS for section reveal animations -->
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body.diag {
+            position: relative;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 14% 20%, #8ea2ff1c 0%, transparent 32%),
+                radial-gradient(circle at 84% 12%, #79c8ff17 0%, transparent 28%),
+                radial-gradient(circle at 78% 76%, #a5b4fc14 0%, transparent 26%),
+                linear-gradient(180deg, #090d18 0%, #0d1324 100%) !important;
+            color: #eaf2ff;
+            overflow-x: hidden;
+        }
+
+            /* Typing animation for headline */
+            .about-typing {
+                font-size: 2em;
+                font-weight: 900;
+                color: #b4ffe8;
+                text-align: center;
+                letter-spacing: 0.01em;
+                min-height: 2.2em;
+                margin-bottom: 8px;
+                text-shadow: 0 2px 12px #1de0ff22;
+            }
+            .about-typing .about-cursor {
+                display: inline-block;
+                width: 1ch;
+                animation: blinkAbout 1s steps(1) infinite;
+            }
+            @keyframes blinkAbout {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+
+            /* Animated skill bars */
+            .skill-bar {
+                background: #232a3a;
+                border-radius: 8px;
+                overflow: hidden;
+                margin-bottom: 12px;
+                height: 18px;
+                width: 100%;
+                box-shadow: 0 2px 8px #8ea2ff11;
+            }
+            .skill-bar-fill {
+                height: 100%;
+                border-radius: 8px;
+                background: linear-gradient(90deg, #8ea2ff 0%, #1de0ff 100%);
+                width: 0;
+                transition: width 1.6s cubic-bezier(.4,1.4,.2,1);
+            }
+            .skill-bar-label {
+                color: #b4ffe8;
+                font-weight: 700;
+                font-size: 1.08em;
+                letter-spacing: 0.01em;
+                margin-bottom: 2px;
+            }
+
+            /* Card and button hover effects */
+            .about-section-card, .accomplishment-card, .recruiter-snapshot-card {
+                transition: box-shadow 0.25s, transform 0.18s;
+            }
+            .about-section-card:hover, .accomplishment-card:hover, .recruiter-snapshot-card:hover {
+                box-shadow: 0 6px 32px #1de0ff33, 0 2px 18px #8ea2ff33;
+                transform: translateY(-4px) scale(1.012);
+            }
+            .resume-link-btn:hover {
+                box-shadow: 0 0 0 3px #8ea2ff88, 0 2px 12px #1de0ff44;
+                transform: translateY(-2px) scale(1.07);
+            }
+
+            /* Section reveal animation (AOS fallback) */
+            [data-aos] { opacity: 0; transition: opacity 0.7s, transform 0.7s; }
+            [data-aos].aos-animate { opacity: 1; }
+        </style>
+    </style>
+</head>
+
+<body class="diag">
+        <!-- Social media app-inspired background -->
+        <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;overflow:hidden;">
+            <div style="position:absolute;top:-10vh;left:-10vw;width:60vw;height:60vw;max-width:700px;max-height:700px;background:radial-gradient(circle at 40% 40%,#1de0ff 0%,#8ea2ff 60%,transparent 100%);opacity:0.32;filter:blur(8px);"></div>
+            <div style="position:absolute;bottom:-12vh;right:-12vw;width:55vw;height:55vw;max-width:600px;max-height:600px;background:radial-gradient(circle at 60% 60%,#ffb6ec 0%,#8ea2ff 60%,transparent 100%);opacity:0.22;filter:blur(12px);"></div>
+            <div style="position:absolute;top:30vh;left:60vw;width:32vw;height:32vw;max-width:340px;max-height:340px;background:radial-gradient(circle at 60% 40%,#fffbe6 0%,#1de0ff 60%,transparent 100%);opacity:0.13;filter:blur(16px);"></div>
+            <div style="position:absolute;bottom:18vh;right:60vw;width:28vw;height:28vw;max-width:260px;max-height:260px;background:radial-gradient(circle at 40% 60%,#ffb6ec 0%,#fffbe6 60%,transparent 100%);opacity:0.11;filter:blur(18px);"></div>
+        </div>
+    <svg class="about-circuit-svg" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="100" y="600" width="1720" height="120" rx="32" stroke="#8ea2ff" stroke-width="2" />
+        <rect x="0" y="700" width="1920" height="80" rx="40" stroke="#79c8ff" stroke-width="1.5" />
+        <path d="M 100 600 Q 120 580 200 580" stroke="#1de0ff" stroke-width="2" fill="none" />
+        <circle cx="100" cy="600" r="6" fill="#1de0ff" />
+        <circle cx="1820" cy="600" r="6" fill="#1de0ff" />
+        <path d="M 1820 600 Q 1900 580 1920 640" stroke="#1de0ff" stroke-width="2" fill="none" />
+    </svg>
+
+    <style>
+        .about-circuit-bg {
+            pointer-events: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            background:
+                repeating-linear-gradient(0deg, rgba(80, 180, 255, 0.07) 0px, rgba(80, 180, 255, 0.07) 1px, transparent 1px, transparent 64px),
+                repeating-linear-gradient(90deg, rgba(80, 180, 255, 0.07) 0px, rgba(80, 180, 255, 0.07) 1px, transparent 1px, transparent 64px);
+        }
+
+        .about-circuit-svg {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.18;
+        }
+    </style>
+    <style>
+        .about-circuit-bg {
+            pointer-events: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            background:
+                repeating-linear-gradient(0deg, rgba(80, 180, 255, 0.07) 0px, rgba(80, 180, 255, 0.07) 1px, transparent 1px, transparent 64px),
+                repeating-linear-gradient(90deg, rgba(80, 180, 255, 0.07) 0px, rgba(80, 180, 255, 0.07) 1px, transparent 1px, transparent 64px);
+        }
+
+        .about-circuit-svg {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.18;
+        }
+    </style>
+    <div class="about-circuit-bg"></div>
+    <style>
+        .about-circuit-bg {
+            pointer-events: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            background:
+                repeating-linear-gradient(0deg, rgba(80, 180, 255, 0.07) 0px, rgba(80, 180, 255, 0.07) 1px, transparent 1px, transparent 64px),
+                repeating-linear-gradient(90deg, rgba(80, 180, 255, 0.07) 0px, rgba(80, 180, 255, 0.07) 1px, transparent 1px, transparent 64px);
+        }
+
+        /* Glowing top border */
+        .about-page-shell::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 6px;
+            border-radius: 8px 8px 0 0;
+            background: linear-gradient(90deg, #1de0ff 0%, #8ea2ff 100%);
+            box-shadow: 0 0 16px 2px #1de0ff99;
+            opacity: 0.7;
+            z-index: 10;
+        }
+
+        /* Circuit lines and rounded rectangles (SVG overlay) */
+        .about-circuit-svg {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.18;
+        }
+    </style>
+    <svg class="about-circuit-svg" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="100" y="600" width="1720" height="120" rx="32" stroke="#8ea2ff" stroke-width="2" />
+        <rect x="0" y="700" width="1920" height="80" rx="40" stroke="#79c8ff" stroke-width="1.5" />
+        <path d="M 100 600 Q 120 580 200 580" stroke="#1de0ff" stroke-width="2" fill="none" />
+        <circle cx="100" cy="600" r="6" fill="#1de0ff" />
+        <circle cx="1820" cy="600" r="6" fill="#1de0ff" />
+        <path d="M 1820 600 Q 1900 580 1920 640" stroke="#1de0ff" stroke-width="2" fill="none" />
+    </svg>
+    </style>
+    </head>
+
+    <body class="diag">
+
+            <div class="about-page-nav" style="box-shadow:0 2px 16px #1de0ff22;background:#181e2b;border-radius:0 0 18px 18px;">
+                <header>
+                    <nav class="modern-navbar" aria-label="Main Navigation">
+                        <div class="logo">
+                            <a href="index.html#home" aria-label="Home">
+                                <img src="images/Logo-np.png" alt="NP logo" class="header-logo-img">
+                            </a>
+                        </div>
+                        <div class="nav-menu" role="menubar">
+                            <a href="index.html#home" role="menuitem">Home</a>
+                            <a href="about.html" role="menuitem" aria-current="page">About Me</a>
+
+                            <a href="resume.html" role="menuitem">Resume</a>
+                            <a href="work.html" role="menuitem">Projects</a>
+                            <a href="contact.html" role="menuitem">Contact</a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/nikitaparalkar/" target="_blank"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/paralkarniki?tab=repositories" target="_blank"
+                                aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+
+            <!-- Professional Headshot, Bio, Resume, and Accomplishments Section (now directly under navbar) -->
+            <section class="about-profile-intro" style="max-width:900px;margin:48px auto 32px auto;padding:36px 32px 32px 32px;background:#181e2b;border-radius:20px;box-shadow:0 2px 18px #8ea2ff22;display:flex;flex-wrap:wrap;align-items:center;gap:36px 48px;justify-content:center;position:relative;z-index:2;" data-aos="fade-up">
+                <div style="width:100%;min-width:220px;max-width:600px;margin:0 auto;position:relative;display:flex;flex-direction:column;align-items:center;">
+                    <div class="profile-img-float-wrap" style="position:relative;z-index:2;margin-bottom:18px;">
+                        <img src="images/nikita.jpg" alt="Nikita Paralkar headshot" style="width:160px;height:160px;border-radius:50%;box-shadow:0 0 32px 8px #1de0ff44,0 2px 12px #8ea2ff33;object-fit:cover;border:4px solid #1de0ff;">
+                    </div>
+                    <div class="about-typing" style="font-size:2.1em;font-weight:900;color:#1de0ff;text-align:center;letter-spacing:0.01em;margin-bottom:8px;text-shadow:0 2px 12px #1de0ff22;">Nikita Paralkar</div>
+                    <div style="display:flex;gap:32px;margin:18px 0 28px 0;justify-content:center;">
+                        <div style="text-align:center;">
+                            <div style="font-size:2.2em;font-weight:700;color:#1de0ff;margin-bottom:0.2em;">6+</div>
+                            <div style="font-size:1em;color:#b6c5df;letter-spacing:0.04em;">Years Experience</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="font-size:2.2em;font-weight:700;color:#1de0ff;margin-bottom:0.2em;">8</div>
+                            <div style="font-size:1em;color:#b6c5df;letter-spacing:0.04em;">Projects</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="font-size:2.2em;font-weight:700;color:#1de0ff;margin-bottom:0.2em;">12+</div>
+                            <div style="font-size:1em;color:#b6c5df;letter-spacing:0.04em;">Technologies</div>
+                        </div>
+                    </div>
+                    <p style="font-size:1.15em;color:#eaf2ff;line-height:1.7;margin-bottom:18px;text-align:center;text-shadow:0 1px 8px #1de0ff11;max-width:600px;">
+                        Passionate software engineer with a strong background in full-stack development, mobile computing, and user-centric design. I thrive on building impactful technology, collaborating with diverse teams, and delivering solutions that make a difference. My journey spans startups and established companies, where I have led projects, mentored peers, and continuously learned new skills.
+                    </p>
+                        <!-- Particle background for extra depth -->
+                        <div id="particles-js" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;"></div>
+
+
+                        
+                            <style>
+                                /* Subtle decorative images for portfolio context */
+                                .about-decor-img {
+                                    position: absolute;
+                                    opacity: 0.13;
+                                    z-index: 0;
+                                    pointer-events: none;
+                                    filter: blur(0.5px) drop-shadow(0 2px 12px #8ea2ff33);
+                                    transition: opacity 0.3s;
+                                }
+                                .about-decor-img.top-left { top: 32px; left: 32px; width: 90px; }
+                                .about-decor-img.top-right { top: 48px; right: 48px; width: 80px; }
+                                .about-decor-img.bottom-left { bottom: 48px; left: 48px; width: 80px; }
+                                .about-decor-img.bottom-right { bottom: 32px; right: 32px; width: 90px; }
+                                .about-section-card .about-decor-img { z-index: 1; }
+                            </style>
+                            <!-- Subtle decorative portfolio images -->
+                            <img src="images/portfolio1.jpg" alt="Portfolio Home" class="about-decor-img top-left">
+                            <img src="images/portfolio2.jpg" alt="Portfolio Projects" class="about-decor-img top-right">
+                            <img src="images/Logo-np.png" alt="Portfolio Logo" class="about-decor-img bottom-left">
+                            <img src="images/main.png" alt="Portfolio Main" class="about-decor-img bottom-right">
+                        <style>
+                            /* Floating profile image with glow and parallax */
+                            .profile-img-float-wrap { perspective: 600px; }
+                            .about-profile-img-float {
+                                transition: transform 0.5s cubic-bezier(.4,1.4,.2,1), box-shadow 0.4s;
+                            }
+                            .profile-img-glow {
+                                position: absolute;
+                                top: 50%; left: 50%;
+                                width: 180px; height: 180px;
+                                background: radial-gradient(circle, #8ea2ff55 0%, transparent 70%);
+                                border-radius: 50%;
+                                transform: translate(-50%,-50%);
+                                z-index: 1;
+                                pointer-events: none;
+                                filter: blur(8px);
+                            }
+                            .profile-img-float-wrap:hover .about-profile-img-float {
+                                transform: scale(1.06) rotateY(8deg) rotateX(8deg);
+                                box-shadow: 0 0 48px 12px #8ea2ff88, 0 2px 18px #1de0ff33;
+                            }
+                            /* Animated counters */
+                            .about-counters { display: flex; gap: 32px; margin: 18px 0 28px 0; justify-content:center; }
+                            .counter-block { text-align: center; }
+                            .counter-number { font-size: 2.2em; font-weight: 700; color: #8ea2ff; margin-bottom: 0.2em; transition: color 0.3s; }
+                            .counter-label { font-size: 1em; color: #b6c5df; letter-spacing: 0.04em; }
+                            /* Testimonials carousel */
+                            .testimonial-carousel { position: relative; min-height: 120px; }
+                            .testimonial { display: none; font-style: italic; color: #dbe7ff; background:rgba(142,162,255,0.10); border-radius:12px; padding:18px 22px 14px 22px; border-left:5px solid #8ea2ff; box-shadow:0 2px 8px #8ea2ff11; margin-bottom:0; }
+                            .testimonial.active { display: block; animation: fadeInTestimonial 0.7s; }
+                            @keyframes fadeInTestimonial { from { opacity:0; transform:translateY(16px);} to { opacity:1; transform:translateY(0);} }
+                            .testimonial-controls button { background: linear-gradient(90deg,#8ea2ff 0%,#1de0ff 100%); border:none; color:#101a31; font-weight:700; border-radius:8px; padding:6px 16px; margin:0 6px; cursor:pointer; transition:box-shadow 0.2s,transform 0.2s; }
+                            .testimonial-controls button:hover { box-shadow:0 0 0 3px #8ea2ff88,0 2px 12px #1de0ff44; transform:scale(1.08); }
+                            /* Enhanced button ripple effect */
+                            .resume-link-btn { position:relative; overflow:hidden; }
+                            .resume-link-btn:after {
+                                content: '';
+                                position: absolute;
+                                left: 50%; top: 50%;
+                                width: 0; height: 0;
+                                background: rgba(142,162,255,0.18);
+                                border-radius: 50%;
+                                transform: translate(-50%,-50%);
+                                transition: width 0.4s, height 0.4s, opacity 0.4s;
+                                opacity: 0;
+                                pointer-events: none;
+                            }
+                            .resume-link-btn:active:after {
+                                width: 180px; height: 180px;
+                                opacity: 1;
+                                transition: 0s;
+                            }
+                        </style>
+                    <div style="display:flex;gap:14px;align-items:center;justify-content:center;margin-bottom:16px;">
+                        <a href="resume.html" class="resume-link-btn" style="background:linear-gradient(90deg,#1de0ff 0%,#8ea2ff 100%);color:#101a31;font-weight:700;padding:10px 22px;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px #1de0ff22;transition:box-shadow 0.2s,transform 0.2s;display:inline-flex;align-items:center;gap:10px;">
+                            <i class="fas fa-file-download"></i> View Resume
+                        </a>
+                        <a href="resume/Nikita_Paralkar_Resume.pdf" class="resume-link-btn" style="background:linear-gradient(90deg,#8ea2ff 0%,#1de0ff 100%);color:#101a31;font-weight:700;padding:10px 22px;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px #8ea2ff22;transition:box-shadow 0.2s,transform 0.2s;display:inline-flex;align-items:center;gap:10px;" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                    <div class="about-key-accomplishments" style="display:flex;flex-wrap:wrap;gap:14px 18px;margin-top:10px;justify-content:center;">
+                        <div class="accomplishment-card" style="background:linear-gradient(120deg,#232a3a 80%,#1de0ff22 100%);border:1.5px solid #8ea2ff33;border-radius:14px;padding:18px 22px;min-width:170px;flex:1 1 170px;box-shadow:0 4px 18px #1de0ff11;display:flex;align-items:flex-start;gap:14px;transition:box-shadow 0.2s,transform 0.2s;">
+                            <i class="fas fa-award" style="font-size:1.6em;color:#8ea2ff;"></i>
+                            <div>
+                                <div style="font-weight:800;color:#b4ffe8;letter-spacing:0.01em;">Award-Winning Projects</div>
+                                <div style="color:#eaf2ff;font-size:1em;">Recognized for innovative app and platform launches in tech competitions.</div>
+                            </div>
+                        </div>
+                        <div class="accomplishment-card" style="background:linear-gradient(120deg,#232a3a 80%,#1de0ff22 100%);border:1.5px solid #8ea2ff33;border-radius:14px;padding:18px 22px;min-width:170px;flex:1 1 170px;box-shadow:0 4px 18px #1de0ff11;display:flex;align-items:flex-start;gap:14px;transition:box-shadow 0.2s,transform 0.2s;">
+                            <i class="fas fa-users" style="font-size:1.6em;color:#8ea2ff;"></i>
+                            <div>
+                                <div style="font-weight:800;color:#b4ffe8;letter-spacing:0.01em;">Team Leadership</div>
+                                <div style="color:#eaf2ff;font-size:1em;">Led agile teams to deliver high-impact features and mentor junior developers.</div>
+                            </div>
+                        </div>
+                        <div class="accomplishment-card" style="background:linear-gradient(120deg,#232a3a 80%,#1de0ff22 100%);border:1.5px solid #8ea2ff33;border-radius:14px;padding:18px 22px;min-width:170px;flex:1 1 170px;box-shadow:0 4px 18px #1de0ff11;display:flex;align-items:flex-start;gap:14px;transition:box-shadow 0.2s,transform 0.2s;">
+                            <i class="fas fa-mobile-alt" style="font-size:1.6em;color:#8ea2ff;"></i>
+                            <div>
+                                <div style="font-weight:800;color:#b4ffe8;letter-spacing:0.01em;">Mobile & Web Expertise</div>
+                                <div style="color:#eaf2ff;font-size:1em;">Full-stack and mobile solutions for startups and enterprise clients.</div>
+                            </div>
+                        </div>
+                        <div class="accomplishment-card" style="background:linear-gradient(120deg,#232a3a 80%,#1de0ff22 100%);border:1.5px solid #8ea2ff33;border-radius:14px;padding:18px 22px;min-width:170px;flex:1 1 170px;box-shadow:0 4px 18px #1de0ff11;display:flex;align-items:flex-start;gap:14px;transition:box-shadow 0.2s,transform 0.2s;">
+                            <i class="fas fa-lightbulb" style="font-size:1.6em;color:#8ea2ff;"></i>
+                            <div>
+                                <div style="font-weight:800;color:#b4ffe8;letter-spacing:0.01em;">Creative Problem Solving</div>
+                                <div style="color:#eaf2ff;font-size:1em;">Known for innovative solutions and a growth mindset in fast-paced environments.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- SKILLS SECTION -->
+
+            <section class="about-section-card" id="skills" style="margin:36px auto 24px auto;max-width:900px;background:#20263a;border-radius:18px;border:1.5px solid #1de0ff33;box-shadow:0 2px 18px #1de0ff18;padding:34px 38px 22px 38px;position:relative;overflow:hidden;">
+                <h2 style="font-size:1.7em;margin-bottom:12px;color:#1de0ff;font-weight:800;letter-spacing:0.01em;">Skills</h2>
+                <p style="color:#b6c5df;font-size:1.08em;margin-bottom:22px;text-align:left;max-width:700px;">
+        Technical expertise spanning software engineering, systems, and modern development practices.
+    </p>
+                <ul id="skills-list" style="list-style:square inside; color:#b4ffe8; font-size:1.13em; margin:0 0 0 1em; padding:0;">
+                    <li><strong>Programming Languages:</strong> JavaScript, TypeScript, Python, Java, C/C++</li>
+                    <li><strong>Web &amp; App Frameworks:</strong> React, Redux, Next.js, Node.js, Express, Vue.js, Angular</li>
+                    <li><strong>Systems &amp; Architecture:</strong> REST APIs, GraphQL, Microservices, MVC, OOP, Design Patterns</li>
+                    <li><strong>DevOps &amp; Tools:</strong> Docker, Git, GitHub Actions, CI/CD</li>
+                    <li><strong>Database Technologies:</strong> MySQL,MongoDB, SQLite</li>
+                    <li><strong>Cloud &amp; Infrastructure:</strong> AWS ( S2,S3, Lambda), Azure, Firebase, Netlify</li>
+                    <li><strong>Testing &amp; QA:</strong> Postman</li>
+                    <li><strong>Security &amp; Networking:</strong> OAuth2,HTTPS, WebSockets, TCP/IP, VPN</li>
+                    <li><strong>Agile &amp; Collaboration:</strong> Scrum, Kanban, Jira, Confluence, Code Reviews, Mentorship</li>
+                    <li><strong>Soft Skills:</strong> Technical Communication, Problem Solving, Team Leadership, Rapid Learning</li>
+                </ul>
+                <div style="position:absolute;left:0;bottom:0;width:100%;height:4px;background:linear-gradient(90deg,#8ea2ff 0%,#1de0ff 100%);opacity:0.18;"></div>
+            </section>
+<script>
+    // Animate skill list items with a fade-in and slight slide-up effect
+    document.addEventListener('DOMContentLoaded', function() {
+        const items = document.querySelectorAll('#skills-list li');
+        items.forEach((li, i) => {
+            li.style.opacity = '0';
+            li.style.transform = 'translateY(24px)';
+            li.style.transition = 'opacity 0.6s cubic-bezier(.4,1.4,.2,1), transform 0.6s cubic-bezier(.4,1.4,.2,1)';
+        });
+        function animateSkillsList() {
+            items.forEach((li, i) => {
+                setTimeout(() => {
+                    li.style.opacity = '1';
+                    li.style.transform = 'translateY(0)';
+                }, 120 * i);
+            });
+        }
+        // Animate when section is in view
+        const section = document.getElementById('skills');
+        let animated = false;
+        if ('IntersectionObserver' in window && section) {
+            const observer = new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting && !animated) {
+                    animateSkillsList();
+                    animated = true;
+                    observer.disconnect();
+                }
+            }, { threshold: 0.2 });
+            observer.observe(section);
+        } else {
+            animateSkillsList();
+        }
+    });
+</script>
+             <!-- EXPERIENCE SECTION -->
+            <section class="about-section-card" id="experience" style="margin:36px auto 24px auto;max-width:900px;background:#20263a;border-radius:18px;border:1.5px solid #1de0ff33;box-shadow:0 2px 18px #1de0ff18;padding:34px 38px 22px 38px;position:relative;overflow:hidden;">
+                <h2 style="font-size:1.7em;margin-bottom:20px;color:#1de0ff;font-weight:800;letter-spacing:0.01em;">Experience</h2>
+                <div style="margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid #8ea2ff22;">
+                    <strong style="color:#b4ffe8;font-size:1.08em;">Senior System Development Consultant</strong> - <span style="color:#8ea2ff;">Duuo By Co-operators</span> <span style="color:#b4ffe8;">(Jul 2023 to Present)</span>
+                    <ul style="margin:7px 0 0 18px;color:#dbe7ff;font-size:1.01em;">
+                        <li>Designed scalable enterprise solutions and Salesforce CRM integrations.</li>
+                        <li>Developed chatbot and analytics tools to enhance customer engagement.</li>
+                        <li>Led CI CD automation and system performance improvements.</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid #8ea2ff22;">
+                    <strong style="color:#b4ffe8;font-size:1.08em;">Support Developer</strong> - <span style="color:#8ea2ff;">Agility CMS</span> <span style="color:#b4ffe8;">(Nov 2022 to Jul 2023)</span>
+                    <ul style="margin:7px 0 0 18px;color:#dbe7ff;font-size:1.01em;">
+                        <li>Optimized and debugged code for system efficiency and stability.</li>
+                        <li>Developed API integrations and managed cloud resources AWS and Azure.</li>
+                        <li>Maintained version control and supported enterprise systems.</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid #8ea2ff22;">
+                    <strong style="color:#b4ffe8;font-size:1.08em;">Digital Engineering Senior Analyst Developer</strong> - <span style="color:#8ea2ff;">Morgan Stanley Contract</span> <span style="color:#b4ffe8;">(Jan 2022 to Nov 2022)</span>
+                    <ul style="margin:7px 0 0 18px;color:#dbe7ff;font-size:1.01em;">
+                        <li>Troubleshot and optimized full stack infrastructure and deployments.</li>
+                        <li>Automated CI CD pipelines and monitored systems with AppDynamics Grafana Splunk.</li>
+                        <li>Supported SRE and operational readiness initiatives.</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid #8ea2ff22;">
+                    <strong style="color:#b4ffe8;font-size:1.08em;">Technical Analyst Developer</strong> - <span style="color:#8ea2ff;">Risk Control Technologies Inc</span> <span style="color:#b4ffe8;">(Sep 2021 to Jan 2022)</span>
+                    <ul style="margin:7px 0 0 18px;color:#dbe7ff;font-size:1.01em;">
+                        <li>Provided Level 1 and 2 support for cloud and mobile platforms.</li>
+                        <li>Built reports dashboards and resolved technical issues.</li>
+                        <li>Researched and implemented innovative solutions.</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid #8ea2ff22;">
+                    <strong style="color:#b4ffe8;font-size:1.08em;">Software Developer System Coordinator</strong> - <span style="color:#8ea2ff;">4S Consulting</span> <span style="color:#b4ffe8;">(Mar 2021 to Sep 2021)</span>
+                    <ul style="margin:7px 0 0 18px;color:#dbe7ff;font-size:1.01em;">
+                        <li>Improved build times and led Vue.js migration from PHP.</li>
+                        <li>Collaborated on product releases and software upgrades.</li>
+                        <li>Supported full development lifecycle and QA testing.</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong style="color:#b4ffe8;font-size:1.08em;">Customer Service Analyst</strong> - <span style="color:#8ea2ff;">Scotiabank</span> <span style="color:#b4ffe8;">(Aug 2019 to Mar 2021)</span>
+                    <ul style="margin:7px 0 0 18px;color:#dbe7ff;font-size:1.01em;">
+                        <li>Developed web applications for internal testing ASP.NET Angular SQL.</li>
+                        <li>Enhanced test suites and improved system design and performance.</li>
+                        <li>Delivered high quality client service and support.</li>
+                    </ul>
+                </div>
+                <div style="position:absolute;left:0;bottom:0;width:100%;height:4px;background:linear-gradient(90deg,#8ea2ff 0%,#1de0ff 100%);opacity:0.18;"></div>
+            </section>     
+        
+            <!-- EDUCATION SECTION (Modern Interactive Cards) -->
+            <section class="about-section-card" id="education" style="margin:36px auto 24px auto;max-width:900px;background:#20263a;border-radius:18px;border:1.5px solid #1de0ff33;box-shadow:0 2px 18px #1de0ff18;padding:34px 38px 22px 38px;position:relative;overflow:hidden;">
+                <h2 style="font-size:1.7em;margin-bottom:20px;color:#1de0ff;font-weight:800;letter-spacing:0.01em;">Education</h2>
+                <div class="education-grid" style="display: flex; flex-direction: row; gap: 18px; flex-wrap: wrap; justify-content: space-between; align-items: stretch;">
+                    <!-- St. Francis Xavier Secondary School Card -->
+                    <div class="resume-column-card education-card">
+                        <div class="education-card-header">
+                            <span class="education-years"><i class="fas fa-school"></i> 2013-2015</span>
+                            <h3 style="margin:14px 0 8px;font-size:1.15rem;color:#f3f7ff;">St. Francis Xavier Secondary School</h3>
+                            <p style="margin:0;color:#b9c7e6;line-height:1.65;">Built my early foundation across programming, business, sciences, and technology-focused studies.</p>
+                        </div>
+                        <div class="education-card-body">
+                            <button type="button" class="btn edu-toggle" data-toggle="collapse" data-target="#highschool_courses_resume" aria-expanded="false" aria-controls="highschool_courses_resume">
+                                In-Class Development
+                                <i class="fas fa-chevron-circle-down" aria-hidden="true"></i>
+                            </button>
+                            <div id="highschool_courses_resume" class="collapse education-course-wrap">
+                                <ul style="margin:0; padding-left:18px; color:#dce7ff;">
+                                    <li>International Business Fundamentals</li>
+                                    <li>Introduction to Business</li>
+                                    <li>Canada: History, Identity, and Culture</li>
+                                    <li>Law: Understanding Canadian Law</li>
+                                    <li>Law: Canadian and International Law</li>
+                                    <li>Computer Programming</li>
+                                    <li>Computer Science</li>
+                                    <li>French</li>
+                                    <li>Advanced Functions</li>
+                                    <li>Calculus and Vectors</li>
+                                    <li>Data Management</li>
+                                    <li>World Religions: Beliefs, Issues, and Religious Traditions</li>
+                                    <li>Biology</li>
+                                    <li>Chemistry</li>
+                                    <li>Physics</li>
+                                    <li>Introduction to Anthropology, Psychology, and Sociology</li>
+                                    <li>Computer Engineering Technology</li>
+                                    <li>Hospitality and Tourism Technology</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Humber College Card -->
+                    <div class="resume-column-card education-card">
+                        <div class="education-card-header">
+                            <span class="education-years"><i class="fas fa-laptop-code"></i> 2015-2018</span>
+                            <h3 style="margin:14px 0 8px;font-size:1.15rem;color:#f3f7ff;">Humber College</h3>
+                            <p style="margin:0;color:#b9c7e6;line-height:1.65;">Computer Programmer studies with a strong emphasis on Java, databases, frameworks, and systems thinking.</p>
+                        </div>
+                        <div class="education-card-body">
+                            <button type="button" class="btn edu-toggle" data-toggle="collapse" data-target="#humber_courses_resume" aria-expanded="false" aria-controls="humber_courses_resume">
+                                In-Class Development
+                                <i class="fas fa-chevron-circle-down" aria-hidden="true"></i>
+                            </button>
+                            <div id="humber_courses_resume" class="collapse education-course-wrap">
+                                <ul style="margin:0; padding-left:18px; color:#dce7ff;">
+                                    <li>Critical Thinking and IT Concepts</li>
+                                    <li>Object-Oriented Programming using Java</li>
+                                    <li>Numeric Computing</li>
+                                    <li>Operating Systems</li>
+                                    <li>Web Programming and Design</li>
+                                    <li>Framework Programming</li>
+                                    <li>Relational DB Design and SQL</li>
+                                    <li>Java Application Development</li>
+                                    <li>Mobile Programming</li>
+                                    <li>Database Administration</li>
+                                    <li>XML</li>
+                                    <li>Requirements Analysis and Process Modelling (WI)</li>
+                                    <li>Open Source Programming</li>
+                                    <li>Object-Oriented Analysis and Design</li>
+                                    <li>Project Management</li>
+                                    <li>Distributed Computing using Java</li>
+                                    <li>ASP.NET</li>
+                                    <li>IT Management</li>
+                                    <li>Design Patterns and Software Testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sheridan College Card -->
+                    <div class="resume-column-card education-card">
+                        <div class="education-card-header">
+                            <span class="education-years"><i class="fas fa-mobile-alt"></i> 2018-2021</span>
+                            <h3 style="margin:14px 0 8px;font-size:1.15rem;color:#f3f7ff;">Sheridan College</h3>
+                            <p style="margin:0;color:#b9c7e6;line-height:1.65;">Mobile Computing and Computer Programming with deeper work in applications, algorithms, networking, and intelligent systems.</p>
+                        </div>
+                        <div class="education-card-body">
+                            <button type="button" class="btn edu-toggle" data-toggle="collapse" data-target="#sheridan_courses_resume" aria-expanded="false" aria-controls="sheridan_courses_resume">
+                                In-Class Development
+                                <i class="fas fa-chevron-circle-down" aria-hidden="true"></i>
+                            </button>
+                            <div id="sheridan_courses_resume" class="collapse education-course-wrap">
+                                <ul style="margin:0; padding-left:18px; color:#dce7ff;">
+                                    <li>Programming Principles</li>
+                                    <li>Operating Systems Fundamentals</li>
+                                    <li>Mathematics for Computing</li>
+                                    <li>Edge to Core: Network Foundations</li>
+                                    <li>Composition and Rhetoric</li>
+                                    <li>Mobile Computing</li>
+                                    <li>Interactive Application Development</li>
+                                    <li>Scripting and Web Languages</li>
+                                    <li>Database Modeling</li>
+                                    <li>Linear Algebra</li>
+                                    <li>Mobile Device Application Principles</li>
+                                    <li>Programming Languages</li>
+                                    <li>Introduction to Information Systems Security</li>
+                                    <li>Computer Systems Architecture</li>
+                                    <li>Wireless Network Principles</li>
+                                    <li>Mobile Web Application Development</li>
+                                    <li>Data Structures and Algorithms</li>
+                                    <li>Application Design and Implementation</li>
+                                    <li>Calculus</li>
+                                    <li>Human Computer Interaction</li>
+                                    <li>Software Engineering</li>
+                                    <li>IP Engineering</li>
+                                    <li>Cognitive Computing</li>
+                                    <li>Quality Assurance and Software Testing</li>
+                                    <li>Artificial Intelligence</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Carousel -->
+                        <section class="about-section-card" id="testimonials" style="margin:36px auto 24px auto;max-width:900px;background:#181e2b;border-radius:16px;border:1.5px solid #3249ae33;box-shadow:0 2px 16px #8ea2ff18;padding:34px 38px 22px 38px;position:relative;overflow:hidden;" data-aos="fade-up">
+    <h2 style="font-size:1.7em;margin-bottom:20px;background:linear-gradient(90deg,#8ea2ff 0%,#1de0ff 100%);-webkit-background-clip:text;background-clip:text;display:flex;align-items:center;gap:12px;">
+        <span style="background:linear-gradient(90deg,#1de0ff 60%,#8ea2ff 100%);border-radius:8px;padding:8px 12px;display:inline-flex;align-items:center;">
+            <i class="fas fa-comment-dots" style="color:#325095;"></i>
+        </span> Testimonials
+    </h2>
+    <div id="testimonial-carousel" class="testimonial-carousel">
+        <blockquote class="testimonial active">
+            <div style="margin-top:10px;">
+                "Nikita is a creative problem solver and a joy to work with. Her attention to detail and passion for user experience are unmatched."
+            </div>
+            <div style="margin-top:8px;color:#8ea2ff;font-size:0.98em;">
+                — Engineering Manager, Duuo
+            </div>
+        </blockquote>
+        <blockquote class="testimonial">
+            <div style="margin-top:10px;">
+                "A fast learner who always brings positive energy to the team. Highly recommended!"
+            </div>
+            <div style="margin-top:8px;color:#8ea2ff;font-size:0.98em;">
+                — Full Stack Developer, Agility CMS
+            </div>
+        </blockquote>
+        <blockquote class="testimonial">
+            <div style="margin-top:10px;">
+                "Her technical depth and leadership made a huge impact on our project success."
+            </div>
+            <div style="margin-top:8px;color:#8ea2ff;font-size:0.98em;">
+                — Project Lead, Morgan Stanley
+            </div>
+        </blockquote>
+    </div>
+    <div class="testimonial-controls" style="text-align:center;margin-top:12px;">
+        <button class="testimonial-prev" aria-label="Previous testimonial">&#8592;</button>
+        <button class="testimonial-next" aria-label="Next testimonial">&#8594;</button>
+    </div>
+    <div style="margin-top:18px;text-align:center;">
+        <span style="color:#b6c5df;font-size:0.98em;">
+            <i class="fas fa-check-circle" style="color:#1de0ff;"></i>
+            All testimonials are from verified colleagues and managers.
+        </span>
+    </div>
+    <div style="position:absolute;left:0;bottom:0;width:100%;height:4px;background:linear-gradient(90deg,#8ea2ff 0%,#1de0ff 100%);opacity:0.18;"></div>
+</section>
+
+            </div>
+            </section>
+
+                <!-- Recruiter Snapshot Card -->
+            <div class="recruiter-snapshot-card" style="margin: 32px auto 24px auto; max-width: 540px; background: #181e2b; border-radius: 14px; border: 1.5px solid #8ea2ff44; box-shadow: 0 2px 12px #1de0ff11; padding: 22px 24px 18px 24px; color: #eaf2ff; position: relative; z-index: 3; cursor:pointer;" data-aos="zoom-in">
+                <div style="display: flex; align-items: flex-start; gap: 16px;">
+                    <span
+                        style="background:#8ea2ff22;color:#8ea2ff;font-weight:700;padding:5px 14px 5px 12px;border-radius:8px;font-size:0.98em;letter-spacing:0.03em;">Recruiter
+                        Snapshot</span>
+                    <div>
+                        <strong style="font-size:1.13em;letter-spacing:0.01em;">Open to Software & IT Roles</strong>
+                        <p style="margin:7px 0 0 0;font-size:1.01em;color:#dbe7ff;">Strong ownership, fast learning,
+                            bilingual (EN/FR), and practical delivery experience across web, mobile, and database-backed
+                            apps.</p>
+                    </div>
+                </div>
+                <ul style="margin:14px 0 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px 18px;">
+                    <li style="color:#8ea2ff;font-size:0.98em;"><i class="fas fa-bolt"></i> Fast Learner</li>
+                    <li style="color:#79c8ff;font-size:0.98em;"><i class="fas fa-users"></i> Team Player</li>
+                    <li style="color:#a5b4fc;font-size:0.98em;"><i class="fas fa-code"></i> Problem Solver</li>
+                    <li style="color:#1de0ff;font-size:0.98em;"><i class="fas fa-language"></i> Bilingual (EN/FR)</li>
+                    <li style="color:#8ea2ff;font-size:0.98em;"><i class="fas fa-rocket"></i> Results Driven</li>
+                </ul>
+                <div style="margin-top:14px;text-align:center;">
+                    <a href="mailto:paralkarnikita@gmail.com"
+                        style="display:inline-block;background:#8ea2ff22;color:#8ea2ff;font-weight:700;border:none;border-radius:12px;padding:10px 26px;box-shadow:0 1px 6px #8ea2ff11;cursor:pointer;text-decoration:none;font-size:1em;transition:background 0.2s,box-shadow 0.2s;">Connect
+                        with Me</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="site-footer">
+
+            <div class="container">
+                <div class="social site-footer-links">
+                    <a href="https://www.linkedin.com/in/nikitaparalkar/"><i
+                            class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                    <a href="https://github.com/paralkarniki?tab=repositories"><i
+                            class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="mailto:paralkarnikita@gmail.com"><i
+                            class="fas fa-envelope"></i><span>paralkarnikita@gmail.com</span></a>
+                </div>
+
+            </div>
+
+            <div class="social site-footer-meta">
+
+                <p>Copyright © 2026, All rights Reserved. <br />
+                    Created by Nikita Paralkar</p>
+            </div>
+        </footer>
+    <!-- Animate On Scroll JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- Particles.js for background effect -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+                // Floating profile image parallax
+                document.addEventListener('mousemove', function(e) {
+                    var img = document.querySelector('.about-profile-img-float');
+                    if (!img) return;
+                    var rect = img.getBoundingClientRect();
+                    var cx = rect.left + rect.width/2;
+                    var cy = rect.top + rect.height/2;
+                    var dx = (e.clientX - cx)/rect.width;
+                    var dy = (e.clientY - cy)/rect.height;
+                    img.style.transform = `rotateY(${dx*12}deg) rotateX(${-dy*12}deg)`;
+                });
+                document.querySelector('.profile-img-float-wrap')?.addEventListener('mouseleave', function() {
+                    var img = document.querySelector('.about-profile-img-float');
+                    if (img) img.style.transform = '';
+                });
+
+                // Animated counters
+                function animateCounters() {
+                    document.querySelectorAll('.counter-number').forEach(function(el) {
+                        var target = +el.getAttribute('data-count');
+                        var count = 0;
+                        var step = Math.max(1, Math.ceil(target/40));
+                        function update() {
+                            count += step;
+                            if (count > target) count = target;
+                            el.textContent = count;
+                            if (count < target) requestAnimationFrame(update);
+                        }
+                        update();
+                    });
+                }
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Animate counters when in view
+                    const counters = document.querySelector('.about-counters');
+                    if ('IntersectionObserver' in window && counters) {
+                        const observer = new IntersectionObserver(function(entries) {
+                            if (entries[0].isIntersecting) {
+                                animateCounters();
+                                observer.disconnect();
+                            }
+                        }, { threshold: 0.3 });
+                        observer.observe(counters);
+                    } else {
+                        animateCounters();
+                    }
+                });
+
+                // Testimonials carousel
+                document.addEventListener('DOMContentLoaded', function() {
+                    var idx = 0;
+                    var testimonials = document.querySelectorAll('.testimonial');
+                    function showTestimonial(i) {
+                        testimonials.forEach(t => t.classList.remove('active'));
+                        testimonials[i].classList.add('active');
+                    }
+                    document.querySelector('.testimonial-prev').onclick = function() {
+                        idx = (idx - 1 + testimonials.length) % testimonials.length;
+                        showTestimonial(idx);
+                    };
+                    document.querySelector('.testimonial-next').onclick = function() {
+                        idx = (idx + 1) % testimonials.length;
+                        showTestimonial(idx);
+                    };
+                    showTestimonial(idx);
+                });
+
+                // Particle background
+                document.addEventListener('DOMContentLoaded', function() {
+                    if (window.particlesJS) {
+                        particlesJS('particles-js', {
+                            particles: {
+                                number: { value: 38, density: { enable: true, value_area: 800 } },
+                                color: { value: ['#8ea2ff','#79c8ff','#a5b4fc','#1de0ff'] },
+                                shape: { type: 'circle' },
+                                opacity: { value: 0.18, random: true },
+                                size: { value: 6, random: true },
+                                line_linked: { enable: true, distance: 120, color: '#8ea2ff', opacity: 0.13, width: 1 },
+                                move: { enable: true, speed: 1.2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+                            },
+                            interactivity: {
+                                detect_on: 'canvas',
+                                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                                modes: { repulse: { distance: 80, duration: 0.4 }, push: { particles_nb: 4 } }
+                            },
+                            retina_detect: true
+                        });
+                    }
+                });
+        // Typing animation for headline
+        const typingHeadline = "Nikita Paralkar";
+        let typingIndex = 0;
+        function typeHeadline() {
+            const el = document.getElementById('typing-headline');
+            if (!el) return;
+            if (typingIndex <= typingHeadline.length) {
+                el.textContent = typingHeadline.slice(0, typingIndex);
+                typingIndex++;
+                setTimeout(typeHeadline, 90);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', typeHeadline);
+
+        // Prevent skill bar flickering by setting initial width in CSS and only animating on first view
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial width to 0% with no transition
+            document.querySelectorAll('.skill-bar-fill').forEach(function(bar) {
+                bar.style.transition = 'none';
+                bar.style.width = '0%';
+            });
+
+            // Restore transition after a short delay (so initial paint is 0%)
+            setTimeout(function() {
+                document.querySelectorAll('.skill-bar-fill').forEach(function(bar) {
+                    bar.style.transition = 'width 1.6s cubic-bezier(.4,1.4,.2,1)';
+                });
+            }, 50);
+
+            const skillsSection = document.getElementById('skills');
+            let skillBarsAnimated = false;
+
+            function animateSkillBars() {
+                if (skillBarsAnimated) return;
+                document.querySelectorAll('.skill-bar-fill').forEach(function(bar) {
+                    bar.style.width = bar.getAttribute('data-width');
+                });
+                skillBarsAnimated = true;
+            }
+
+            // Only animate once, never reset to 0%
+            if ('IntersectionObserver' in window && skillsSection) {
+                const observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting && !skillBarsAnimated) {
+                        animateSkillBars();
+                        observer.disconnect();
+                    }
+                }, { threshold: 0.3 });
+                observer.observe(skillsSection);
+            } else {
+                animateSkillBars();
+            }
+        });
+
+        // Animate On Scroll (AOS) initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.AOS) {
+                AOS.init({
+                    duration: 900,
+                    once: true,
+                    offset: 60
+                });
+            } else {
+                // Fallback: add aos-animate class manually
+                document.querySelectorAll('[data-aos]').forEach(function(el) {
+                    el.classList.add('aos-animate');
+                });
+            }
+        });
+
+        // Interactive effect for recruiter snapshot card
+        document.addEventListener('DOMContentLoaded', function() {
+            var card = document.querySelector('.recruiter-snapshot-card');
+            if (card) {
+                card.addEventListener('mousemove', function(e) {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.boxShadow = `0 2px 12px #1de0ff11, 0 0 32px 0px #8ea2ff44, ${((x/rect.width-0.5)*16).toFixed(1)}px ${((y/rect.height-0.5)*16).toFixed(1)}px 32px #1de0ff22`;
+                });
+                card.addEventListener('mouseleave', function() {
+                    card.style.boxShadow = '0 2px 12px #1de0ff11';
+                });
+            }
+        });
+    </script>
+
+<!-- Place this script at the end of the file, just before </body> -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    // Ensure only one education dropdown is open at a time (Bootstrap 3/4 compatible)
+    $(function () {
+        $('.edu-toggle').on('click', function (e) {
+            var target = $(this).data('target');
+            // Close all other dropdowns except the one being toggled
+            $('.education-course-wrap').not(target).collapse('hide');
+            // Let Bootstrap handle the toggle for the clicked one
+        });
+    });
+</script>
+    <!-- Add Back to Homepage link -->
+    <a class="resume-back-link" href="index.html#home">
+        <i class="fas fa-arrow-left"></i>
+        Back to Homepage
+    </a>
+</body>
+</html>

@@ -1,3 +1,58 @@
+// Back swipe gesture — swipe right from left edge to go back
+(function () {
+    var touchStartX = 0;
+    var touchStartY = 0;
+    var touchStartTarget = null;
+
+    document.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+        touchStartTarget = e.target;
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+        var deltaX = e.changedTouches[0].screenX - touchStartX;
+        var deltaY = Math.abs(e.changedTouches[0].screenY - touchStartY);
+
+        // Start within 40px of left edge, swipe right ≥80px, mostly horizontal
+        if (touchStartX < 40 && deltaX > 80 && deltaY < Math.abs(deltaX) * 0.6) {
+            // Skip if the swipe started inside a carousel or project section
+            if (!touchStartTarget.closest('.carousel') && !touchStartTarget.closest('.project-open-card')) {
+                history.back();
+            }
+        }
+    }, { passive: true });
+})();
+
+// Parallax effect for floating shapes
+window.addEventListener('scroll', function() {
+    const scrollY = window.scrollY;
+    document.querySelectorAll('.floating-shape').forEach((el, i) => {
+        const speed = 0.12 + i * 0.07;
+        el.style.transform = `translateY(${scrollY * speed}px)`;
+    });
+});
+
+// Animate hero tags on load
+document.addEventListener('DOMContentLoaded', function() {
+    const tags = document.querySelectorAll('.hero-tag');
+    if (tags[0]) tags[0].classList.add('animated');
+    if (tags[1]) setTimeout(() => tags[1].classList.add('animated', 'delay'), 300);
+});
+// Animate on scroll for modern interactive effect
+document.addEventListener('DOMContentLoaded', function() {
+    const animatedEls = document.querySelectorAll('.animate-on-scroll');
+    function animateOnScroll() {
+        animatedEls.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 80) {
+                el.classList.add('visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll();
+});
 'use strict'; 
 $(window).load( function() {	
     
@@ -14,38 +69,10 @@ $(window).load( function() {
 	});
         
 //PRELOADER
-        /** Loader */
-    var loader = $(".loader");
-    var wHeight = $(window).height();
-    var wWidth = $(window).width();
-    var o = 0;
-
-    loader.css({
-        top: wHeight / 2 - 2.5,
-        left: wWidth / 2 - 200
-    })
-
-    do {
-        loader.animate({
-            width: o
-        }, 10)
-        o += 3;
-    } while (o <= 400)
-    if (o === 402) {
-        loader.animate({
-            left: 0,
-            width: '100%'
-        })
-        loader.animate({
-            top: '0',
-            height: '100vh'
-        })
-    }
-
     setTimeout(function() {
-        $(".loader-wrapper").fadeOut('fast');
-        (loader).fadeOut('fast');
-    }, 3500);
+        $("body").addClass("is-loaded");
+        $(".loader-wrapper").fadeOut(450);
+    }, 900);
 
     
 
@@ -87,6 +114,11 @@ $(document).ready( function() {
     //SMOOTH SCROLL
     $(document).on("scroll", onScroll);
     $('a[href^="#"]').on('click', function (e) {
+        var target = $(this.hash);
+        if (!this.hash || !target.length) {
+            return;
+        }
+
         e.preventDefault();
         $(document).off("scroll");
         
@@ -99,9 +131,6 @@ $(document).ready( function() {
             
         $(this).addClass('active');
       
-        var target = this.hash,
-        menu = target;
-        target = $(target);
         $('html, body').stop().animate({
             'scrollTop': target.offset().top+2
         }, 500, 'swing', function () {
@@ -132,14 +161,21 @@ $(document).ready( function() {
     
     
     //NAVBAR SHOW - HIDE
-    $(window).scroll(function() {				
-    var scroll = $(window).scrollTop();
-    var homeheight = $(".home").height() -86;			
+    $(window).scroll(function() {
+        var legacyNav = $("nav").not(".modern-navbar");
+        var homeSection = $(".home");
 
-    if (scroll > homeheight ) {												
-        $("nav").slideDown(100);
+        if (!legacyNav.length || !homeSection.length) {
+            return;
+        }
+
+        var scroll = $(window).scrollTop();
+        var homeheight = homeSection.height() - 86;
+
+        if (scroll > homeheight) {
+            legacyNav.slideDown(100);
         } else {
-        $("nav").slideUp(100);
+            legacyNav.slideUp(100);
         }
      }); 
     

@@ -1,28 +1,1133 @@
+<style>
+    /* SOCIAL MEDIA INSPIRED BACKGROUND */
+    body {
+        background: linear-gradient(135deg, #e0e7ef 0%, #f5f7fa 60%, #dbeafe 100%) !important;
+        background-attachment: fixed;
+        min-height: 100vh;
+        font-family: 'Segoe UI', 'Fira Mono', 'Share Tech Mono', Arial, sans-serif;
+    }
+    /* Subtle dot pattern overlay for depth */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.13;
+        background-image: radial-gradient(circle, #b6c6e6 1.2px, transparent 1.2px), radial-gradient(circle, #c7d2fe 1.2px, transparent 1.2px);
+        background-size: 32px 32px, 64px 64px;
+        background-position: 0 0, 16px 16px;
+    }
+    /* ===============================
+    GLOBAL THEME: ENGINEERING STYLE
+    =============================== */
+    .engineering-section {
+        background: linear-gradient(120deg, #23243a 0%, #2d3250 60%, #1e293b 100%) !important;
+        color: #eaf6fb !important;
+        font-family: 'Fira Mono', 'Share Tech Mono', 'Consolas', monospace;
+        position: relative;
+        z-index: 1;
+        border-radius: 24px;
+        box-shadow: 0 2px 32px #1e293b88, 0 1.5px 0 #00e6ff;
+        padding: 18px 0 18px 0 !important;
+        margin-bottom: 18px !important;
+        overflow: hidden;
+    }
+
+    .engineering-section .container,
+    .engineering-section .row,
+    .engineering-section .about-card,
+    .engineering-section .about-text,
+    .engineering-section .section-title,
+    .engineering-section .project-grid,
+    .engineering-section .contact-row {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        gap: 12px !important;
+    }
+
+    .engineering-section ul,
+    .engineering-section ol {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-left: 18px !important;
+    }
+
+    .engineering-section .about-counters,
+    .engineering-section .bar.flex,
+    .engineering-section .counter-block,
+    .engineering-section .project-card {
+        margin: 8px 0 !important;
+        padding: 0 !important;
+    }
+
+    .engineering-section .section-title {
+        margin-bottom: 8px !important;
+        margin-top: 0 !important;
+    }
+
+    .engineering-section .project-grid {
+        gap: 16px !important;
+    }
+
+    .engineering-section .about-highlight-quote {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 8px 12px !important;
+    }
+
+    .engineering-section .counter-label {
+        margin-bottom: 0 !important;
+    }
+
+    .engineering-section .contact-info,
+    .engineering-section .contact-form,
+    .engineering-section .contact-form-col {
+        margin: 0 !important;
+        padding: 10px 0 !important;
+    }
+
+    .engineering-section::before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border-radius: 28px;
+        pointer-events: none;
+        z-index: 0;
+        border: 2.5px solid #00e6ff;
+        box-shadow: 0 0 24px 4px #00e6ff55, 0 0 0 8px #23243a;
+        /* Removed SVG code/text background for cleaner look */
+        background: none;
+        animation: none;
+    }
+
+    @keyframes borderGlow {
+        0% {
+            box-shadow: 0 0 24px 4px #00e6ff55, 0 0 0 8px #23243a;
+        }
+
+        100% {
+            box-shadow: 0 0 48px 12px #00e6ffcc, 0 0 0 12px #23243a;
+        }
+    }
+
+    .engineering-section h2,
+    .engineering-section h3,
+    .engineering-section h1 {
+        color: #00e6ff !important;
+        font-family: 'Fira Mono', 'Share Tech Mono', 'Consolas', monospace;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+        text-shadow: 0 2px 12px #00e6ff33;
+        position: relative;
+    }
+
+    .engineering-section .section-title h2 {
+        color: #00e6ff !important;
+        text-shadow: 0 2px 12px #00e6ff55;
+        position: relative;
+    }
+
+    .engineering-section .section-title h2::before {
+        content: '<h2>';
+        color: #00e6ff99;
+        font-size: 0.7em;
+        margin-right: 8px;
+        font-family: 'Fira Mono', monospace;
+        opacity: 0.7;
+    }
+
+    .engineering-section .section-title h2::after {
+        content: '</h2>';
+        color: #00e6ff99;
+        font-size: 0.7em;
+        margin-left: 8px;
+        font-family: 'Fira Mono', monospace;
+        opacity: 0.7;
+    }
+
+    .engineering-section a,
+    .engineering-section .btn,
+    .engineering-section .project-link {
+        color: #00e6ff !important;
+        border-color: #00e6ff !important;
+        background: #23243a !important;
+        border-radius: 7px;
+        font-weight: 500;
+        transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px #00e6ff22;
+    }
+
+    .engineering-section a:hover,
+    .engineering-section .btn:hover,
+    .engineering-section .project-link:hover {
+        background: linear-gradient(90deg, #00e6ff 0%, #00bcd4 100%) !important;
+        color: #23243a !important;
+        border-color: #00bcd4 !important;
+        box-shadow: 0 4px 16px #00e6ff55;
+    }
+
+    .engineering-section .about-bar,
+    .engineering-section .bar.fill {
+        background: linear-gradient(90deg, #00e6ff 0%, #00bcd4 100%) !important;
+        box-shadow: 0 2px 8px #00e6ff33;
+    }
+
+    .engineering-section .counter-number {
+        color: #00e6ff !important;
+        text-shadow: 0 2px 8px #00e6ff55;
+    }
+
+    .engineering-section .counter-label {
+        color: #b3c6e0 !important;
+    }
+
+    .engineering-section .about-highlight-quote {
+        background: #23243a !important;
+        color: #00e6ff !important;
+        border: 1.5px solid #00e6ff;
+        font-style: italic;
+        box-shadow: 0 2px 8px #00e6ff22;
+    }
+
+    .engineering-section .project-card {
+        background: linear-gradient(120deg, #23243a 0%, #2d3250 100%) !important;
+        border: 1.5px solid #00e6ff !important;
+        box-shadow: 0 2px 16px #00e6ff33;
+        transition: transform 0.2s, box-shadow 0.2s;
+        position: relative;
+    }
+
+    .engineering-section .project-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 8px 32px #00e6ff77;
+    }
+
+    .engineering-section .resume-iframe {
+        border: 2px solid #00e6ff !important;
+        background: #23243a !important;
+        box-shadow: 0 2px 12px #00e6ff33;
+    }
+
+    .engineering-section .contact-info,
+    .engineering-section .contact-form,
+    .engineering-section .contact-form-col {
+        background: #23243a !important;
+        border: 1.5px solid #00e6ff !important;
+        color: #eaf6fb !important;
+        box-shadow: 0 2px 8px #00e6ff22;
+    }
+
+    /* Animated code cursor for section titles */
+    .engineering-section .section-title h2::after {
+        animation: devCursorBlink 1.1s steps(1) infinite;
+        content: '</h2>|';
+    }
+
+    @keyframes devCursorBlink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.2;
+        }
+    }
+
+    /* Subtle code/terminal grid motif for section backgrounds */
+    .engineering-section {
+        /* Removed SVG/text background and kept only subtle grid motif */
+        background-image: repeating-linear-gradient(0deg, transparent, transparent 31px, #2d3250 32px, #2d3250 33px),
+            repeating-linear-gradient(90deg, transparent, transparent 31px, #2d3250 32px, #2d3250 33px);
+    }
+
+    /* Engineering Themed Header */
+    header {
+        position: relative;
+        z-index: 20;
+    }
+
+    .modern-navbar {
+        position: sticky;
+        top: 0;
+        margin: 14px auto;
+        width: min(1180px, 96%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 12px 18px;
+        border-radius: 14px;
+        border: 2px solid #00e6ffcc;
+        background: linear-gradient(120deg, #0f172a 0%, #111827 55%, #0b1220 100%);
+        box-shadow: 0 0 18px #00e6ff55, 0 4px 32px #00e6ff22, inset 0 0 0 1px #00e6ff33;
+        backdrop-filter: none;
+        font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+    }
+
+    .modern-navbar::after {
+        content: '';
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: -2px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #00e6ff, transparent);
+        animation: none;
+        opacity: 0.85;
+    }
+
+    .electric-bg {
+        display: none;
+    }
+
+    @keyframes navPulse {
+        0% {
+            opacity: 0.45;
+            transform: scaleX(0.85);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        100% {
+            opacity: 0.45;
+            transform: scaleX(0.85);
+        }
+    }
+
+    .header-logo-img {
+        height: 44px;
+        width: auto;
+        margin-right: 12px;
+        background: #0b1220;
+        border-radius: 18px;
+        padding: 6px;
+        border: 1px solid #00e6ff99;
+        box-shadow: 0 0 14px #00e6ff66;
+    }
+
+    .modern-navbar .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .modern-navbar .nav-menu a {
+        color: #d7efff;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        padding: 8px 12px;
+        white-space: nowrap;
+        transition: color 0.14s ease, background-color 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+        will-change: transform;
+    }
+
+    .modern-navbar .nav-menu a::before {
+        content: '';
+    }
+
+    .modern-navbar .nav-menu a::after {
+        content: '';
+        display: block;
+        height: 2px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #00e6ff, #00e676);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.22s ease;
+        margin-top: 2px;
+    }
+
+    .modern-navbar .nav-menu a:hover::after,
+    .modern-navbar .nav-menu a:focus::after {
+        transform: scaleX(1);
+    }
+
+    .modern-navbar .nav-menu a:hover,
+    .modern-navbar .nav-menu a:focus {
+        color: #00e6ff;
+        border-color: transparent;
+        background: #00e6ff12;
+        transform: translateY(-1px);
+    }
+
+    .modern-navbar .social {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .modern-navbar .social a {
+        color: #00e6ff;
+        width: 34px;
+        height: 34px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid #00e6ff77;
+        background: #0b1220;
+        box-shadow: 0 0 6px #00e6ff26;
+        transition: transform 0.14s ease, color 0.14s ease, background-color 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
+        will-change: transform;
+    }
+
+    .modern-navbar .social a:hover {
+        transform: translateY(-2px);
+        color: #0b1220;
+        background: #00e6ff;
+        box-shadow: 0 0 10px #00e6ff70;
+    }
+
+    @media (max-width: 860px) {
+        .modern-navbar {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .modern-navbar .nav-menu {
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    /* ===============================
+   HOME SECTION: ENGINEERING UPGRADE
+   =============================== */
+    .engineering-home {
+        padding-top: 8px !important;
+        background:
+            radial-gradient(circle at 12% 18%, #00e6ff1c 0%, transparent 35%),
+            radial-gradient(circle at 86% 78%, #00e6761c 0%, transparent 34%),
+            linear-gradient(135deg, #07101f 0%, #0a1428 50%, #0a1122 100%);
+    }
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #050b1a !important;
+    }
+
+    /* Engineering page loader */
+    .loader-wrapper {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:
+            radial-gradient(circle at 20% 20%, #00e6ff14, transparent 45%),
+            radial-gradient(circle at 80% 80%, #00e67612, transparent 45%),
+            linear-gradient(135deg, #050b1a 0%, #081428 50%, #050e1f 100%);
+    }
+
+    .loader-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+            repeating-linear-gradient(0deg, transparent, transparent 30px, #00e6ff10 31px, #00e6ff10 32px),
+            repeating-linear-gradient(90deg, transparent, transparent 30px, #00e6ff10 31px, #00e6ff10 32px);
+    }
+
+    .loader {
+        width: 170px;
+        height: 170px;
+        border-radius: 18px;
+        border: 1px solid #00e6ff66;
+        box-shadow: inset 0 0 0 1px #00e6ff2b, 0 0 24px #00e6ff33;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #08142ad1;
+        position: relative;
+    }
+
+    .loader::before,
+    .loader::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid transparent;
+    }
+
+    .loader::before {
+        width: 88px;
+        height: 88px;
+        border-top-color: #00e6ff;
+        border-right-color: #00e6ff;
+        animation: engSpin 1s linear infinite;
+    }
+
+    .loader::after {
+        width: 58px;
+        height: 58px;
+        border-bottom-color: #00e676;
+        border-left-color: #00e676;
+        animation: engSpinReverse 0.8s linear infinite;
+    }
+
+    .loader-core {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #00e6ff;
+        box-shadow: 0 0 16px #00e6ff, 0 0 28px #00e6ff88;
+    }
+
+    .loader-text {
+        position: absolute;
+        margin-top: 228px;
+        color: #bdefff;
+        font-family: 'Fira Mono', monospace;
+        font-size: 0.84rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    @keyframes engSpin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes engSpinReverse {
+        to {
+            transform: rotate(-360deg);
+        }
+    }
+
+    section#home.engineering-home {
+        margin: 14px auto 20px !important;
+        padding: 0 10px 14px !important;
+        max-width: min(1180px, 96%) !important;
+        border: 2px solid #00e6ffcc !important;
+        border-radius: 14px !important;
+        box-shadow: 0 0 18px #00e6ff55, 0 4px 32px #00e6ff22, inset 0 0 0 1px #00e6ff33 !important;
+        background:
+            radial-gradient(circle at 8% 20%, #00e6ff0d 0%, transparent 35%),
+            radial-gradient(circle at 92% 75%, #00e6760c 0%, transparent 35%),
+            linear-gradient(120deg, #0f172a 0%, #111827 55%, #0b1220 100%) !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    section#home.engineering-home::before {
+        display: none !important;
+    }
+
+    .engineering-home .hero-split-bg {
+        background:
+            radial-gradient(circle, #00e6ff16 1px, transparent 1px) 0 0 / 32px 32px,
+            radial-gradient(circle at 15% 50%, #00e6ff0a 0%, transparent 40%),
+            radial-gradient(circle at 85% 50%, #00e6760a 0%, transparent 40%),
+            linear-gradient(135deg, #06101e 0%, #0a1428 55%, #070f1c 100%) !important;
+        min-height: auto !important;
+        margin-top: 10px !important;
+        border: 1.5px solid #00e6ff55 !important;
+        border-radius: 16px;
+        box-shadow: inset 0 0 0 1px #00e6ff14, 0 0 44px #00e6ff1a, 0 16px 52px #001a2c55;
+        padding: 10px 10px 18px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .engineering-home .hero-split-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1.5px;
+        background: linear-gradient(90deg, transparent 0%, #00e6ff55 20%, #00e6ffdd 50%, #00e6ff55 80%, transparent 100%);
+        animation: heroScan 9s linear infinite;
+        z-index: 4;
+        pointer-events: none;
+    }
+
+    @keyframes heroScan {
+        0% {
+            top: 0;
+            opacity: 0.9;
+        }
+
+        80% {
+            opacity: 0.5;
+        }
+
+        100% {
+            top: 100%;
+            opacity: 0;
+        }
+    }
+
+    .engineering-home .diagonal.home-left,
+    .engineering-home .diagonal.home-right {
+        display: none !important;
+    }
+
+    .engineering-home::after {
+        content: '';
+        display: block;
+        height: 2px;
+        margin: 6px 10px 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, transparent, #00e6ffb3, transparent);
+    }
+
+    .engineering-home .hero-split-content {
+        display: grid !important;
+        grid-template-columns: minmax(300px, 1fr) minmax(260px, 320px) minmax(300px, 1fr);
+        align-items: center !important;
+        gap: 24px !important;
+        min-height: 0 !important;
+        height: auto !important;
+        margin-top: 0 !important;
+        padding: 10px 14px 4px !important;
+    }
+
+    .engineering-home .scroll-indicator {
+        bottom: 8px !important;
+    }
+
+    .engineering-home .hero-side {
+        display: flex;
+        justify-content: center;
+    }
+
+    .engineering-home .hero-side.left,
+    .engineering-home .hero-side.right {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .engineering-home .hero-side.right {
+        justify-content: flex-start;
+    }
+
+    .engineering-home .hero-side.left>div {
+        width: min(100%, 560px);
+    }
+
+    .hero-side-polished {
+        background: linear-gradient(140deg, #0a1828f0 0%, #0f2040f0 100%);
+        border: 1px solid #00e6ff3a;
+        border-radius: 16px;
+        padding: 20px 18px;
+        box-shadow: inset 0 0 40px #00e6ff07, 0 2px 28px #00040c55;
+        backdrop-filter: blur(6px);
+    }
+
+    .hero-title.amazing-glow {
+        background: linear-gradient(95deg, #00e6ff 0%, #4dffc3 55%, #00e676 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent !important;
+        text-shadow: none !important;
+        animation: none !important;
+        font-weight: 800;
+        font-size: 1.82em !important;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin: 4px 0 10px;
+        line-height: 1.08;
+    }
+
+    /* ── Availability badge ── */
+    .hero-availability {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: rgba(0, 230, 118, 0.09);
+        border: 1px solid rgba(0, 230, 118, 0.45);
+        border-radius: 999px;
+        padding: 4px 14px 4px 10px;
+        font-family: 'Fira Mono', monospace;
+        font-size: 0.78rem;
+        color: #b4ffdc;
+        letter-spacing: 0.06em;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .hero-avail-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #00e676;
+        box-shadow: 0 0 6px #00e676;
+        flex-shrink: 0;
+        animation: availPulse 1.8s ease-in-out infinite alternate;
+    }
+
+    @keyframes availPulse {
+        0% {
+            box-shadow: 0 0 4px #00e676;
+            transform: scale(1);
+        }
+
+        100% {
+            box-shadow: 0 0 14px #00e676aa, 0 0 22px #00e67644;
+            transform: scale(1.3);
+        }
+    }
+
+    /* ── Pulsing rings around hero image ── */
+    .hero-img-ring-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .hero-img-ring {
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: ringExpand 3.2s ease-out infinite;
+        border: 1.5px solid #00e6ff;
+    }
+
+    .hero-img-ring:nth-child(1) {
+        width: 190px;
+        height: 190px;
+        animation-delay: 0s;
+    }
+
+    .hero-img-ring:nth-child(2) {
+        width: 190px;
+        height: 190px;
+        animation-delay: 1.07s;
+    }
+
+    .hero-img-ring:nth-child(3) {
+        width: 190px;
+        height: 190px;
+        animation-delay: 2.14s;
+    }
+
+    @keyframes ringExpand {
+        0% {
+            width: 190px;
+            height: 190px;
+            opacity: 0.8;
+            border-color: #00e6ffcc;
+        }
+
+        100% {
+            width: 340px;
+            height: 340px;
+            opacity: 0;
+            border-color: #00e6ff0d;
+        }
+    }
+
+    /* ── Corner bracket decorations ── */
+    .hero-corner-wrap {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 5;
+    }
+
+    .hero-corner {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero-corner-tl {
+        top: 8px;
+        left: 8px;
+        border-top: 2px solid #00e6ffaa;
+        border-left: 2px solid #00e6ffaa;
+        border-radius: 3px 0 0 0;
+    }
+
+    .hero-corner-tr {
+        top: 8px;
+        right: 8px;
+        border-top: 2px solid #00e6ffaa;
+        border-right: 2px solid #00e6ffaa;
+        border-radius: 0 3px 0 0;
+    }
+
+    .hero-corner-bl {
+        bottom: 8px;
+        left: 8px;
+        border-bottom: 2px solid #00e6ffaa;
+        border-left: 2px solid #00e6ffaa;
+        border-radius: 0 0 0 3px;
+    }
+
+    .hero-corner-br {
+        bottom: 8px;
+        right: 8px;
+        border-bottom: 2px solid #00e6ffaa;
+        border-right: 2px solid #00e6ffaa;
+        border-radius: 0 0 3px 0;
+    }
+
+    .engineering-home .hero-desc,
+    .engineering-home .hero-desc-polished {
+        color: #e8f7ff !important;
+        line-height: 1.72;
+        font-size: 1.02rem;
+        text-shadow: none;
+    }
+
+    .engineering-home .hero-title,
+    .engineering-home .hero-tag,
+    .engineering-home .hero-title-animated,
+    .engineering-home .element {
+        color: #a9ecff !important;
+        text-shadow: 0 0 10px #00e6ff4d;
+    }
+
+    .engineering-home .hero-title-animated {
+        margin-bottom: 12px;
+        min-height: 0;
+    }
+
+    .engineering-home .hero-desc {
+        margin-top: 8px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid #00e6ff2e;
+        background: #071522d9;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .eng-command-line {
+        margin: 10px 0 8px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background: #061223;
+        border: 1px solid #00e6ff52;
+        color: #baf3ff;
+        font-size: 0.92rem;
+        font-family: 'Fira Mono', monospace;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .engineering-home .hero-cta-wrap {
+        justify-content: flex-start;
+    }
+
+    .eng-chip-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+
+    .eng-chip {
+        padding: 6px 11px;
+        border-radius: 999px;
+        border: 1px solid #00e6ff59;
+        background: #00e6ff1d;
+        color: #e0f9ff;
+        font-size: 0.84rem;
+        font-family: 'Fira Mono', monospace;
+    }
+
+    .hero-tech-panel {
+        margin-top: 14px;
+        border: 1px solid #00e67659;
+        border-radius: 12px;
+        padding: 10px 12px;
+        background: #071723f0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-tech-panel h5 {
+        margin: 0 0 8px;
+        color: #b4ffe8;
+        font-family: 'Fira Mono', monospace;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+    }
+
+    .hero-tech-panel ul {
+        margin: 0;
+        padding-left: 16px;
+        color: #edf9ff;
+        font-size: 0.95rem;
+    }
+
+    .hero-tech-panel li {
+        margin-bottom: 4px;
+    }
+
+    .engineering-home .hero-img-wrap {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 220px !important;
+        margin: 0 !important;
+    }
+
+    .engineering-home .hero-img-main {
+        width: 172px !important;
+        height: 172px !important;
+        max-width: none !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        border: 3px solid #00e6ff88 !important;
+        background: #0d1a2a !important;
+        box-shadow: 0 0 38px #00e6ff44, 0 0 10px #00e6ff22 !important;
+        position: relative !important;
+        z-index: 3 !important;
+        transition: box-shadow 0.3s, border-color 0.3s, transform 0.22s !important;
+    }
+
+    .engineering-home .hero-img-wrap:hover .hero-img-main {
+        border-color: #00e6ffcc !important;
+        box-shadow: 0 0 56px #00e6ff66, 0 0 18px #00e6ff33 !important;
+        transform: scale(1.06) !important;
+    }
+
+    .engineering-home .hero-desc-polished,
+    .engineering-home .hero-tech-panel {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    @media (max-width: 1200px) {
+        .engineering-home .hero-split-content {
+            grid-template-columns: 1fr !important;
+        }
+
+        .engineering-home .hero-side,
+        .engineering-home .hero-side.left,
+        .engineering-home .hero-side.right {
+            align-items: center !important;
+            text-align: center !important;
+        }
+
+        .engineering-home .hero-side.right {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 980px) {
+        .engineering-home .hero-split-content {
+            grid-template-columns: 1fr !important;
+            min-height: 0 !important;
+            padding: 12px 10px 8px !important;
+        }
+
+        .engineering-home .hero-side,
+        .engineering-home .hero-side.left,
+        .engineering-home .hero-side.right {
+            align-items: center !important;
+            text-align: center !important;
+        }
+
+        .engineering-home .hero-side.left>div {
+            width: 100%;
+        }
+
+        .engineering-home .eng-command-line,
+        .engineering-home .hero-desc {
+            text-align: left;
+        }
+
+        .engineering-home .eng-chip-row,
+        .engineering-home .hero-cta-wrap {
+            justify-content: center;
+        }
+    }
+</style>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+
     <title>Nikita Paralkar</title>
     <meta charset="UTF-8" />
     <meta name="description" content="Nikita Paralkar" />
     <meta name="keywords" content="personal, portfolio" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WVSS4JB');</script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WVSS4JB');</script>
     <!-- End Google Tag Manager -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KW22N424NY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW22N424NY"></script>
+    <script>
+        // Always scroll to #home on load/reload
+        function scrollToHome(force) {
+            var home = document.getElementById('home');
+            if (home) {
+                setTimeout(function () {
+                    home.scrollIntoView({ behavior: 'auto', block: 'start' });
+                }, 10);
+            }
+            if (force || !location.hash || location.hash === '#') {
+                location.hash = '#home';
+            }
+        }
+        window.addEventListener('DOMContentLoaded', function () {
+            scrollToHome(true);
+        });
+        window.addEventListener('hashchange', function () {
+            if (location.hash === '#home') {
+                scrollToHome();
+            }
+        });
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-KW22N424NY');
-</script>
+        gtag('config', 'G-KW22N424NY');
+    </script>
+
+    <!-- Hero Section Interactivity -->
+    <script>
+        // Hide loader after page load
+        window.addEventListener('DOMContentLoaded', function () {
+            var loader = document.querySelector('.loader-wrapper');
+            if (loader) {
+                setTimeout(function () {
+                    loader.style.opacity = '0';
+                    loader.style.pointerEvents = 'none';
+                    loader.style.transition = 'opacity 0.5s';
+                    setTimeout(function () {
+                        loader.style.display = 'none';
+                    }, 500);
+                }, 400); // Adjust delay as needed for effect
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animated code typing in hero-img-code
+            var codeSnippets = [
+                "function buildPortfolio() {\n  return 'Modern, Interactive, Recruiter-Ready';\n}",
+                "const skills = ['JavaScript', 'React', 'CSS', 'Node.js'];",
+                "let engineer = {\n  role: 'Full Stack',\n  passion: true\n};",
+                "if (curiosity && creativity) {\n  innovate();\n}"
+            ];
+            var codeEl = document.querySelector('.hero-img-code');
+            if (codeEl) {
+                let idx = 0, charIdx = 0, typing = true;
+                function typeCode() {
+                    if (!typing) return;
+                    let code = codeSnippets[idx];
+                    codeEl.textContent = code.slice(0, charIdx);
+                    if (charIdx < code.length) {
+                        charIdx++;
+                        setTimeout(typeCode, 28 + Math.random() * 32);
+                    } else {
+                        setTimeout(() => {
+                            typing = false;
+                            setTimeout(() => {
+                                typing = true;
+                                idx = (idx + 1) % codeSnippets.length;
+                                charIdx = 0;
+                                typeCode();
+                            }, 1200);
+                        }, 800);
+                    }
+                }
+                typeCode();
+            }
+
+            // Floating/tilt effect on hero-img-main (more animated)
+            var heroImg = document.querySelector('.hero-img-main');
+            var heroImgWrap = document.querySelector('.hero-img-wrap');
+            if (heroImg && heroImgWrap) {
+                let pointerX = 0;
+                let pointerY = 0;
+                let mouseFrame = null;
+
+                function updateHeroTilt() {
+                    var rect = heroImgWrap.getBoundingClientRect();
+                    var x = pointerX - rect.left - rect.width / 2;
+                    var y = pointerY - rect.top - rect.height / 2;
+                    var rotateX = (y / rect.height) * 12;
+                    var rotateY = -(x / rect.width) * 12;
+                    heroImg.style.transition = 'transform 0.12s linear';
+                    heroImg.style.transform = `scale(1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    mouseFrame = null;
+                }
+
+                heroImgWrap.addEventListener('mousemove', function (e) {
+                    pointerX = e.clientX;
+                    pointerY = e.clientY;
+                    if (!mouseFrame) {
+                        mouseFrame = requestAnimationFrame(updateHeroTilt);
+                    }
+                }, { passive: true });
+                heroImgWrap.addEventListener('mouseleave', function () {
+                    heroImg.style.transition = 'transform 0.2s ease-out';
+                    heroImg.style.transform = '';
+                });
+            }
+
+            // Parallax effect on hero-side left/right
+            var heroSides = document.querySelectorAll('.hero-side');
+            var heroBg = document.querySelector('.hero-split-bg');
+            if (heroBg && heroSides.length === 2) {
+                let bgPointerX = 0;
+                let bgPointerY = 0;
+                let bgFrame = null;
+
+                function updateParallax() {
+                    var w = window.innerWidth, h = window.innerHeight;
+                    var x = (bgPointerX - w / 2) / w * 12;
+                    var y = (bgPointerY - h / 2) / h * 12;
+                    heroSides[0].style.transform = `translateY(${y}px)`;
+                    heroSides[1].style.transform = `translateY(${-y}px)`;
+                    bgFrame = null;
+                }
+
+                heroBg.addEventListener('mousemove', function (e) {
+                    bgPointerX = e.clientX;
+                    bgPointerY = e.clientY;
+                    if (!bgFrame) {
+                        bgFrame = requestAnimationFrame(updateParallax);
+                    }
+                }, { passive: true });
+                heroBg.addEventListener('mouseleave', function () {
+                    heroSides[0].style.transform = '';
+                    heroSides[1].style.transform = '';
+                });
+            }
+        });
+    </script>
 
     <!-- StyleSheets used throughout the App -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -35,814 +1140,349 @@
     <link href="css/resume.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<body class="diag">
+<body class="diag index-engineering">
+    <!-- Electric Animated Background -->
+    <div class="electric-bg">
+        <svg class="electric-svg" width="100vw" height="100vh" viewBox="0 0 1920 1080" preserveAspectRatio="none"
+            style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;">
+            <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+                    <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+            <polyline id="bolt1" points="100,200 300,400 500,300 700,500 900,400 1100,600 1300,500 1500,700 1700,600"
+                stroke="#00e6ff" stroke-width="7" fill="none" filter="url(#glow)">
+                <animate attributeName="stroke-dasharray"
+                    values="0,3000;300,2700;600,2400;900,2100;1200,1800;1500,1500;1800,1200;2100,900;2400,600;2700,300;3000,0"
+                    dur="2.2s" repeatCount="indefinite" />
+            </polyline>
+            <polyline id="bolt2" points="400,900 600,700 800,900 1000,800 1200,1000 1400,900 1600,1050" stroke="#fff176"
+                stroke-width="5" fill="none" filter="url(#glow)">
+                <animate attributeName="stroke-dasharray"
+                    values="0,2000;200,1800;400,1600;600,1400;800,1200;1000,1000;1200,800;1400,600;1600,400;1800,200;2000,0"
+                    dur="2.7s" repeatCount="indefinite" />
+            </polyline>
+            <polyline id="bolt3" points="200,400 350,600 600,500 900,700 1200,600 1500,800 1800,700" stroke="#00e676"
+                stroke-width="4" fill="none" filter="url(#glow)">
+                <animate attributeName="stroke-dasharray"
+                    values="0,1800;180,1620;360,1440;540,1260;720,1080;900,900;1080,720;1260,540;1440,360;1620,180;1800,0"
+                    dur="2.9s" repeatCount="indefinite" />
+            </polyline>
+        </svg>
+    </div>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVSS4JB"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVSS4JB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- LOADER -->
+    <!-- ==================== LOADER ==================== -->
     <div class="loader-wrapper">
-        <div class="loader"></div>
-
-
+        <div class="loader-grid" aria-hidden="true"></div>
+        <div class="loader" aria-label="Loading">
+            <div class="loader-core"></div>
+        </div>
+        <div class="loader-text">Loading Nikita's Portfolio</div>
     </div>
 
-    <nav>
-        <div class="row">
-            <div class="container">
+    <!-- ==================== HOME SECTION ==================== -->
+    <section id="home" class="electric-section engineering-home">
+        <!-- Main Navigation (unchanged) -->
+        <header>
+            <nav class="modern-navbar" aria-label="Main Navigation">
                 <div class="logo">
-                    <img src="images/logo.png" alt="NP">
-
+                    <a href="#home" aria-label="Home">
+                        <img src="images/Logo-np.png" alt="NP logo" class="header-logo-img">
+                    </a>
                 </div>
-
-
-
-                <!--  <div class="responsive"><i data-icon="m" class="icon"></i></div> -->
-                <ul class="nav-menu">
-                    <li><a href="#home" class="smoothScroll">Home</a></li>
-                    <li><a href="index.html#about"
-                            class="smoothScroll">About</a></li>
-                    <li><a href="index.html#education"
-                            class="smoothScroll">Education</a></li>
-                    <li><a href="index.html#resume"
-                            class="smoothScroll">Resume</a></li>
-                    <li><a href="index.html#portfolio"
-                            class="smoothScroll">Projects</a></li>
-                    <li><a href="index.html#contact"
-                            class="smoothScroll">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    </nav>
-
-    <!--HOME Page-->
-
-    <section class="home slider" id="home">
-        <div class="home-content">
-            <div class="container">
-
-                <h1>Computer <span class="element" data-text1="Engineer" data-text2="Developer" data-loop="true"
-                        data-backdelay="3000"></span><br></h1>
-
+                <div class="nav-menu" role="menubar">
+                    <a href="about.html" role="menuitem" tabindex="0">About Me</a>
+                    <a href="resume.html" role="menuitem" tabindex="0">Resume</a>
+                    <a href="work.html" role="menuitem" tabindex="0">Projects</a>
+                    <a href="#skills" role="menuitem" tabindex="0">Skills</a>
+                    <a href="contact.html" role="menuitem" tabindex="0">Contact</a>
+                </div>
                 <div class="social">
-                    <a href="https://www.linkedin.com/in/nikitaparalkar/"><i class="fab fa-linkedin fa-3x"></i></a>
-                    <a href="https://github.com/paralkarniki?tab=repositorie"><i class="fab fa-github fa-3x"></i></a>
+                    <a href="https://www.linkedin.com/in/nikitaparalkar/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/paralkarniki?tab=repositories" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
                 </div>
+            </nav>
+        </header>
+        <div class="hero-split-bg" style="position:relative;overflow:hidden;z-index:1;">
+            <div class="hero-corner-wrap" aria-hidden="true">
+                <span class="hero-corner hero-corner-tl"></span>
+                <span class="hero-corner hero-corner-tr"></span>
+                <span class="hero-corner hero-corner-bl"></span>
+                <span class="hero-corner hero-corner-br"></span>
+            </div>
+            <div class="hero-photo-stack" aria-hidden="true">
 
             </div>
-
-            <br>
-            <a href="#about" class="smoothscroll btn btn-primary px-4 py-3">More About Me...</a>
-        </div>
-        </div>
-        </div>
-
-        </div>
-
-        </div>
-        </div>
-    </section>
-
-    </div>
-    <div class="home-slider">
-        <div id="slides">
-            <div class="slides-container">
-                <img src="images/falls.png" alt="">
-                <img src="images/toronto.jpg" alt="">
-                <img src="images/img.jpg" alt="">
+            <div class="scroll-indicator">
+                <span class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </span>
+                <span class="scroll-arrow">↓</span>
             </div>
-        </div>
-    </div>
-    </div>
-    <svg class="diagonal home-left" width="21%" height="170" viewBox="0 0 100 102" preserveAspectRatio="none">
-        <path d="M0 100 L100 100 L0 10 Z"></path>
-    </svg>
-    <svg class="diagonal home-right" width="80%" height="170" viewBox="0 0 100 102" preserveAspectRatio="none">
-        <path d="M0 100 L100 100 L100 10 Z"></path>
-    </svg>
-    </section>
+            <div class="hero-split-content">
+                <!-- Left: Personal Intro & Call to Action -->
+                <div class="hero-side left hero-side-polished">
+                    <div style="position:relative;display:flex;flex-direction:column;align-items:flex-start;">
+                        <div class="hero-intro-badge"
+                            style="font-size:1.1em;font-weight:600;color:#00e6ff;background:#07101f33;padding:7px 18px 7px 12px;border-radius:999px;box-shadow:0 2px 12px #00e6ff22;margin-bottom:10px;display:inline-flex;align-items:center;gap:7px;">
+                            <span style="font-size:1.3em;">👋</span> Hi, I'm <span
+                                style="color:#fff;font-weight:700;">Nikita Paralkar</span>
+                        </div>
+                        <div>
+                            <div id="hero-dynamic-title" class="hero-title amazing-glow"
+                                style="font-size:2.1em;line-height:1.1;margin-bottom:8px;min-height:1.2em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                                SOFTWARE DEVELOPER</div>
 
-
-    <!--ABOUT Page-->
-    <section class="about dgray-bg" id="about">
-        <div class="about type-1 padbot_120">
-            <div class="container">
-                <!-- about image -->
-                <div class="col-md-4 col-sm-12 about-image top_30">
-                    <div class="row">
-                        <img src="images/nikita.jpg" alt="Nikita Paralkar">
-                    </div>
-                </div>
-
-
-                <!-- about text -->
-                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
-                    <div class="section-title dleft bottom_30">
-                        <br>
-                        <h2>ABOUT ME</h2>
-                    </div>
-                    <h2>Hello <br> <br>
-                        I'm Nikita Paralkar</h2>
-                    <p>I'm a <b>Front End / Software Developer </b> 
-                        with about 3 years of experience.I'm a <b> outgoing independent and self-motivated </b> girl.
-                        Interested in all kinds of Visual Communications,major focuses
-                        include web-design, mobile and tablet interfaces.
-                    </p>
-                    <p>Programming Languages learnt so far:</p>
-                    <div class="flex flex-50-gt-sm waypoint bars-wrap" data-animation="slide-in-right">
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:90%">
-                                <div class="tag bold flex">CSS</div>
-                            </div>
-                            <span>80%</span>
                         </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:95%">
-                                <div class="tag bold flex">HTML</div>
-                            </div>
-                            <span>90%</span>
+                        <div class="eng-command-line" style="margin-bottom:10px;">$ <span
+                                style="color:#00e6ff;font-weight:600;">build</span> <span style="color:#fff;">impactful,
+                                polished products</span></div>
+                        <div class="hero-pill-row" style="display:flex;gap:8px;margin-bottom:12px;">
+                            <span class="hero-pill"
+                                style="background:linear-gradient(90deg,#00e6ff 0%,#4dffc3 100%);color:#0a1a2a;padding:7px 20px 7px 16px;border-radius:999px;font-size:1em;font-family:'Fira Mono',monospace;font-weight:700;box-shadow:0 2px 14px #00e6ff44,0 0 0 2px #00e6ff55 inset;display:inline-flex;align-items:center;gap:7px;letter-spacing:0.01em;">
+                                <span style="font-size:1.1em;">{ }</span> Friendly Dev
+                            </span>
+                            <span class="hero-pill"
+                                style="background:linear-gradient(90deg,#00e676 0%,#b4ffe8 100%);color:#0a1a2a;padding:7px 20px 7px 16px;border-radius:999px;font-size:1em;font-family:'Fira Mono',monospace;font-weight:700;box-shadow:0 2px 14px #00e67644,0 0 0 2px #00e67655 inset;display:inline-flex;align-items:center;gap:7px;letter-spacing:0.01em;">
+                                <span style="font-size:1.1em;">&lt;/&gt;</span> Thoughtful UX
+                            </span>
+                            <span class="hero-pill"
+                                style="background:linear-gradient(90deg,#fff176 0%,#ffb6e6 100%);color:#23243a;padding:7px 20px 7px 16px;border-radius:999px;font-size:1em;font-family:'Fira Mono',monospace;font-weight:700;box-shadow:0 2px 14px #fff17644,0 0 0 2px #ffb6e655 inset;display:inline-flex;align-items:center;gap:7px;letter-spacing:0.01em;">
+                                <span style="font-size:1.1em;">&#128187;</span> Built with Care
+                            </span>
                         </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:85%">
-                                <div class="tag bold flex">JAVA</div>
-                            </div>
-                            <span>80%</span>
-                        </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:75%">
-                                <div class="tag bold flex">Android Development</div>
-                            </div>
-                            <span>70%</span>
-                        </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:75%">
-                                <div class="tag bold flex">PHP</div>
-                            </div>
-                            <span>70%</span>
-                        </div>
-
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:75%">
-                                <div class="tag bold flex">ASP.Net</div>
-                            </div>
-                            <span>70%</span>
-                        </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:65%">
-                                <div class="tag bold flex">JSON</div>
-                            </div>
-                            <span>60%</span>
-                        </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:95%">
-                                <div class="tag bold flex">SQL Development</div>
-                            </div>
-                            <span>90%</span>
-                        </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:75%">
-                                <div class="tag bold flex">WordPress</div>
-                            </div>
-                            <span>70%</span>
-                        </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:65%">
-                                <div class="tag bold flex">Java Script</div>
-                            </div>
-                            <span>60%</span>
-                        </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:70%">
-                                <div class="tag bold flex">C#</div>
-                            </div>
-                            <span>65%</span>
-                        </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:70%">
-                                <div class="tag bold flex">Python</div>
-                            </div>
-                            <span>65%</span>
-                        </div>
-                        <div class="bar flex">
-                            <div class="bar fill" style="width:75%">
-                                <div class="tag bold flex">R programming</div>
-                            </div>
-                            <span>70%</span>
+                        <div class="hero-cta-wrap hero-cta-group" style="display:flex;gap:12px;">
+                            <a href="contact.html" class="hero-cta-btn"
+                                style="background:linear-gradient(90deg,#00e6ff 0%,#00bcd4 100%);color:#23243a;font-weight:700;padding:10px 22px;border-radius:8px;font-size:1.08em;box-shadow:0 2px 12px #00e6ff33;transition:background 0.2s;">Let's
+                                Connect <span class="hero-cta-arrow">→</span></a>
+                            <a href="work.html" class="hero-cta-btn hero-cta-btn-secondary"
+                                style="background:#23243a;color:#00e6ff;font-weight:600;padding:10px 22px;border-radius:8px;font-size:1.08em;box-shadow:0 2px 12px #00e6ff22;transition:background 0.2s;">View
+                                Projects</a>
                         </div>
                     </div>
                 </div>
+                <!-- Center: Profile Image with Glow -->
+                <div class="hero-img-wrap">
+                    <div class="hero-img-ring-wrap" aria-hidden="true">
+                        <span class="hero-img-ring"></span>
+                        <span class="hero-img-ring"></span>
+                        <span class="hero-img-ring"></span>
+                    </div>
+                    <img src="images/nikita.jpg" alt="Nikita Paralkar" class="hero-img-main">
+                </div>
+                <!-- Right: Animated Titles & Work Style -->
+                <div class="hero-side right hero-side-polished">
+                    <div class="hero-title hero-title-animated" style="font-size:1.3em;margin-bottom:10px;">
+                        <span class="element" data-text1="Programmer" data-text2="Software Engineer"
+                            data-text3="Frontend Engineer" data-text4="Backend Engineer"
+                            data-text5="Full Stack Engineer" data-loop="true"></span>
+                    </div>
+                    <div class="hero-desc hero-desc-polished fade-in-hero-desc"
+                        style="font-size:1.13em;font-weight:500;margin-bottom:16px;background:linear-gradient(90deg,#00e6ff 10%,#b4ffe8 90%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-fill-color:transparent;display:flex;align-items:center;gap:10px;">
+                        <span class="sparkle-anim" style="display:inline-flex;align-items:center;">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:4px;"><g><circle cx="11" cy="11" r="10" fill="#00e6ff33"/><path d="M11 4v4M11 14v4M4 11h4M14 11h4M7.5 7.5l2.5 2.5M14.5 14.5l-2.5-2.5M7.5 14.5l2.5-2.5M14.5 7.5l-2.5 2.5" stroke="#00e6ff" stroke-width="1.5" stroke-linecap="round"/></g></svg>
+                        </span>
+                        I create digital worlds that welcome, inspire, and empower—where design feels effortless, and every detail is crafted for genuine human connection.
+                    </div>
+                    <div class="hero-tech-panel" style="background:#071723f0;border:1px solid #00e67659;border-radius:14px;padding:14px 14px 12px 14px;max-width:340px;margin:0 auto;box-shadow:0 2px 18px #00e6ff22;">
+                        <h5 class="how-i-work-heading" style="color:#b4ffe8;font-family:'Fira Mono',monospace;font-size:1.02rem;letter-spacing:0.05em;margin:0 0 10px;display:flex;align-items:center;gap:7px;">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" stroke="#00e6ff" stroke-width="2" fill="#071723"/><path d="M7.5 10.5L9.5 12.5L13 8.5" stroke="#b4ffe8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            &lt;HOW I WORK /&gt;
+                        </h5>
+                        <ul style="margin:0;padding-left:16px;color:#edf9ff;font-size:1.01rem;">
+                            <li class="how-i-work-item animated-list">Collaboration: Open, curious, and always elevating the team</li>
+                            <li class="how-i-work-item animated-list">Code Style: Thoughtful, expressive, and built for tomorrow</li>
+                            <li class="how-i-work-item animated-list">Focus: Effortless, joyful journeys that spark delight</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <svg class="diagonal home-left" width="21%" height="170" viewBox="0 0 100 102" preserveAspectRatio="none">
+                <path d="M0 100 L100 100 L0 10 Z"></path>
+            </svg>
+            <svg class="diagonal home-right" width="80%" height="170" viewBox="0 0 100 102" preserveAspectRatio="none">
+                <path d="M0 100 L100 100 L100 10 Z"></path>
+            </svg>
         </div>
     </section>
+    <!-- ==================== END HOME SECTION ==================== -->
+    <!-- ==================== CONTACT PAGE LINK SECTION ==================== -->
+    <section class="contact engineering-section" id="contact-link"
+        style="position:relative;z-index:1;background:linear-gradient(120deg,#1b2444 60%,#232b4d 100%);padding:0;display:flex;align-items:center;justify-content:center;min-height:0;height:auto;">
 
-
-
-    <!--Education-->
-    <section class="eductaion" id="education">
         <div class="container">
-            <div class="section-title dleft top_120 bottom_90">
-                <h2>EDUCATION</h2>
-            </div>
-            <hr>
-            <div id="education" class="section">
-                <!-- <span class="delimiter wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;" data-wow-delay="0.1s"></span> -->
-
-                <div id="education" style="padding-left: 10px; ">
-                    <p>2013-2015: St. Francis Xavier Secondary School</p>
-                    <div id="edu-courses" style="position: relative; padding-left: 40px; padding-top: 10px;">
-                        <button type="button" class="btn btn-default" id="menu-toggle" data-toggle="collapse"
-                            data-target="#highschool_courses">In-Class Development
-                            <i class="fas fa-chevron-circle-down" aria-hidden="true"></i>
-                        </button>
-
-                        <div id="highschool_courses" class="collapse" style="width: 100%;">
-                            <br>
-                            <table class="table table-striped">
-
-                                <tbody>
-                                    <tr>
-                                        <td>International Business Fundamentals</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Introduction to Business</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Canada: History, Identity, and Culture</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Law-Understanding Canadian Law</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Law-Canadian and International Law</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Computer Programming</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Computer Science</td>
-                                    </tr>
-                                    <tr>
-                                        <td>French</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Advanced Functions</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Calculus and Vector</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Data Management</td>
-                                    </tr>
-                                    <tr>
-                                        <td>World Religions: Beliefs, Issues, and Religious Traditions</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Biology</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Chemistry</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Physics</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Introduction to Anthropology, Psychology, and Sociology</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Computer Engineering Technology</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hospitality and Tourism Technology</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+            <div
+                style="max-width:420px;margin:0 auto;background:linear-gradient(120deg,#232b4d 60%,#1b2444 100%);box-shadow:0 8px 40px #8ea2ff33, 0 1.5px 8px #0002;border-radius:24px;padding:24px 18px 20px 18px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;">
+                <div style="margin-bottom:18px;">
+                    <img src="images/nikita.jpg" alt="Profile Photo"
+                        style="width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid #8ea2ff44;box-shadow:0 2px 12px #8ea2ff22;">
                 </div>
-            </div>
-        </div>
-        <p> 2015-2017: Humber College, Computer Programmer</p>
-        <div id="edu-courses" style="position: relative; padding-left: 40px; padding-top: 10px;">
-            <button type="button" class="btn btn-default" id="menu-toggle" data-toggle="collapse" data-target="#humber_courses">In-Class
-                Development
-                <i class="fas fa-chevron-circle-down" aria-hidden="true"></i>
-            </button>
-
-            <div id="humber_courses" class="collapse" style="width: 100%;">
-                <br>
-                <table class="table table-striped">
-
-                    <tbody>
-                        <tr>
-                            <td>Critical Thinking and IT Concepts</td>
-                        </tr>
-                        <tr>
-                            <td>Object-Oriented Programming using Java</td>
-                        </tr>
-                        <tr>
-                            <td>Numeric Computing</td>
-                        </tr>
-                        <tr>
-                            <td>Operating Systems</td>
-                        </tr>
-                        <tr>
-                            <td>Web Programming and Design</td>
-                        </tr>
-                        <tr>
-                            <td>Framework Programming</td>
-                        </tr>
-                        <tr>
-                            <td>Relational DB Design and SQL</td>
-                        </tr>
-                        <tr>
-                            <td>Java Application Development</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile Programming</td>
-                        </tr>
-                        <tr>
-                            <td>Database Administration</td>
-                        </tr>
-                        <tr>
-                            <td>XML</td>
-                        </tr>
-                        <tr>
-                            <td>Requirements Analysis and Process Modelling (WI)</td>
-                        </tr>
-                        <tr>
-                            <td>Open Source Programming</td>
-                        </tr>
-                        <tr>
-                            <td>Object-Oriented Analysis and Design</td>
-                        </tr>
-                        <tr>
-                            <td>Project Management</td>
-                        </tr>
-                        <tr>
-                            <td>Distributed Computing using Java</td>
-                        </tr>
-                        <tr>
-                            <td>ASP.NET</td>
-                        </tr>
-                        <tr>
-                            <td>IT Management</td>
-                        </tr>
-                        <tr>
-                            <td>Design Patterns and Software Testing</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        </div>
-        <p> 2017-Present: Sheridan College, Mobile Computing & Computer Programming </p>
-        <div id="edu-courses" style="position: relative; padding-left: 40px; padding-top: 10px;">
-            <button type="button" class="btn btn-default" id="menu-toggle" data-toggle="collapse" data-target="#sheridan_courses">In-Class
-                Development
-                <i class="fas fa-chevron-circle-down" aria-hidden="true"></i>
-            </button>
-
-            <div id="sheridan_courses" class="collapse" style="width: 100%;">
-                <br>
-                <table class="table table-striped">
-
-                    <tbody>
-                        <tr>
-                            <td>Programming Principles</td>
-                        </tr>
-                        <tr>
-                            <td>Operating Systems Fundamentals</td>
-                        </tr>
-                        <tr>
-                            <td>Mathematics for Computing</td>
-                        </tr>
-                        <tr>
-                            <td>Edge to Core: Network Foundations</td>
-                        </tr>
-                        <tr>
-                            <td>Composition and Rhetoric</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile Computing</td>
-                        </tr>
-                        <tr>
-                            <td>Interactive Application Development</td>
-                        </tr>
-                        <tr>
-                            <td>Scripting and Web Languages</td>
-                        </tr>
-                        <tr>
-                            <td>Database Modelingg</td>
-                        </tr>
-                        <tr>
-                            <td>Linear Algebra</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile Device Application PrinciplesL</td>
-                        </tr>
-                        <tr>
-                            <td>Programming Languages</td>
-                        </tr>
-                        <tr>
-                            <td>Introduction to Information Systems Security</td>
-                        </tr>
-                        <tr>
-                            <td>Computer Systems Architecture</td>
-                        </tr>
-                        <tr>
-                            <td>Wireless Network Principles</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile Web Application Developmenta</td>
-                        </tr>
-                        <tr>
-                            <td>Data Structures and Algorithms</td>
-                        </tr>
-                        <tr>
-                            <td>Application Design and Implementation</td>
-                        </tr>
-                        <tr>
-                            <td>Calculus</td>
-                        </tr>
-                        <tr>
-                            <td>Human Computer Interaction</td>
-                        </tr>
-                        <tr>
-                            <td>Software Engineering</td>
-                        </tr>
-                        <tr>
-                            <td>IP Engineering</td>
-                        </tr>
-                        <tr>
-                            <td>Cognitive Computing</td>
-                        </tr>
-                        <tr>
-                            <td>Quality Assurance and Software Testing</td>
-                        </tr>
-                        <tr>
-                            <td>Artificial Intelligence</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        </div>
-        </div>
-    </section>
-
-    <!--Resume-->
-    <section class="resume" id="resume">
-        <div class="container">
-            <div class="section-title dleft top_120 bottom_90">
-                <h2>RESUME</h2>
-            </div>
-
-            <div id="hd">
-                <div class="yui-gc">
-                    <div class="yui-u first">
-                        <h1>Nikita Paralkar</h1>
-                    </div>
-
-                    <div class="yui-u">
-                        <div class="contact-info">
-                            <h3><a id="pdf" href="resume/Resume_Nikita_Paralkar_2025.pdf">Download PDF
-                                <i class="fas fa-download"></i></a></h3>
-                            <h3><a href="mailto:paralkarnikita@gmail.com">paralkarnikita@gmail.com</a></h3>
-                            <h3>(647)-518-9623</h3>
-                        </div>
-                    </div>
+                <h2 style="font-size:1.7em;letter-spacing:0.03em;color:#fff;margin-bottom:2px;">Nikita Paralkar</h2>
+                <div style="font-size:1.08em;color:#8ea2ff;font-weight:600;margin-bottom:10px;">Software Engineer</div>
+                <div style="font-size:1em;color:#b9c7e6;margin-bottom:18px;">Toronto, Canada</div>
+                <div style="display:flex;justify-content:center;gap:16px;margin-bottom:18px;">
+                    <a href="mailto:your.email@example.com" title="Email"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#232b4d;border:1.5px solid #8ea2ff55;color:#8ea2ff;font-size:1.35em;transition:background 0.2s;"
+                        onmouseover="this.style.background='#8ea2ff22'" onmouseout="this.style.background='#232b4d'"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener" title="LinkedIn"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#232b4d;border:1.5px solid #8ea2ff55;color:#8ea2ff;font-size:1.35em;transition:background 0.2s;"
+                        onmouseover="this.style.background='#8ea2ff22'" onmouseout="this.style.background='#232b4d'"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/your-github" target="_blank" rel="noopener" title="GitHub"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#232b4d;border:1.5px solid #8ea2ff55;color:#8ea2ff;font-size:1.35em;transition:background 0.2s;"
+                        onmouseover="this.style.background='#8ea2ff22'" onmouseout="this.style.background='#232b4d'"><i
+                            class="fab fa-github"></i></a>
+                    <a href="resume/Your_Resume.pdf" download title="Download Resume"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#232b4d;border:1.5px solid #8ea2ff99;color:#fff;font-size:1.35em;transition:background 0.2s;box-shadow:0 2px 8px #8ea2ff22;"
+                        onmouseover="this.style.background='#8ea2ff44'" onmouseout="this.style.background='#232b4d'"><i
+                            class="fas fa-file-download"></i></a>
                 </div>
-            </div>
-
-            <div id="bd">
-                <div id="yui-main">
-                    <div class="yui-b">
-
-                        <div class="yui-gf">
-                            <div class="yui-u first">
-                                <h2>Profile</h2>
-                            </div>
-                            <div class="yui-u">
-                                <p class="enlarge">
-                                    As an IT student, I am very passionate about the work allocated to me.
-                                    Skilled at coding, testing and debugging in Java, C++, C, Visual Basics,
-                                    Visual Studios, Android Studios, HTML and SQL. Having bilingual expertise
-                                    in English & French. Have the ability to grasp new Information quickly.
-                                </p>
-                            </div>
-                        </div>
-                        <!--// .yui-gf -->
-
-                        <div class="yui-gf">
-                            <div class="yui-u first">
-                                <h2>Skills</h2>
-                            </div>
-                            <div class="yui-u">
-
-                                <div class="talent">
-                                    <h2>Programming</h2>
-                                    <p>
-                                        <li>Languages: - Java, C++, C#, C, Python, PHP, HTML, SQL, Bootstrap and many
-                                            more</li>
-                                        <li>Effectively write code and documentations to the code</li>
-                                        <li>Quick on grasping new languages & expert in entire Microsoft suite.</li>
-                                        <li>Strong problem-solving techniques.</li>
-                                    </p>
-                                </div>
-
-                                <div class="talent">
-                                    <h2>Database</h2>
-                                    <p>
-                                        <li>Confident in database design, build, and query databases</li>
-                                        <li> Familiar with SQLServer and MySQL (MySQL Workbench)</li>
-                                    </p>
-                                </div>
-
-                                <div class="talent">
-                                    <h2>Additional</h2>
-                                    <p>
-                                        <li>Excellent Communication skills, Oral and Written</li>
-                                        <li>Write professional documentation and reports</li>
-                                        <li>Works well as a part of team, or independent with nominal supervision.</li>
-                                        <li>Strong time management skills</li>
-                                        <li>Time limits and achieve required goals always achieved</li>
-                                        <li>Project management skills.</li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--// .yui-gf -->
-
-                    <div class="yui-gf">
-                        <div class="yui-u first">
-                            <h2>Technical</h2>
-                        </div>
-                        <div class="yui-u">
-                            <ul class="talent">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li class="last">Javascript</li>
-                            </ul>
-
-                            <ul class="talent">
-                                <li>Jquery</li>
-                                <li>PHP</li>
-                                <li class="last">Python</li>
-                            </ul>
-
-                            <ul class="talent">
-                                <li>Java</li>
-                                <li>C++</li>
-                                <li class="last"> Android Development</li>
-                            </ul>
-
-                            <ul class="talent">
-                                <li>R</li>
-                                <li class="last">Angular</li>
-                            </ul>
-
-                            <ul class="talent">
-                                <li>SQL</li>
-                                <li>Windows</li>
-                                <li class="last"></li>Microsoft Office((Word, Excel, Access, PowerPoint)</li>
-                            </ul>
-
-                        </div>
-                    </div>
-
-                    <div class="yui-gf">
-
-                        <div class="yui-u first">
-                            <h2>Experience</h2>
-                        </div>
-
-                        <div class="yui-u">
-                            <div class="job">
-                                <h2>Freelancer</h2>
-                                <h3>Self-Employeed</h3>
-                                <h4>2017-Present</h4>
-                                <p>Utilizes the diverse programming skills to complete freelance work.
-                                    Develope applications that are help refresh programming skills learned, and build
-                                    custom applications for personal use.
-                                </p>
-                            </div>
-
-                            <div class="job">
-                                    <div class="yui-u first">
-                                            <h2>Work Experience</h2>
-                                        </div>
-                                        <br>
-                                        <br>
-                                <h2>Customer Service Representative- (Technicall) Branch Based</h2>
-                                <h3>Scotia Bank</h3>
-                                <h4>August 2019 – Present</h4>
-                                <p>
-                                        •	Manage technical workflow of the systems
-                                        <br>
-                                        •	Releasing and Issuing Wire Payments
-                                        <br>
-                                        •	Fraud Control on Client Accounts
-                                        <br>
-                                        •	Manage Mortgage Payments	
-                                        <br>
-                                </p>
-                                
-                            </div>
-                            <div>
-                                <h2>Manager</h2>
-                                <h3>Mcdonalds</h3>
-                                <h4>September 2016 – August 2019</h4>
-                                <p>
-                                        •	Keep track of Account Verification
-                                        <br>
-                                        •	Manage Storage
-                                        <br>
-                                        •	Train Employees
-                                        <br>
-                                        •	Completed Certified Customer Service Training	
-                                        <br>
-                                        •	Completed Certified Manager Training	
-                                        <br>
-                                        •	Activate Account of Storage Database	
-                                        <br>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!--PORTFOLIO-->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-title dleft top_120 bottom_90">
-                <div class="container-fluid dgray-bg padbot_200">
-
-                    <h2>PROJECTS</h2>
-                    <div class="portfolio_filter">
-                        <div class="container-fluid dgray-bg padbot_200">
-                            <div class="container">
-                                <div class="section-title dright top_120 bottom_45">
-
-                                </div>
-                            </div>
-                            <!--Portfolio Items-->
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="isotope_items row">
-
-                                        <!-- Item -->
-                                        <a href="work.html#crown"
-                                            class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-content wow fadeInUp"
-                                            data-wow-delay="0.4s">
-
-                                            <div class="blog-image">
-                                                <img src="images/hotel.jpg">
-                                            </div>
-                                            <h2 class="blog-title">Crown-Hotel</h2>
-                                        </a>
-
-                                        <!-- Item -->
-                                        <a href="work.html#address"
-                                            class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-content wow fadeInUp"
-                                            data-wow-delay="0.6s">
-                                            <div class="blog-image">
-                                                <img src="images/address1.png" style="width:250px;height:500px;">
-                                            </div>
-                                            <h2 class="blog-title">Address Book</h2>
-                                        </a>
-
-                                  <!-- Item -->
-                                        <a href="work.html#track"
-                                            class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-content wow fadeInUp"
-                                            data-wow-delay="0.6s">
-                                            <div class="blog-image">
-                                                <img src="images/trackiffy3.png" style="width:250px;height:500px;">
-                                            </div>
-                                            <h2 class="blog-title">Trackiffy</h2>
-                                        </a>
-
-
-                                        <!-- Item -->
-                                        <a href="work.html#coffee" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-content wow fadeInUp"
-                                            data-wow-delay="0.6s">
-                                            <div class="blog-image">
-                                                <img src="images/coffee01.png">
-                                            </div>
-                                            <h2 class="blog-title">Coffee Simulator</h2>
-                                        </a>
-                                         <!-- Item -->
-                                         <a href="work.html#app" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-content wow fadeInUp"
-                                         data-wow-delay="0.6s">
-                                         <div class="blog-image">
-                                             <img src="images/apa1.png">
-                                         </div>
-                                         <h2 class="blog-title">App of Apps</h2>
-                                     </a> 
-                                     <a href="work.html#manage" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-content wow fadeInUp"
-                                         data-wow-delay="0.6s">
-                                         <div class="blog-image">
-                                             <img src="images/invent.png">
-                                         </div>
-                                         <h2 class="blog-title">Inventory Management System </h2>
-                                     </a> 
-
-                                     
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-        <div class="container">
-
-            <div class="section-title dleft top_90">
-                <h2 class="bottom_30">GET IN TOUCH</h2>
-                <p>I'm available for local projects as well as potential employment opportunities outside of the province.
-                    Use the form to inquire about availability, or just to say HI!!.</p>
-            </div>
-            <div class="col-md-3">
-                <!-- Contact Info -->
-                <ul class="contact-info row">
+                <div style="font-size:1.08em;color:#dbe7ff;margin-bottom:18px;">
+                    🚀 Open to new adventures!<br>
                     <br>
-                    <li>Toronto,Canada</li>
-                    <li>
-                        <h3><a href="mailto:paralkarnikita@gmail.com">paralkarnikita@gmail.com</a></h3>
-                    </li>
-                    <li>647-518-9623</li>
-                </ul>
-                <div class="social-icons top_60 row">
-                    <a href="https://github.com/paralkarniki?tab=repositories"><i class="fab fa-github" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/in/nikitaparalkar/"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    Let's build something impactful together—I'm actively exploring new roles and collaborations.<br>
+                    <br>
+                    <span style="color:#8ea2ff;">Fast, friendly replies always.</span>
                 </div>
+                <a href="contact.html" class="btn btn-primary"
+                    style="margin-top:0;display:inline-flex;align-items:center;gap:8px;font-size:1.08em;box-shadow:0 2px 12px #8ea2ff33;">Open
+                    Contact Page <i class="fas fa-arrow-right"></i></a>
             </div>
-            <!-- <div class="col-md-7 col-md-offset-2 form top_30 bottom_90"> -->
-            <div class="page-title sub">
-                <h5>Connect with Me</h5>
-            </div>
-            <form class="contact-form top_80" method="POST" action="mail.php">
-                <div class="row">
-                    <!--Name-->
-                    <div class="col-md-6">
-                        <input id="con_name" name="con_name" class="form-inp required" type="text" placeholder="Name">
-                    </div>
-                    <!--Message-->
-                    <textarea name="con_message" id="con_message" class="required" placeholder="Message" rows="8"></textarea>
-                    <button href="mailto:paralkarnikita@gmail.com" class="btn btn-primary top_30 pull-right" type="submit">
-                        Submit<br><i class="fas fa-envelope"></i></button>
-                </div>
-        </div>
-        </form>
-        </div>
         </div>
     </section>
-    <footer>
+    <!-- ==================== END CONTACT SECTION ==================== -->
 
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer" style="position:relative;">
         <div class="container">
-            <div class="social">
-                <a href="https://www.linkedin.com/in/nikitaparalkar/"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/paralkarniki?tab=repositorie"><i class="fab fa-github fa-2x"></i></a>
-                <a href="mailto:paralkarnikita@gmail.com">paralkarnikita@gmail.com<i class=""></i></a>
+            <div class="social site-footer-links">
+                <a href="https://www.linkedin.com/in/nikitaparalkar/"><i
+                        class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                <a href="https://github.com/paralkarniki?tab=repositories"><i
+                        class="fab fa-github"></i><span>GitHub</span></a>
+                <a href="mailto:paralkarnikita@gmail.com"><i
+                        class="fas fa-envelope"></i><span>paralkarnikita@gmail.com</span></a>
             </div>
-
         </div>
-
-        <div class="social">
-
-            <p>Copyright © 2025, All rights Reserved. <br />
+        <div class="social site-footer-meta">
+            <p>Copyright © 2026, All rights Reserved. <br />
                 Created by Nikita Paralkar</p>
         </div>
     </footer>
 
-    <!-- Javascripts -->
+    <!-- ==================== JAVASCRIPT BUNDLES ==================== -->
+    <script>
+        // Typewriter effect for dynamic hero title
+        document.addEventListener('DOMContentLoaded', function () {
+            var titles = [
+                'SOFTWARE DEVELOPER',
+                'SOFTWARE ENGINEER',
+                'FRONTEND DEVELOPER',
+                'BACKEND DEVELOPER',
+                'FULL STACK ENGINEER'
+            ];
+            var el = document.getElementById('hero-dynamic-title');
+            if (!el) return;
+            var idx = 0, charIdx = 0, isDeleting = false;
+            function typeTitle() {
+                var current = titles[idx];
+                if (isDeleting) {
+                    el.textContent = current.substring(0, charIdx--);
+                    if (charIdx < 0) {
+                        isDeleting = false;
+                        idx = (idx + 1) % titles.length;
+                        setTimeout(typeTitle, 400);
+                    } else {
+                        setTimeout(typeTitle, 28 + Math.random() * 32);
+                    }
+                } else {
+                    el.textContent = current.substring(0, charIdx++);
+                    if (charIdx > current.length) {
+                        isDeleting = true;
+                        setTimeout(typeTitle, 900);
+                    } else {
+                        setTimeout(typeTitle, 38 + Math.random() * 32);
+                    }
+                }
+            }
+            typeTitle();
+        });
+    </script>
+    <script>
+        // Dynamic hero title animation
+        document.addEventListener('DOMContentLoaded', function () {
+            var titles = [
+                'SOFTWARE DEVELOPER',
+                'FRONTEND DEVELOPER',
+                'BACKEND DEVELOPER',
+                'FULL STACK ENGINEER',
+                'SOFTWARE ENGINEER'
+
+            ];
+            var el = document.getElementById('hero-dynamic-title');
+            if (!el) return;
+            var idx = 0;
+            function showTitle() {
+                el.textContent = titles[idx];
+                idx = (idx + 1) % titles.length;
+                setTimeout(showTitle, 1700);
+            }
+            showTitle();
+        });
+    </script>
     <script src="js/jquery-2.1.4.min.js"></script><!-- jQuery library -->
+    <script>
+        // Typewriter effect for hero section description
+        document.addEventListener('DOMContentLoaded', function () {
+            var el = document.getElementById('hero-typewriter');
+            if (!el) return;
+            var phrases = [
+                'I love building modern, user-friendly products',
+                'with thoughtful detail and a kind approach 💡'
+            ];
+            var colors = [
+                'background:linear-gradient(90deg,#00e6ff 0%,#fff176 50%,#00e676 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;font-size:1.04em;letter-spacing:0.01em;',
+                'color:#b4ffe8;font-weight:600;font-size:0.97em;'
+            ];
+            var i = 0, j = 0, isDeleting = false, line = 0;
+            function type() {
+                var html = '';
+                for (var l = 0; l <= line; l++) {
+                    var phrase = phrases[l];
+                    var len = (l === line) ? j : phrase.length;
+                    html += '<span style="' + colors[l] + '">' + phrase.substring(0, len) + '</span>';
+                    if (l === 0) html += '<br>';
+                }
+                el.innerHTML = html;
+                if (!isDeleting) {
+                    if (j < phrases[line].length) {
+                        j++;
+                        setTimeout(type, 28 + Math.random() * 32);
+                    } else if (line < phrases.length - 1) {
+                        line++;
+                        j = 0;
+                        setTimeout(type, 400);
+                    }
+                }
+            }
+            type();
+        });
+    </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
@@ -853,6 +1493,40 @@
     <script src="js/main.js"></script>
     <script>
 
+        // ==================== Theme & Slider Runtime ====================
+
+        // Dark/Light Theme Switcher
+        (function () {
+            var themeToggle = document.getElementById('theme-toggle');
+            var icon = document.getElementById('theme-toggle-icon');
+            var darkClass = 'dark-theme';
+            function setTheme(dark) {
+                if (dark) {
+                    document.body.classList.add(darkClass);
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    document.body.classList.remove(darkClass);
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+                localStorage.setItem('theme', dark ? 'dark' : 'light');
+            }
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function () {
+                    var isDark = document.body.classList.toggle(darkClass);
+                    setTheme(isDark);
+                });
+            }
+            // On load, set theme from localStorage or system
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                setTheme(true);
+            } else {
+                setTheme(false);
+            }
+        })();
+
         //SUPER SLİDER
         $('#slides').superslides({
             animation: 'fade',
@@ -861,9 +1535,6 @@
     </script>
 
 
-</body>
-
-</html>
 </body>
 
 </html>

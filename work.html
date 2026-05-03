@@ -1,3 +1,19 @@
+<script>
+    // Hide loader after page load
+    window.addEventListener('DOMContentLoaded', function() {
+        var loader = document.querySelector('.loader-wrapper');
+        if (loader) {
+            setTimeout(function() {
+                loader.style.opacity = '0';
+                loader.style.pointerEvents = 'none';
+                loader.style.transition = 'opacity 0.5s';
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 400); // Adjust delay as needed for effect
+        }
+    });
+    </script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,497 +37,2503 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
+    <style>
+        body.work-engineering {
+            position: relative;
+            overflow-x: hidden;
+            background:
+                radial-gradient(circle at 14% 20%, #8ea2ff1c 0%, transparent 32%),
+                radial-gradient(circle at 84% 12%, #79c8ff17 0%, transparent 28%),
+                radial-gradient(circle at 78% 76%, #a5b4fc14 0%, transparent 26%),
+                linear-gradient(180deg, #090d18 0%, #0d1324 100%) !important;
+        }
+
+        body.work-engineering::before {
+            content: none;
+        }
+
+        body.work-engineering::after {
+            content: none;
+        }
+
+        body.work-engineering > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .modern-navbar {
+            width: min(1180px, 94%);
+            margin: 18px auto 0;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            border-radius: 18px;
+            border: 1.5px solid #00e6ff99;
+            background: linear-gradient(120deg, #0b1220 0%, #101a31 55%, #0a1324 100%);
+            box-shadow: 0 0 18px #00e6ff2a, 0 10px 28px #00e6761a;
+            position: relative;
+            z-index: 4;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .header-logo-img {
+            height: 44px;
+            width: auto;
+            margin-right: 12px;
+            background: #0b1220;
+            border-radius: 18px;
+            padding: 6px;
+            border: 1px solid #00e6ff99;
+            box-shadow: 0 0 14px #00e6ff66;
+        }
+
+        .modern-navbar .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .modern-navbar .nav-menu a {
+            color: #d7efff;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 8px 12px;
+            white-space: nowrap;
+            transition: color 0.14s ease, background-color 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+            will-change: transform;
+        }
+
+        .modern-navbar .nav-menu a::before {
+            content: '';
+        }
+
+        .modern-navbar .nav-menu a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #00e6ff, #00e676);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.22s ease;
+            margin-top: 2px;
+        }
+
+        .modern-navbar .nav-menu a:hover::after,
+        .modern-navbar .nav-menu a:focus::after {
+            transform: scaleX(1);
+        }
+
+        .modern-navbar .nav-menu a:hover,
+        .modern-navbar .nav-menu a:focus {
+            color: #00e6ff;
+            border-color: transparent;
+            background: #00e6ff12;
+            transform: translateY(-1px);
+        }
+
+        .modern-navbar .nav-menu a[aria-current="page"] {
+            color: #f3f7ff;
+            background: #8ea2ff12;
+            border-color: #8ea2ff99;
+            box-shadow: 0 0 14px #8ea2ff33;
+        }
+
+        .modern-navbar .social {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modern-navbar .social a {
+            color: #00e6ff;
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #00e6ff77;
+            background: #0b1220;
+            box-shadow: 0 0 6px #00e6ff26;
+            transition: transform 0.14s ease, color 0.14s ease, background-color 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
+            will-change: transform;
+        }
+
+        .modern-navbar .social a:hover {
+            transform: translateY(-2px);
+            color: #0b1220;
+            background: #00e6ff;
+            box-shadow: 0 0 10px #00e6ff70;
+        }
+        .work-hero {
+            width: min(1180px, 94%);
+            margin: 16px auto 36px;
+            padding: 28px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.9fr;
+            gap: 22px;
+            border-radius: 24px;
+            border: 2px solid #8ea2ff88;
+            background:
+                radial-gradient(circle at 15% 20%, #8ea2ff22 0%, transparent 32%),
+                radial-gradient(circle at 85% 75%, #79c8ff18 0%, transparent 28%),
+                linear-gradient(135deg, #151b31 0%, #1b2240 55%, #12182d 100%);
+            box-shadow: 0 0 24px #8ea2ff22, 0 16px 44px #08111f88;
+            position: relative;
+            overflow: hidden;
+        }
+        .work-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(142,162,255,0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(142,162,255,0.07) 1px, transparent 1px);
+            background-size: 34px 34px;
+            pointer-events: none;
+        }
+        .work-hero-copy,
+        .work-hero-gallery {
+            position: relative;
+            z-index: 1;
+        }
+        .work-hero-kicker {
+            display: inline-flex;
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid #a5b4fc77;
+            color: #dce7ff;
+            background: #8ea2ff14;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+            font-size: 0.82rem;
+            margin-bottom: 12px;
+        }
+        .work-hero h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2.3rem, 5vw, 4.2rem);
+            line-height: 1.02;
+            font-weight: 800;
+            background: linear-gradient(90deg, #8ea2ff 0%, #a5b4fc 45%, #79c8ff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .work-hero p {
+            margin: 0 0 18px;
+            max-width: 640px;
+            color: #e7efff;
+            font-size: 1.03rem;
+            line-height: 1.7;
+        }
+
+        .work-hero-rotator {
+            display: inline-flex;
+            margin-bottom: 14px;
+            padding: 6px 11px;
+            border-radius: 999px;
+            border: 1px solid #79c8ff66;
+            background: #79c8ff14;
+            color: #e8f2ff;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .work-hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+        .work-hero-pills span {
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid #79c8ff66;
+            background: linear-gradient(90deg, #8ea2ff1d, #79c8ff1d);
+            color: #ecf3ff;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+        }
+        .work-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+        .work-hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+        .work-hero-btn-primary {
+            background: linear-gradient(90deg, #8ea2ff 0%, #79c8ff 100%);
+            color: #fff;
+            box-shadow: 0 10px 24px #79c8ff33;
+        }
+        .work-hero-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px #79c8ff44;
+        }
+        .work-hero-btn-secondary {
+            border: 1px solid #a5b4fc77;
+            color: #e7efff;
+            background: #ffffff08;
+        }
+        .work-hero-btn-secondary:hover {
+            background: #8ea2ff14;
+        }
+        .work-hero-social {
+            display: flex;
+            gap: 12px;
+        }
+        .work-hero-social a {
+            color: #a9d2ff;
+            font-size: 1.3rem;
+        }
+        .work-hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+        .work-hero-stat {
+            padding: 14px 15px;
+            border-radius: 18px;
+            border: 1px solid #8ea2ff3d;
+            background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+            box-shadow: inset 0 0 0 1px #ffffff08;
+        }
+        .work-hero-stat strong {
+            display: block;
+            color: #f4f8ff;
+            font-size: 1.45rem;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .work-hero-stat span {
+            display: block;
+            color: #c8d7f5;
+            font-size: 0.82rem;
+            line-height: 1.55;
+        }
+        .work-hero-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            align-content: center;
+        }
+        .work-preview-card {
+            overflow: hidden;
+            border-radius: 18px;
+            border: 1px solid #8ea2ff55;
+            background: #12182d;
+            box-shadow: 0 8px 22px #08111f77;
+        }
+        .work-preview-card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            display: block;
+        }
+        .work-preview-card-tall {
+            grid-row: span 2;
+        }
+        .work-preview-card-tall img {
+            height: 352px;
+        }
+        .work-preview-label {
+            padding: 10px 12px;
+            color: #eff4ff;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            border-top: 1px solid #8ea2ff33;
+        }
+        @media (max-width: 900px) {
+            .modern-navbar,
+            .work-hero {
+                width: min(96%, 96%);
+            }
+            .modern-navbar {
+                flex-direction: column;
+            }
+            .modern-navbar .nav-menu {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .work-hero {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .work-hero-gallery {
+                grid-template-columns: 1fr;
+            }
+            .work-hero-stats {
+                grid-template-columns: 1fr;
+            }
+            .work-preview-card-tall {
+                grid-row: span 1;
+            }
+            .work-preview-card-tall img {
+                height: 200px;
+            }
+        }
+
+        .project-picker {
+            width: min(1180px, 94%);
+            margin: 0 auto 22px;
+            padding: 22px;
+            border-radius: 24px;
+            border: 1.5px solid #8ea2ff66;
+            background:
+                radial-gradient(circle at 14% 18%, #8ea2ff1e 0%, transparent 30%),
+                radial-gradient(circle at 84% 78%, #79c8ff16 0%, transparent 28%),
+                linear-gradient(120deg, #131a31 0%, #1b2444 58%, #10172d 100%);
+            box-shadow: 0 14px 34px #09112680;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-picker::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(142, 162, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(121, 200, 255, 0.06) 1px, transparent 1px);
+            background-size: 34px 34px;
+            opacity: 0.42;
+        }
+
+        .project-picker h2 {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 6px;
+            color: #eff4ff;
+            font-size: 1.5rem;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+            letter-spacing: 0.03em;
+        }
+
+        .project-picker p {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 12px;
+            color: #c9d8f6;
+            line-height: 1.6;
+            max-width: 760px;
+        }
+
+        .project-picker-top {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px 14px;
+            margin-bottom: 10px;
+        }
+
+        .project-open-card-count {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 8px;
+            padding: 4px 9px;
+            border-radius: 999px;
+            border: 1px solid #79c8ff77;
+            background: #79c8ff1c;
+            color: #eaf3ff;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+            font-size: 0.72rem;
+            vertical-align: middle;
+        }
+
+        .project-filter-bar {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+        }
+
+        .project-filter-btn {
+            border: 1px solid #8ea2ff66;
+            background: #8ea2ff14;
+            color: #e3eeff;
+            padding: 7px 11px;
+            border-radius: 999px;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+            font-size: 0.74rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            transition: all 0.18s ease;
+        }
+
+        .project-filter-btn:hover,
+        .project-filter-btn:focus {
+            outline: none;
+            border-color: #79c8ff;
+            background: #79c8ff1f;
+            color: #f2f7ff;
+            transform: translateY(-1px);
+        }
+
+        .project-filter-btn.active {
+            border-color: #79c8ff;
+            background: linear-gradient(90deg, #8ea2ff30, #79c8ff30);
+            color: #ffffff;
+            box-shadow: 0 0 0 1px #79c8ff44 inset;
+        }
+
+        .project-picker-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 14px;
+        }
+
+        .project-open-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #8ea2ff66;
+            border-radius: 20px;
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%),
+                linear-gradient(145deg, rgba(142, 162, 255, 0.16), rgba(121, 200, 255, 0.08));
+            color: #eaf2ff;
+            min-height: 156px;
+            padding: 16px;
+            text-align: left;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 14px;
+            box-shadow: 0 12px 24px #09112640, inset 0 0 0 1px #ffffff08;
+            backdrop-filter: blur(10px);
+            isolation: isolate;
+        }
+
+        .project-open-card.card-pending {
+            opacity: 0;
+            transform: translateY(14px);
+        }
+
+        .project-open-card.reveal-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        .project-open-card[hidden] {
+            display: none !important;
+        }
+
+        .project-open-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 0%, #ffffff14 45%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+
+        .project-open-card::selection {
+            background: transparent;
+        }
+
+        .project-open-card::after {
+            content: '';
+            position: absolute;
+            left: 14px;
+            right: 14px;
+            bottom: 0;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #8ea2ff, #79c8ff, #a5b4fc);
+            transform: scaleX(0.22);
+            transform-origin: left;
+            transition: transform 0.2s ease;
+            opacity: 0.9;
+        }
+
+        .project-open-card-glow {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            right: -24px;
+            top: -24px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #79c8ff38 0%, transparent 68%);
+            pointer-events: none;
+            opacity: 0.7;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .project-open-card:focus-visible {
+            outline: none;
+            border-color: #a5b4fc;
+            box-shadow: 0 0 0 3px #8ea2ff2e, 0 10px 22px #79c8ff30;
+        }
+
+        .project-open-card-head,
+        .project-open-card-foot {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .project-open-card-visual {
+            position: relative;
+            z-index: 1;
+            height: 148px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #bcd0ff66;
+            background:
+                radial-gradient(circle at 18% 22%, #8ea2ff2e 0%, transparent 34%),
+                linear-gradient(135deg, #1a2341 0%, #27345f 100%);
+            box-shadow: inset 0 0 0 1px #ffffff0f, 0 8px 18px rgba(5, 10, 22, 0.32);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-open-card-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            opacity: 1;
+            transform: scale(1.06);
+            transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease;
+            filter: saturate(1.2) contrast(1.16) brightness(1.11);
+            background: linear-gradient(135deg, #151d36, #202b50);
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .project-open-card-visual.visual-portrait img {
+            object-fit: cover;
+            object-position: center top;
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            filter: saturate(1.22) contrast(1.16) brightness(1.12);
+            transform: scale(1.14);
+        }
+
+        .project-open-card-visual.visual-wide img {
+            object-fit: cover;
+            object-position: center center;
+            padding: 0;
+        }
+
+        .project-open-card-visual::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(9, 17, 38, 0.0) 0%, rgba(9, 17, 38, 0.04) 100%);
+            pointer-events: none;
+        }
+
+        .project-open-card[data-project="track"] .project-open-card-visual img,
+        .project-open-card[data-project="address"] .project-open-card-visual img,
+        .project-open-card[data-project="coffee"] .project-open-card-visual img,
+        .project-open-card[data-project="app"] .project-open-card-visual img,
+        .project-open-card[data-project="expense"] .project-open-card-visual img {
+            object-position: center 16%;
+        }
+
+        .project-open-card[data-project="crown"] .project-open-card-visual img,
+        .project-open-card[data-project="manage"] .project-open-card-visual img {
+            object-position: center 38%;
+        }
+
+        .project-open-card[data-project="crown"] .project-open-card-visual { border-color: #8ea2ff73; }
+        .project-open-card[data-project="track"] .project-open-card-visual { border-color: #7dd3fc70; }
+        .project-open-card[data-project="address"] .project-open-card-visual { border-color: #a5b4fc70; }
+        .project-open-card[data-project="coffee"] .project-open-card-visual { border-color: #f9a8d470; }
+        .project-open-card[data-project="app"] .project-open-card-visual { border-color: #86efac70; }
+        .project-open-card[data-project="manage"] .project-open-card-visual { border-color: #fcd34d70; }
+        .project-open-card[data-project="expense"] .project-open-card-visual { border-color: #34d39970; }
+
+        .project-open-card-visual::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 0%, #ffffff12 38%, transparent 62%);
+            transform: translateX(-120%);
+            transition: transform 0.45s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .project-open-card-pill {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 9px;
+            border-radius: 999px;
+            border: 1px solid #d5e1ff30;
+            background: rgba(11, 18, 32, 0.62);
+            color: #eef4ff;
+            font-size: 0.68rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            backdrop-filter: blur(10px);
+        }
+
+        .project-open-card-copy {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .project-open-card-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+        }
+
+        .project-open-card-badge {
+            width: 46px;
+            height: 46px;
+            border-radius: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.18rem;
+            border: 1px solid #8ea2ff55;
+            background: linear-gradient(145deg, #8ea2ff22, #79c8ff18);
+            color: #eaf2ff;
+            box-shadow: inset 0 0 0 1px #ffffff12, 0 6px 16px #8ea2ff2a;
+            flex-shrink: 0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .project-open-card-badge i {
+            font-size: 1.06em;
+            line-height: 1;
+            filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.15));
+        }
+
+        .project-open-card:hover .project-open-card-badge {
+            transform: scale(1.13) rotate(-4deg);
+        }
+
+        /* Per-project badge accent colors */
+        .project-open-card[data-project="crown"] .project-open-card-badge {
+            border-color: #8ea2ff55;
+            background: linear-gradient(145deg, #8ea2ff28, #79c8ff1e);
+            color: #c7d4ff;
+            box-shadow: inset 0 0 0 1px #ffffff0a, 0 4px 16px #8ea2ff30;
+        }
+        .project-open-card[data-project="track"] .project-open-card-badge {
+            border-color: #38bdf855;
+            background: linear-gradient(145deg, #7dd3fc28, #38bdf81e);
+            color: #bae6fd;
+            box-shadow: inset 0 0 0 1px #ffffff0a, 0 4px 16px #38bdf830;
+        }
+        .project-open-card[data-project="address"] .project-open-card-badge {
+            border-color: #a5b4fc55;
+            background: linear-gradient(145deg, #a5b4fc28, #8b5cf61e);
+            color: #c4b5fd;
+            box-shadow: inset 0 0 0 1px #ffffff0a, 0 4px 16px #a5b4fc30;
+        }
+        .project-open-card[data-project="coffee"] .project-open-card-badge {
+            border-color: #f9a8d455;
+            background: linear-gradient(145deg, #f9a8d428, #c084fc1e);
+            color: #f9a8d4;
+            box-shadow: inset 0 0 0 1px #ffffff0a, 0 4px 16px #f9a8d430;
+        }
+        .project-open-card[data-project="app"] .project-open-card-badge {
+            border-color: #86efac55;
+            background: linear-gradient(145deg, #86efac28, #2dd4bf1e);
+            color: #a7f3d0;
+            box-shadow: inset 0 0 0 1px #ffffff0a, 0 4px 16px #86efac30;
+        }
+        .project-open-card[data-project="manage"] .project-open-card-badge {
+            border-color: #fcd34d55;
+            background: linear-gradient(145deg, #fcd34d28, #fb71851e);
+            color: #fde68a;
+            box-shadow: inset 0 0 0 1px #ffffff0a, 0 4px 16px #fcd34d30;
+        }
+
+        .project-open-card[data-project="manage"] .project-open-card-badge i,
+        .project-open-card[data-project="expense"] .project-open-card-badge i {
+            transform: scale(1.12);
+        }
+
+        .project-open-card[data-project="expense"] .project-open-card-badge {
+            border-color: #34d39955;
+            background: linear-gradient(145deg, #34d39928, #06b6d41e);
+            color: #6ee7b7;
+            box-shadow: inset 0 0 0 1px #ffffff0a, 0 4px 16px #34d39930;
+        }
+
+        .project-open-card:hover {
+            transform: translateY(-6px) scale(1.015);
+            box-shadow: 0 18px 34px #79c8ff30;
+            background: linear-gradient(145deg, rgba(142, 162, 255, 0.22), rgba(121, 200, 255, 0.13));
+            border-color: #a5b4fc;
+        }
+
+        .project-open-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-open-card:hover .project-open-card-glow,
+        .project-open-card.active .project-open-card-glow {
+            transform: scale(1.18);
+            opacity: 1;
+        }
+
+        .project-open-card:hover .project-open-card-visual::before,
+        .project-open-card.active .project-open-card-visual::before {
+            transform: translateX(120%);
+        }
+
+        .project-open-card:hover .project-open-card-visual img,
+        .project-open-card.active .project-open-card-visual img {
+            transform: scale(1.18);
+            opacity: 1;
+            filter: saturate(1.24) contrast(1.18) brightness(1.14);
+        }
+
+        .project-open-card:hover .project-open-card-visual.visual-portrait img,
+        .project-open-card.active .project-open-card-visual.visual-portrait img {
+            transform: scale(1.2);
+        }
+
+        .project-open-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .project-open-card.active {
+            border-color: #79c8ff;
+            background: linear-gradient(135deg, #8ea2ff38, #79c8ff30);
+            box-shadow: 0 0 0 1px #79c8ff55 inset, 0 18px 34px #79c8ff35;
+        }
+
+        .project-open-card.active::before {
+            opacity: 1;
+        }
+
+        .project-open-card.active::after {
+            transform: scaleX(1);
+        }
+
+        .project-open-card strong {
+            display: block;
+            font-size: 1.04rem;
+            letter-spacing: 0.01em;
+            line-height: 1.3;
+            color: #f4f7ff;
+        }
+
+        .project-open-card span {
+            display: block;
+            font-size: 0.82rem;
+            color: #c7d4f2;
+            line-height: 1.5;
+        }
+
+        .project-open-card-desc {
+            color: #d6e1f7 !important;
+            font-size: 0.83rem !important;
+        }
+
+        .project-open-card-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 8px;
+            border-radius: 999px;
+            border: 1px solid #8ea2ff40;
+            background: #8ea2ff12;
+            color: #dbe7ff;
+            font-size: 0.72rem !important;
+            width: fit-content;
+        }
+
+        .project-open-card-arrow {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #8ea2ff1c;
+            border: 1px solid #8ea2ff44;
+            color: #cfe0ff;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+        }
+
+        .project-open-card:hover .project-open-card-arrow,
+        .project-open-card.active .project-open-card-arrow {
+            transform: translateX(3px);
+            background: linear-gradient(135deg, #8ea2ff, #79c8ff);
+            color: #0b1220;
+        }
+
+        .project-open-card-foot > span:first-child {
+            color: #dbe7ff;
+            font-size: 0.76rem;
+            letter-spacing: 0.02em;
+        }
+
+        .project-open-hint {
+            position: relative;
+            z-index: 1;
+            margin-top: 10px;
+            color: #b9c7e6;
+            font-size: 0.84rem;
+        }
+
+        @media (max-width: 700px) {
+            .project-picker {
+                padding: 18px;
+            }
+
+            .project-picker-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-open-card {
+                min-height: 132px;
+            }
+
+            .project-open-card-visual {
+                height: 132px;
+            }
+        }
+
+        .project-detail-section {
+            --project-accent: #8ea2ff;
+            --project-accent-2: #79c8ff;
+            display: none;
+        }
+
+        .project-detail-section.is-open {
+            display: block;
+            animation: projectReveal 0.35s ease;
+        }
+
+        @keyframes projectReveal {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-detail-section {
+            width: min(1180px, 94%);
+            margin: 0 auto 28px;
+            padding: 0;
+            border-radius: 28px;
+            border: 1.5px solid color-mix(in srgb, var(--project-accent) 58%, transparent);
+            background:
+                radial-gradient(circle at 14% 18%, color-mix(in srgb, var(--project-accent) 18%, transparent) 0%, transparent 32%),
+                radial-gradient(circle at 86% 76%, color-mix(in srgb, var(--project-accent-2) 16%, transparent) 0%, transparent 28%),
+                linear-gradient(135deg, #131a31 0%, #1b2444 56%, #10172d 100%);
+            box-shadow: 0 14px 36px #0911267a, 0 0 0 1px color-mix(in srgb, var(--project-accent) 18%, transparent) inset;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-detail-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(142, 162, 255, 0.055) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(121, 200, 255, 0.055) 1px, transparent 1px);
+            background-size: 34px 34px;
+            opacity: 0.4;
+        }
+
+        .project-detail-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 22px;
+            right: 22px;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, transparent, var(--project-accent), var(--project-accent-2), transparent);
+            opacity: 0.95;
+            box-shadow: 0 0 18px color-mix(in srgb, var(--project-accent) 40%, transparent);
+        }
+
+        .project-detail-section:hover {
+            box-shadow: 0 18px 42px #09112686, 0 0 0 1px color-mix(in srgb, var(--project-accent) 24%, transparent) inset;
+        }
+
+        .project-detail-section#crown {
+            --project-accent: #8ea2ff;
+            --project-accent-2: #79c8ff;
+        }
+
+        .project-detail-section#track {
+            --project-accent: #7dd3fc;
+            --project-accent-2: #38bdf8;
+        }
+
+        .project-detail-section#address {
+            --project-accent: #a5b4fc;
+            --project-accent-2: #8b5cf6;
+        }
+
+        .project-detail-section#coffee {
+            --project-accent: #f9a8d4;
+            --project-accent-2: #c084fc;
+        }
+
+        .project-detail-section#app {
+            --project-accent: #86efac;
+            --project-accent-2: #2dd4bf;
+        }
+
+        .project-detail-section#manage {
+            --project-accent: #fcd34d;
+            --project-accent-2: #fb7185;
+        }
+
+        .project-detail-section#expense {
+            --project-accent: #34d399;
+            --project-accent-2: #06b6d4;
+        }
+
+        .project-detail-section .type-1.padbot_120 {
+            padding-bottom: 0 !important;
+        }
+
+        .project-detail-section > div,
+        .project-detail-section .type-1,
+        .project-detail-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-detail-section .container {
+            width: 100%;
+            max-width: none;
+            padding: 26px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 26px;
+            align-items: stretch;
+        }
+
+        .project-detail-section .about-image,
+        .project-detail-section .about-text {
+            float: none !important;
+            margin: 0 !important;
+        }
+
+        .project-detail-section .about-image {
+            flex: 1 1 420px;
+        }
+
+        .project-detail-section .about-image > .container {
+            padding: 0;
+            display: block;
+        }
+
+        .project-detail-section .about-text {
+            flex: 1 1 420px;
+            height: auto;
+            display: block;
+        }
+
+        .project-detail-section .section-title {
+            padding: 0 !important;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+
+        .project-detail-section h2 {
+            margin: 0 0 14px;
+            font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+            line-height: 1.05;
+            background: linear-gradient(90deg, #eef4ff 0%, var(--project-accent) 42%, var(--project-accent-2) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.01em;
+            text-shadow: 0 10px 24px color-mix(in srgb, var(--project-accent) 20%, transparent);
+        }
+
+        .project-detail-section h3 {
+            margin: 0 0 14px;
+            color: #dbe7ff;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            font-weight: 600;
+            padding: 10px 14px;
+            border-radius: 14px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 34%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+            display: inline-block;
+            max-width: 100%;
+            box-shadow: inset 0 0 0 1px #ffffff08;
+        }
+
+        .project-detail-section p {
+            color: #dbe7ff;
+            font-size: 1rem;
+            line-height: 1.85;
+            margin: 0;
+        }
+
+        .project-detail-section li {
+            color: #dbe7ff;
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .project-detail-section .about-text p,
+        .project-detail-section .project-story {
+            padding: 18px 20px;
+            border-radius: 20px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 28%, transparent);
+            background:
+                linear-gradient(145deg, color-mix(in srgb, var(--project-accent) 10%, transparent), color-mix(in srgb, var(--project-accent-2) 6%, transparent)),
+                linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+            box-shadow: inset 0 0 0 1px #ffffff08, 0 10px 24px rgba(7, 12, 23, 0.18);
+        }
+
+        .project-detail-section .carousel {
+            border-radius: 22px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 30%, transparent);
+            background: linear-gradient(145deg, #121a31 0%, #1c2648 100%);
+            box-shadow: 0 14px 28px #09112666, 0 0 0 1px color-mix(in srgb, var(--project-accent) 14%, transparent) inset;
+            overflow: hidden;
+            padding: 12px;
+        }
+
+        .project-detail-section .carousel-indicators {
+            bottom: 2px;
+        }
+
+        .project-detail-section .carousel-indicators li {
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            border: none;
+            border-radius: 50%;
+            background: #dbe7ff66;
+        }
+
+        .project-detail-section .carousel-indicators .active {
+            background: var(--project-accent-2);
+            box-shadow: 0 0 10px color-mix(in srgb, var(--project-accent-2) 60%, transparent);
+        }
+
+        .project-detail-section .carousel-inner {
+            border-radius: 16px;
+            overflow: hidden;
+            background:
+                linear-gradient(180deg, rgba(7, 12, 23, 0.1) 0%, rgba(7, 12, 23, 0.5) 100%),
+                linear-gradient(90deg, rgba(142, 162, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(rgba(121, 200, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(135deg, #11192f 0%, #1c274a 100%);
+            background-size: auto, 28px 28px, 28px 28px, auto;
+            min-height: 320px;
+        }
+
+        .project-detail-section .carousel-inner .item {
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+        }
+
+        .project-detail-section .carousel-inner img {
+            width: auto !important;
+            max-width: 100% !important;
+            height: 290px !important;
+            max-height: 290px !important;
+            object-fit: contain !important;
+            object-position: center center !important;
+            border-radius: 16px;
+            background: transparent;
+            box-shadow: 0 12px 28px rgba(6, 12, 24, 0.45);
+            padding: 0 !important;
+            display: block;
+        }
+
+        .project-detail-section .btn.btn-primary {
+            margin-top: 18px !important;
+            padding: 12px 18px;
+            border-radius: 999px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 58%, transparent);
+            background: linear-gradient(90deg, var(--project-accent) 0%, var(--project-accent-2) 100%) !important;
+            color: #fff !important;
+            box-shadow: 0 12px 24px color-mix(in srgb, var(--project-accent-2) 28%, transparent);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-detail-section .btn.btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 28px color-mix(in srgb, var(--project-accent-2) 40%, transparent);
+        }
+
+        .project-detail-section .btn.btn-primary i {
+            font-size: 0.95rem;
+        }
+
+        .project-section-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 16px;
+        }
+
+        .project-section-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 32%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+            color: #eef4ff;
+            font-size: 0.76rem;
+            letter-spacing: 0.03em;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-rich-content {
+            display: grid;
+            gap: 16px;
+        }
+
+        .project-tech-panel,
+        .project-feature-panel {
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 24%, transparent);
+            background: linear-gradient(165deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            box-shadow: inset 0 0 0 1px #ffffff08;
+        }
+
+        .project-tech-panel h4,
+        .project-feature-panel h4 {
+            margin: 0 0 12px;
+            color: #f4f8ff;
+            font-size: 0.92rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .project-tech-list span {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 11px;
+            border-radius: 12px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 28%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 10%, transparent);
+            color: #eef4ff;
+            font-size: 0.82rem;
+            box-shadow: inset 0 0 0 1px #ffffff05;
+        }
+
+        .project-feature-list {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-action-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .project-link-note {
+            color: #b9c8e8;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .project-detail-section#crown .crown-highlights-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+        }
+
+        .project-detail-section#crown .crown-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 30%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+            color: #eef4ff;
+            font-size: 0.75rem;
+            letter-spacing: 0.03em;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#crown .crown-recruiter-panel {
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 26%, transparent);
+            background:
+                linear-gradient(145deg, color-mix(in srgb, var(--project-accent) 12%, transparent), color-mix(in srgb, var(--project-accent-2) 8%, transparent)),
+                linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+            box-shadow: inset 0 0 0 1px #ffffff08;
+        }
+
+        .project-detail-section#crown .crown-recruiter-panel h4 {
+            margin: 0 0 12px;
+            color: #f4f8ff;
+            font-size: 0.92rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#crown .crown-recruiter-list {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-detail-section#crown .crown-recruiter-list li {
+            color: #dfe9ff;
+        }
+
+        .project-detail-section#address .address-highlights-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+        }
+
+        .project-detail-section#address .address-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 30%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+            color: #eef4ff;
+            font-size: 0.75rem;
+            letter-spacing: 0.03em;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#address .address-impact-panel {
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 26%, transparent);
+            background:
+                linear-gradient(145deg, color-mix(in srgb, var(--project-accent) 12%, transparent), color-mix(in srgb, var(--project-accent-2) 8%, transparent)),
+                linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+            box-shadow: inset 0 0 0 1px #ffffff08;
+        }
+
+        .project-detail-section#address .address-impact-panel h4 {
+            margin: 0 0 12px;
+            color: #f4f8ff;
+            font-size: 0.92rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#address .address-impact-list {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-detail-section#address .address-impact-list li {
+            color: #dfe9ff;
+        }
+
+        .project-detail-section#coffee .coffee-highlights-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+        }
+
+        .project-detail-section#coffee .coffee-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 30%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+            color: #eef4ff;
+            font-size: 0.75rem;
+            letter-spacing: 0.03em;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#coffee .coffee-impact-panel {
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 26%, transparent);
+            background:
+                linear-gradient(145deg, color-mix(in srgb, var(--project-accent) 12%, transparent), color-mix(in srgb, var(--project-accent-2) 8%, transparent)),
+                linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+            box-shadow: inset 0 0 0 1px #ffffff08;
+        }
+
+        .project-detail-section#coffee .coffee-impact-panel h4 {
+            margin: 0 0 12px;
+            color: #f4f8ff;
+            font-size: 0.92rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#coffee .coffee-impact-list {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-detail-section#coffee .coffee-impact-list li {
+            color: #dfe9ff;
+        }
+
+        .project-detail-section#app .app-highlights-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+        }
+
+        .project-detail-section#app .app-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 30%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+            color: #eef4ff;
+            font-size: 0.75rem;
+            letter-spacing: 0.03em;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#app .app-impact-panel {
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 26%, transparent);
+            background:
+                linear-gradient(145deg, color-mix(in srgb, var(--project-accent) 12%, transparent), color-mix(in srgb, var(--project-accent-2) 8%, transparent)),
+                linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+            box-shadow: inset 0 0 0 1px #ffffff08;
+        }
+
+        .project-detail-section#app .app-impact-panel h4 {
+            margin: 0 0 12px;
+            color: #f4f8ff;
+            font-size: 0.92rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#app .app-impact-list {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-detail-section#app .app-impact-list li {
+            color: #dfe9ff;
+        }
+
+        .project-detail-section#manage .manage-highlights-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+        }
+
+        .project-detail-section#manage .manage-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 30%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+            color: #eef4ff;
+            font-size: 0.75rem;
+            letter-spacing: 0.03em;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#manage .manage-impact-panel {
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 26%, transparent);
+            background:
+                linear-gradient(145deg, color-mix(in srgb, var(--project-accent) 12%, transparent), color-mix(in srgb, var(--project-accent-2) 8%, transparent)),
+                linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+            box-shadow: inset 0 0 0 1px #ffffff08;
+        }
+
+        .project-detail-section#manage .manage-impact-panel h4 {
+            margin: 0 0 12px;
+            color: #f4f8ff;
+            font-size: 0.92rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#manage .manage-impact-list {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-detail-section#manage .manage-impact-list li {
+            color: #dfe9ff;
+        }
+
+        .project-detail-section#expense .expense-highlights-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+        }
+
+        .project-detail-section#expense .expense-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 30%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+            color: #eef4ff;
+            font-size: 0.75rem;
+            letter-spacing: 0.03em;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#expense .expense-impact-panel {
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 26%, transparent);
+            background:
+                linear-gradient(145deg, color-mix(in srgb, var(--project-accent) 12%, transparent), color-mix(in srgb, var(--project-accent-2) 8%, transparent)),
+                linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+            box-shadow: inset 0 0 0 1px #ffffff08;
+        }
+
+        .project-detail-section#expense .expense-impact-panel h4 {
+            margin: 0 0 12px;
+            color: #f4f8ff;
+            font-size: 0.92rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+        }
+
+        .project-detail-section#expense .expense-impact-list {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-detail-section#expense .expense-impact-list li {
+            color: #dfe9ff;
+        }
+
+        .project-detail-section#crown .project-story::before,
+        .project-detail-section#track .project-story::before,
+        .project-detail-section#address .project-story::before,
+        .project-detail-section#coffee .project-story::before,
+        .project-detail-section#app .project-story::before,
+        .project-detail-section#manage .project-story::before,
+        .project-detail-section#expense .project-story::before {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 14px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid color-mix(in srgb, var(--project-accent) 30%, transparent);
+            background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+            color: #eef4ff;
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-family: 'Fira Mono', 'Share Tech Mono', monospace;
+            box-shadow: 0 8px 18px rgba(8, 14, 29, 0.18);
+        }
+
+        .project-detail-section#crown .project-story::before { content: 'Case Study · Hospitality'; }
+        .project-detail-section#track .project-story::before { content: 'Case Study · Android'; }
+        .project-detail-section#address .project-story::before { content: 'Case Study · Contact Manager'; }
+        .project-detail-section#coffee .project-story::before { content: 'Case Study · iOS'; }
+        .project-detail-section#app .project-story::before { content: 'Case Study · Product Suite'; }
+        .project-detail-section#manage .project-story::before { content: 'Case Study · Operations'; }
+        .project-detail-section#expense .project-story::before { content: 'Case Study · React Native'; }
+
+        @media (max-width: 900px) {
+            .project-detail-section {
+                width: min(96%, 96%);
+            }
+
+            .project-detail-section .container {
+                padding: 18px;
+                gap: 18px;
+            }
+
+            .project-detail-section .carousel-inner,
+            .project-detail-section .carousel-inner .item {
+                min-height: 260px;
+            }
+
+            .project-detail-section .carousel-inner img {
+                height: 230px !important;
+                max-height: 230px !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .project-detail-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .project-detail-section .about-text p {
+                padding: 16px;
+            }
+
+            .project-detail-section .carousel {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 
-<body class="diag">
-
-    <!-- LOADER -->
+<body class="diag index-engineering work-engineering">
+    <!-- ==================== LOADER ==================== -->
     <div class="loader-wrapper">
-        <div class="loader"></div>
-
-
+        <div class="loader-grid" aria-hidden="true"></div>
+        <div class="loader" aria-label="Loading">
+            <div class="loader-core"></div>
+        </div>
+        <div class="loader-text">Loading Nikita's Portfolio</div>
     </div>
 
-    <nav>
-        <div class="row">
-            <div class="container">
-                <div class="logo">
-                    <img src="images/logo.png" alt="NP">
-
-                </div>
-                <!--  <div class="responsive"><i data-icon="m" class="icon"></i></div> -->
-                <ul class="nav-menu">
-                    <li><a href="file:///Users/nikitaparalkar/Documents/VisualStudioCode/NikitaParalkarVScode/index.html#home"
-                            class="smoothScroll">Home</a></li>
-                    <li><a href="file:///Users/nikitaparalkar/Documents/VisualStudioCode/NikitaParalkarVScode/index.html#contact"
-                            class="smoothScroll">Contact</a></li>
-                </ul>
+    <!-- ===== Header / Navigation ===== -->
+    <header>
+        <nav class="modern-navbar" aria-label="Main Navigation">
+            <div class="logo">
+                <a href="index.html#home" aria-label="Home">
+                    <img src="images/Logo-np.png" alt="NP logo" class="header-logo-img">
+                </a>
             </div>
-        </div>
-    </nav>
-
-    <!--HOME Page-->
-
-    <section class="home slider" id="home">
-        <div class="home-content">
-            <div class="container">
-
-                <h1>Computer <span class="element" data-text1="Engineer" data-text2="Developer" data-loop="true"
-                        data-backdelay="3000"></span><br></h1>
-
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/nikitaparalkar/"><i class="fab fa-linkedin fa-3x"></i></a>
-                    <a href="https://github.com/paralkarniki?tab=repositorie"><i class="fab fa-github fa-3x"></i></a>
-                </div>
+            <div class="nav-menu" role="menubar">
+                <a href="index.html#home" role="menuitem" tabindex="0">Home</a>
+                <a href="about.html" role="menuitem" tabindex="0">About Me</a>
+                
+                <a href="resume.html" role="menuitem" tabindex="0">Resume</a>
+                <a href="work.html" role="menuitem" tabindex="0" aria-current="page">Projects</a>
+                <a href="contact.html" role="menuitem" tabindex="0">Contact</a>
             </div>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/nikitaparalkar/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/paralkarniki?tab=repositories" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="work-hero" aria-label="Projects page hero">
+        <div class="work-hero-copy">
+            <span class="work-hero-kicker">Nikita · project engineering</span>
             <br>
-            <a href="file:///Users/nikitaparalkar/Documents/VisualStudioCode/NikitaParalkarVScode/index.html" class="smoothscroll btn btn-primary px-4 py-3">Home</a>
-        </div>
-        </div>
-        </div>
-
-        </div>
-
-        </div>
-        </div>
-    </section>
-
-    </div>
-    <!--Slider-->
-    <div class="home-slider">
-        <div id="slides">
-            <div class="slides-container">
-                <img src="images/falls.png" alt="">
-                <img src="images/toronto.png" alt="">
-                <img src="images/main.png" alt="">
-                <img src="images/img.jpg" alt="">
+            <span class="work-hero-rotator" id="workHeroRotator">Now showcasing: Full-Stack Builds</span>
+            <p>
+                Explore a curated set of projects across web, mobile, and full-stack development.
+                Use filters to quickly browse by platform and open any card for the full case study with tech stack,
+                impact, and implementation details.
+            </p>
+            <div class="work-hero-pills">
+                <span>Case-study format</span>
+                <span>Recruiter-friendly highlights</span>
+                <span>Interactive project filter</span>
+            </div>
+            <div class="work-hero-actions">
+                <a class="work-hero-btn work-hero-btn-primary" href="#projects">Open Project Library</a>
+                <a class="work-hero-btn work-hero-btn-secondary" href="contact.html">Contact Me</a>
+            </div>
+            <div class="work-hero-social" aria-label="Social links">
+                <a href="https://github.com/paralkarniki?tab=repositories" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nikitaparalkar/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-    </div>
-    </div>
-    <svg class="diagonal home-left" width="21%" height="170" viewBox="0 0 100 102" preserveAspectRatio="none">
-        <path d="M0 100 L100 100 L0 10 Z"></path>
-    </svg>
-    <svg class="diagonal home-right" width="80%" height="170" viewBox="0 0 100 102" preserveAspectRatio="none">
-        <path d="M0 100 L100 100 L100 10 Z"></path>
-    </svg>
+        <div class="work-hero-gallery" aria-hidden="true">
+            <div class="work-preview-card work-preview-card-tall">
+                <img src="images/expensetracker1.png" alt="Expense Tracker project preview" loading="lazy">
+                <div class="work-preview-label">Expense Tracker · React Native</div>
+            </div>
+            <div class="work-preview-card">
+                <img src="images/invent2.png" alt="Inventory project preview" loading="lazy">
+                <div class="work-preview-label">Inventory System · ASP.NET MVC</div>
+            </div>
+            <div class="work-preview-card">
+                <img src="images/trackiffy8.png" alt="Trackiffy project preview" loading="lazy">
+                <div class="work-preview-label">Trackiffy · Android</div>
+            </div>
+        </div>
     </section>
 
+    <!-- ===== Project Picker ===== -->
+    <section class="project-picker" id="projects" aria-label="Choose project details">
+        <div class="project-picker-top">
+            <h2>Project library <span class="project-open-card-count" id="visibleProjectCount">7 visible</span></h2>
+            <p>Filter by platform, then click a card to open its full case study.</p>
+        </div>
 
-    <!--Crown Project Page-->
-    <section class="crown dgray-bg" id="crown">
+        <div class="project-filter-bar" role="tablist" aria-label="Project type filters">
+            <button class="project-filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="project-filter-btn" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+            <button class="project-filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+            <button class="project-filter-btn" type="button" data-filter="fullstack" aria-pressed="false">Full-Stack</button>
+            <button class="project-filter-btn" type="button" data-filter="ios" aria-pressed="false">iOS</button>
+            <button class="project-filter-btn" type="button" data-filter="android" aria-pressed="false">Android</button>
+        </div>
+
+        <div class="project-picker-grid">
+
+            <!-- Project: Pantrio -->
+            <button class="project-open-card" type="button" data-project="pantrio" data-stack="web react nextjs tailwind" aria-controls="pantrio">
+                <span class="project-open-card-glow" aria-hidden="true"></span>
+                <span class="project-open-card-visual visual-wide"><img src="images/pantrio-logo.png" alt="Pantrio logo" loading="lazy" onerror="this.onerror=null;this.src='images/main.png';"><span class="project-open-card-pill">Meal-Planning</span></span>
+                <span class="project-open-card-copy"><span class="project-open-card-head">
+                    <span class="project-open-card-title">
+                        <span class="project-open-card-badge"><i class="fas fa-utensils"></i></span>
+                        <span><strong>Pantrio</strong><span class="project-open-card-desc">Recipe and meal-planning web app: turn pantry ingredients into meal ideas, plan meals, and track favorites.</span></span>
+                    </span>
+                </span></span>
+                <span class="project-open-card-foot"><span class="project-open-card-meta">Next.js · React · Tailwind</span><span class="project-open-card-arrow"><i class="fas fa-arrow-right"></i></span></span>
+            </button>
+            <button class="project-open-card" type="button" data-project="crown" data-stack="web fullstack java" aria-controls="crown">
+                <span class="project-open-card-glow" aria-hidden="true"></span>
+                <span class="project-open-card-visual visual-wide"><img src="images/check.JPG" alt="Crown-Hotel preview" loading="lazy" onerror="this.onerror=null;this.src='images/main.png';"><span class="project-open-card-pill">Hotel Booking</span></span>
+                <span class="project-open-card-copy"><span class="project-open-card-head">
+                    <span class="project-open-card-title">
+                        <span class="project-open-card-badge"><i class="fas fa-concierge-bell"></i></span>
+                        <span><strong>Crown-Hotel</strong><span class="project-open-card-desc">Role-based hotel booking platform with room management and date-based availability.</span></span>
+                    </span>
+                </span></span>
+                <span class="project-open-card-foot"><span class="project-open-card-meta">Java web application</span><span class="project-open-card-arrow"><i class="fas fa-arrow-right"></i></span></span>
+            </button>
+            <button class="project-open-card" type="button" data-project="track" data-stack="mobile android java" aria-controls="track">
+                <span class="project-open-card-glow" aria-hidden="true"></span>
+                <span class="project-open-card-visual visual-portrait"><img src="images/trackiffy8.png" alt="Trackiffy preview" loading="lazy" onerror="this.onerror=null;this.src='images/main.png';"><span class="project-open-card-pill">Savings app</span></span>
+                <span class="project-open-card-copy"><span class="project-open-card-head">
+                    <span class="project-open-card-title">
+                        <span class="project-open-card-badge"><i class="fas fa-mobile-alt"></i></span>
+                        <span><strong>Trackiffy</strong><span class="project-open-card-desc">Android money tracker with transaction history, reminders, and local persistence.</span></span>
+                    </span>
+                </span></span>
+                <span class="project-open-card-foot"><span class="project-open-card-meta">Android + SQLite</span><span class="project-open-card-arrow"><i class="fas fa-arrow-right"></i></span></span>
+            </button>
+            <button class="project-open-card" type="button" data-project="address" data-stack="mobile android java" aria-controls="address">
+                <span class="project-open-card-glow" aria-hidden="true"></span>
+                <span class="project-open-card-visual visual-portrait"><img src="images/adress4.png" alt="Address Book preview" loading="lazy" onerror="this.onerror=null;this.src='images/main.png';"><span class="project-open-card-pill">CRUD app</span></span>
+                <span class="project-open-card-copy"><span class="project-open-card-head">
+                    <span class="project-open-card-title">
+                        <span class="project-open-card-badge"><i class="fas fa-address-book"></i></span>
+                        <span><strong>Address Book</strong><span class="project-open-card-desc">SQLite-backed contact manager with add, edit, view, and delete flows.</span></span>
+                    </span>
+                </span></span>
+                <span class="project-open-card-foot"><span class="project-open-card-meta">Java mobile app</span><span class="project-open-card-arrow"><i class="fas fa-arrow-right"></i></span></span>
+            </button>
+            <button class="project-open-card" type="button" data-project="coffee" data-stack="mobile ios swift" aria-controls="coffee">
+                <span class="project-open-card-glow" aria-hidden="true"></span>
+                <span class="project-open-card-visual visual-portrait"><img src="images/coffee02.png" alt="Coffee Simulator preview" loading="lazy" onerror="this.onerror=null;this.src='images/main.png';"><span class="project-open-card-pill">Interactive</span></span>
+                <span class="project-open-card-copy"><span class="project-open-card-head">
+                    <span class="project-open-card-title">
+                        <span class="project-open-card-badge"><i class="fas fa-coffee"></i></span>
+                        <span><strong>Coffee Simulator</strong><span class="project-open-card-desc">iOS simulator that models the coffee-making sequence with interactive controls.</span></span>
+                    </span>
+                </span></span>
+                <span class="project-open-card-foot"><span class="project-open-card-meta">Swift + UIKit</span><span class="project-open-card-arrow"><i class="fas fa-arrow-right"></i></span></span>
+            </button>
+            <button class="project-open-card" type="button" data-project="app" data-stack="mobile ios swift" aria-controls="app">
+                <span class="project-open-card-glow" aria-hidden="true"></span>
+                <span class="project-open-card-visual visual-portrait"><img src="images/apa4.png" alt="App of Apps preview" loading="lazy" onerror="this.onerror=null;this.src='images/main.png';"><span class="project-open-card-pill">All-in-one</span></span>
+                <span class="project-open-card-copy"><span class="project-open-card-head">
+                    <span class="project-open-card-title">
+                        <span class="project-open-card-badge"><i class="fas fa-th-large"></i></span>
+                        <span><strong>App of Apps</strong><span class="project-open-card-desc">A single iOS product combining mapping, to-do, music, login, and game modules.</span></span>
+                    </span>
+                </span></span>
+                <span class="project-open-card-foot"><span class="project-open-card-meta">iOS product suite</span><span class="project-open-card-arrow"><i class="fas fa-arrow-right"></i></span></span>
+            </button>
+            <button class="project-open-card" type="button" data-project="manage" data-stack="web fullstack dotnet" aria-controls="manage">
+                <span class="project-open-card-glow" aria-hidden="true"></span>
+                <span class="project-open-card-visual visual-wide"><img src="images/invent2.png" alt="Inventory System preview" loading="lazy" onerror="this.onerror=null;this.src='images/main.png';"><span class="project-open-card-pill">Operations</span></span>
+                <span class="project-open-card-copy"><span class="project-open-card-head">
+                    <span class="project-open-card-title">
+                        <span class="project-open-card-badge"><i class="fas fa-boxes"></i></span>
+                        <span><strong>Inventory System</strong><span class="project-open-card-desc">ASP.NET MVC management dashboard for users, roles, categories, and inventory workflows.</span></span>
+                    </span>
+                </span></span>
+                <span class="project-open-card-foot"><span class="project-open-card-meta">ASP.NET MVC</span><span class="project-open-card-arrow"><i class="fas fa-arrow-right"></i></span></span>
+            </button>
+            <button class="project-open-card" type="button" data-project="expense" data-stack="mobile fullstack react-native" aria-controls="expense">
+                <span class="project-open-card-glow" aria-hidden="true"></span>
+                <span class="project-open-card-visual visual-portrait"><img src="images/expensetracker1.png" alt="Expense Tracker preview" loading="lazy" onerror="this.onerror=null;this.src='images/main.png';"><span class="project-open-card-pill">Finance</span></span>
+                <span class="project-open-card-copy"><span class="project-open-card-head">
+                    <span class="project-open-card-title">
+                        <span class="project-open-card-badge"><i class="fas fa-wallet"></i></span>
+                        <span><strong>Expense Tracker</strong><span class="project-open-card-desc">React Native mobile app for income and expense tracking with analytics, CSV export, and backend sync.</span></span>
+                    </span>
+                </span></span>
+                <span class="project-open-card-foot"><span class="project-open-card-meta">React Native + Expo</span><span class="project-open-card-arrow"><i class="fas fa-arrow-right"></i></span></span>
+            </button>
+        </div>
+        <p class="project-open-hint">Tip: click a card to open its full story, then click it again to close.</p>
+    </section>
+
+    <!-- ===== Project: Crown-Hotel ===== -->
+    <section class="crown dgray-bg project-detail-section" id="crown">
         <div class="crown type-1 padbot_120">
             <div class="container">
-                <!-- Crown image -->
                 <div class="col-md-4 col-sm-12 about-image top_30">
                     <div class="container">
                         <h2>Crown-Hotel</h2>
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
+                        <div class="project-section-meta">
+                            <span><i class="fas fa-layer-group"></i> Java web stack</span>
+                            <span><i class="fas fa-users-cog"></i> Admin + user roles</span>
+                            <span><i class="fas fa-calendar-check"></i> Availability booking</span>
+                        </div>
+                        <div id="carousel-crown" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#carousel-crown" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-crown" data-slide-to="1"></li>
+                                <li data-target="#carousel-crown" data-slide-to="2"></li>
                             </ol>
-
-                            <!-- Wrapper for slides -->
                             <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="images/check.JPG" style="width:100%;">
-                                </div>
-
-                                <div class="item">
-                                    <img src="images/contact.JPG" style="width:100%;">
-                                </div>
-
-                                <div class="item">
-                                    <img src="images/one.JPG" style="width:100%;">
+                                <div class="item active"><img src="images/check.JPG" alt="Crown-Hotel home screen"></div>
+                                <div class="item"><img src="images/contact.JPG" alt="Crown-Hotel booking screen"></div>
+                                <div class="item"><img src="images/one.JPG" alt="Crown-Hotel room view"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
+                    <div class="section-title dleft bottom_30">
+                        <h3>Full-stack hospitality platform built to streamline booking journeys and role-based operations.</h3>
+                        <div class="project-rich-content">
+                            <div class="crown-highlights-row" aria-label="Crown-Hotel highlights">
+                                <span class="crown-highlight"><i class="fas fa-user-check"></i> Role-based access</span>
+                                <span class="crown-highlight"><i class="fas fa-stream"></i> End-to-end booking flow</span>
+                                <span class="crown-highlight"><i class="fas fa-users"></i> Collaborative build</span>
+                            </div>
+                            <div class="project-story">
+                                Crown-Hotel demonstrates product-minded backend and frontend coordination in a real-world domain.
+                                I focused on building a smooth room-discovery and reservation experience while supporting admin-side
+                                controls for room lifecycle and booking management through a role-aware architecture.
+                            </div>
+                            <div class="crown-recruiter-panel">
+                                <h4>Project Impact</h4>
+                                <ul class="crown-recruiter-list">
+                                    <li>Designed workflows for three user modes: guest browsing, registered booking, and admin operations.</li>
+                                    <li>Implemented date-based availability logic to support reliable room search and reservation actions.</li>
+                                    <li>Built maintainable CRUD pathways for rooms and bookings, improving operational control.</li>
+                                    <li>Delivered collaborative group execution using a clear MVC-style separation of concerns.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech-panel">
+                                <h4>Technology display</h4>
+                                <div class="project-tech-list">
+                                    <span>Java</span>
+                                    <span>JSP</span>
+                                    <span>JSTL</span>
+                                    <span>Spring MVC</span>
+                                    <span>MySQL</span>
+                                    <span>jQuery</span>
+                                    <span>AJAX</span>
+                                    <span>Bootstrap</span>
                                 </div>
                             </div>
-
+                            <div class="project-feature-panel">
+                                <h4>Key features</h4>
+                                <ul class="project-feature-list">
+                                    <li>Date-based room availability and room-type selection for guests.</li>
+                                    <li>Registered users can book rooms and manage previous reservations.</li>
+                                    <li>Admin tools support add, edit, delete, and update workflows for rooms and bookings.</li>
+                                    <li>Structured login and registration flows supported by server-side Java servlets.</li>
+                                </ul>
+                            </div>
+                            <div class="project-action-row">
+                                <button class="btn btn-primary top_30" onclick="myCrown()" type="button">Explore Code on GitHub<i class="fab fa-github"></i></button>
+                                <span class="project-link-note">Strong fit for full-stack Java roles requiring product sense, data workflows, and clean admin tooling.</span>
+                            </div>
                         </div>
-                        <!-- Crown text -->
-                        <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
-                            <div class="section-title dleft bottom_30">
-
-
-                                <p>The Crown-Hotel <br>
-                                    <h3>Technologies: Java, JSP, MYSQL, JSLT, Spring MVC framework, JavaScript, Ajax, jQuery, Bootstrap</h3>
-                                    <br>
-
-                        •	Designed and developed using J2EE Web Application as the group project
-                        <br>
-                        •	This project helps the users to find rooms in the hotel and book them for specific date.
-                        <br>
-                        •	Provide functionality to Add/Edit/Delete rooms as well as users and bookings for Admin.
-                        <br>
-                        •	Give register user ability to search available rooms between certain dates and book rooms or edit the previous booking. 
-                        <br>
-                        •	Guest can only check available rooms.
-                        <br>
-
-                                </p>
-
-
-                                <button class="btn btn-primary top_30" onclick="myCrown()" type="button">Crown-Hotel<i
-                                        class="fas fa-concierge-bell"></i></button>
-                                
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-        </div>
     </section>
 
-
-
-    <!--Trackiff Project Page-->
-    <section class="track dgray-bg" id="track">
+    <!-- ===== Project: Trackiffy ===== -->
+    <section class="track dgray-bg project-detail-section" id="track">
         <div class="track type-1 padbot_120">
             <div class="container">
-                <!-- Trackiffy image -->
                 <div class="col-md-4 col-sm-12 about-image top_30">
                     <div class="container">
                         <h2>Trackiffy</h2>
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
+                        <div class="project-section-meta">
+                            <span><i class="fas fa-mobile-alt"></i> Android app</span>
+                            <span><i class="fas fa-database"></i> SQLite storage</span>
+                            <span><i class="fas fa-wallet"></i> Savings tracking</span>
+                        </div>
+                        <div id="carousel-track" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                                <li data-target="#myCarousel" data-slide-to="3"></li>
-                                <li data-target="#myCarousel" data-slide-to="4"></li>
-
+                                <li data-target="#carousel-track" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-track" data-slide-to="1"></li>
+                                <li data-target="#carousel-track" data-slide-to="2"></li>
+                                <li data-target="#carousel-track" data-slide-to="3"></li>
+                                <li data-target="#carousel-track" data-slide-to="4"></li>
+                                <li data-target="#carousel-track" data-slide-to="5"></li>
                             </ol>
-
-                            <!-- Wrapper for slides -->
                             <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="images/trackiffy3.png" style="width:25%;height:50%;">
-                                </div>
-                                <div class="item">
-                                    <img src="images/trackiffy4.png" style="width:25%;height:50%;">
-                                </div>
-                                <div class="item">
-                                    <img src="images/trackifyy5.png" style="width:25%;height:50%;">
-                                </div>
-                                <div class="item">
-                                    <img src="images/trackiffy6.png" style="width:25%;height:50%;">
-                                </div>
-                                <div class="item">
-                                    <img src="images/trackiffy7.png" style="width:25%;height:50%;">
-                                </div>
-                                <div class="item">
-                                    <img src="images/trackiffy8.png" style="width:25%;height:50%;">
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
-                        <!-- Trackiffy text -->
-                        <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
-                            <div class="section-title dleft bottom_30">
-
-                                <p>The Trackiffy Android Application<br>
-                                   <h3> Technologies: MYSQL, CSS5, Spring MVC framework, JavaScript, Ajax, Java, JSP, jQuery, Bootstrap, HTML
-                                    (Android Mobile Application)</h3>
-                                    <br>
-                                    •	Android Application that allows users to successfully keep track of their monthly savings.
-                                    <br>
-                                    •	Allows user to modify their savings and keep a trail for 6 months for the time of entry.
-                                    <br>
-                                    •	It is based on a login system helping to identify the user for privacy breach.
-
-                                    </p>
-                                <button class="btn btn-primary top_30" onclick="myTrackiffy()" type="button">Trackiffy<i
-                                        class="fas fa-mobile-alt"></i></button>
-                                
-                                </div>
+                                <div class="item active"><img src="images/trackiffy3.png" alt="Trackiffy sign in"></div>
+                                <div class="item"><img src="images/trackiffy4.png" alt="Trackiffy dashboard"></div>
+                                <div class="item"><img src="images/trackifyy5.png" alt="Trackiffy transactions"></div>
+                                <div class="item"><img src="images/trackiffy6.png" alt="Trackiffy transaction add form"></div>
+                                <div class="item"><img src="images/trackiffy7.png" alt="Trackiffy reminders"></div>
+                                <div class="item"><img src="images/trackiffy8.png" alt="Trackiffy summary screen"></div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
+                    <div class="section-title dleft bottom_30">
+                        <h3>Personal finance companion focused on transaction tracking, reminders, and quick mobile feedback.</h3>
+                        <div class="project-rich-content">
+                            <div class="project-story">
+                                Trackiffy is an Android reminder and savings tracker with sign-in, sign-up, transaction entry,
+                                spending summaries, and reminder tooling. The codebase uses local databases to store users and
+                                transactions, then surfaces category-style spending totals directly inside the app.
+                            </div>
+                            <div class="project-tech-panel">
+                                <h4>Technology display</h4>
+                                <div class="project-tech-list">
+                                    <span>Java</span>
+                                    <span>Android SDK</span>
+                                    <span>SQLite</span>
+                                    <span>RecyclerView</span>
+                                    <span>Parcelable models</span>
+                                    <span>SharedPreferences</span>
+                                    <span>PopupWindow</span>
+                                </div>
+                            </div>
+                            <div class="project-feature-panel">
+                                <h4>Key features</h4>
+                                <ul class="project-feature-list">
+                                    <li>User sign-up and sign-in flows with local account persistence.</li>
+                                    <li>Add, list, and clear transactions with item, seller, cost, date, and payment method fields.</li>
+                                    <li>Automatic spending summaries across total, cash, cheque, debit, and credit categories.</li>
+                                    <li>Reminder and settings screens to support ongoing savings habits.</li>
+                                </ul>
+                            </div>
+                            <div class="project-action-row">
+                                <button class="btn btn-primary top_30" onclick="myTrackiffy()" type="button">View GitHub repo<i class="fab fa-github"></i></button>
+                                <span class="project-link-note">Designed to make saving behavior visible with fast, local-first Android interactions.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-   
 
-
-
-            <!--Address Project Page-->
-            <section class="address dgray-bg" id="address">
-                <div class="address type-1 padbot_120">
+    <!-- ===== Project: Address Book ===== -->
+    <section class="address dgray-bg project-detail-section" id="address">
+        <div class="address type-1 padbot_120">
+            <div class="container">
+                <div class="col-md-4 col-sm-12 about-image top_30">
                     <div class="container">
-                        <!-- address image -->
-                        <div class="col-md-4 col-sm-12 about-image top_30">
-                            <div class="container">
-                                <h2>Address Book</h2>
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                    <!-- Indicators -->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                                    </ol>
-
-                                    <!-- Wrapper for slides -->
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <img src="images/address1.png" style="width:25%;height:50%;">
-                                        </div>
-
-                                        <div class="item">
-                                            <img src="images/address2.png" style="width:25%;height:50%;">
-                                        </div>
-
-                                        <div class="item">
-                                            <img src="images/address3.png" style="width:25%;height:50%;">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/adress4.png" style="width:25%;height:50%;">
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <!-- about text -->
-                                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
-                                    <div class="section-title dleft bottom_30">
-
-                                            <p>Phonebook Application<br>
-                                                <h3> Technologies :Java, JSP, MYSQL, Spring MVC framework, JavaScript, Ajax, jQuery, Bootstrap, HTML, CSS5
-
-                                                    </h3>
-                                                 <br>
-                                                 •	Designed and developed in J2EE Web Application as a research project
-                                                 <br>
-                                                 •	Project concentrated on the aspect of client storage and access grant to specific user for a phonebook system.
-                                                 <br>
-                                                 •	Users have the ability to select the desired user information from a specific list, giving them a chance to select and manage addes as per maximum quantity.
-             
-                                                 </p>
-
-                                        <button class="btn btn-primary top_30" onclick="myAddress()" type="button">Phonebook<i
-                                                class="fas fa-address-book"></i></button>
-                                        
+                        <h2>Address Book</h2>
+                        <div class="project-section-meta">
+                            <span><i class="fas fa-address-book"></i> Contact manager</span>
+                            <span><i class="fas fa-save"></i> CRUD workflow</span>
+                            <span><i class="fas fa-database"></i> SQLite-backed</span>
+                        </div>
+                        <div id="carousel-address" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-address" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-address" data-slide-to="1"></li>
+                                <li data-target="#carousel-address" data-slide-to="2"></li>
+                                <li data-target="#carousel-address" data-slide-to="3"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active"><img src="images/address1.png" alt="Address Book list"></div>
+                                <div class="item"><img src="images/address2.png" alt="Address Book details"></div>
+                                <div class="item"><img src="images/address3.png" alt="Address Book edit form"></div>
+                                <div class="item"><img src="images/adress4.png" alt="Address Book app screen"></div>
                             </div>
                         </div>
                     </div>
-            </section>
-
-
-            <!--Coffee Maker Simulator-->
-            <section class="coffee dgray-bg" id="coffee">
-                <div class="coffee type-1 padbot_120">
-                    <div class="container">
-                        <!-- coffee image -->
-                        <div class="col-md-4 col-sm-12 about-image top_30">
-                            <div class="container">
-                                <h2>Coffee Maker Simulator</h2>
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                    <!-- Indicators -->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    </ol>
-
-                                    <!-- Wrapper for slides -->
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <img src="images/coffee01.png" style="width:25%;height:50%;">
-                                        </div>
-
-                                        <div class="item">
-                                            <img src="images/coffee02.png" style="width:25%;height:50%;">
-                                        </div>
-
-                                    </div>
-
+                </div>
+                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
+                    <div class="section-title dleft bottom_30">
+                        <h3>Mobile contact management system built with dependable CRUD architecture and clean data handling.</h3>
+                        <div class="project-rich-content">
+                            <div class="address-highlights-row" aria-label="Address Book highlights">
+                                <span class="address-highlight"><i class="fas fa-list"></i> End-to-end CRUD flow</span>
+                                <span class="address-highlight"><i class="fas fa-mobile-alt"></i> Mobile-first UX</span>
+                                <span class="address-highlight"><i class="fas fa-database"></i> Local data persistence</span>
+                            </div>
+                            <div class="project-story">
+                                Address Book demonstrates practical software engineering fundamentals through a complete create,
+                                read, update, and delete lifecycle. The app uses structured screen transitions, background tasks,
+                                and reliable local storage to keep contact operations fast, predictable, and easy to maintain.
+                            </div>
+                            <div class="address-impact-panel">
+                                <h4>Project Impact</h4>
+                                <ul class="address-impact-list">
+                                    <li>Implemented full contact lifecycle workflows with strong UI-to-database consistency.</li>
+                                    <li>Designed detail and edit flows that reduce friction for everyday contact updates.</li>
+                                    <li>Applied SQLite and helper abstractions to keep persistence logic organized.</li>
+                                    <li>Used asynchronous data loading patterns to keep interactions responsive.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech-panel">
+                                <h4>Technology display</h4>
+                                <div class="project-tech-list">
+                                    <span>Java</span>
+                                    <span>Android SDK</span>
+                                    <span>SQLite</span>
+                                    <span>AsyncTask</span>
+                                    <span>ListActivity</span>
+                                    <span>Intents</span>
+                                    <span>CursorAdapter</span>
                                 </div>
-                                <!-- about text -->
-                                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
-                                    <div class="section-title dleft bottom_30">
-
-                                            <p>Coffee Maker Simulator<br>
-                                                <h3> Technologies : Swift, IOS, Java, JSP, MYSQL, Spring MVC framework, JavaScript, Ajax, jQuery, Bootstrap, HTML, CSS5
-
-                                                    </h3>
-                                                 <br>
-                                                 •	Designed and developed in Swift IOS development
-                                                 <br>
-                                                 •	Project concentrated on the aspect of the utilizing the ios simulator 
-                                                 to make a user friendly coffee machine that give the users a chance pick and make the drink as they desire.
-                                                 <br>
-                                                 •	Users have the ability to customize the choice to making the drink the steps for the drink can be ejected or inserted as the user desires.
-                                                <br>
-                                                 •	The final output of the simulator helps the user visualize the steps and choice of how their drink was made. 
-                                                 <br>
-                                                 •	The user is also granted a timer that sets to show them when the next coffee can be brewed (timer has a increment and decrement for the number of coffees brewed)
-                                                 </p>
-
-                                        <button class="btn btn-primary top_30" onclick="myCoffee()" type="button">Coffee Simulator<i
-                                                class="fas fa-coffee-simulator"></i></button>
-                                        
+                            </div>
+                            <div class="project-feature-panel">
+                                <h4>Key features</h4>
+                                <ul class="project-feature-list">
+                                    <li>Create and update contacts with name, phone, email, street, and city fields.</li>
+                                    <li>List and detail views support easy browsing through stored contacts.</li>
+                                    <li>Delete actions are protected with confirmation dialogs.</li>
+                                    <li>SQLite helper and connector classes keep persistence logic organized and reusable.</li>
+                                </ul>
+                            </div>
+                            <div class="project-action-row">
+                                <button class="btn btn-primary top_30" onclick="myAddress()" type="button">Explore Code on GitHub<i class="fab fa-github"></i></button>
+                                <span class="project-link-note">Strong fit for roles focused on mobile development, clean architecture, and reliable data workflows.</span>
                             </div>
                         </div>
                     </div>
-            </section>
-            
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ===== Project: Coffee Maker Simulator ===== -->
+    <section class="coffee dgray-bg project-detail-section" id="coffee">
+        <div class="coffee type-1 padbot_120">
+            <div class="container">
+                <div class="col-md-4 col-sm-12 about-image top_30">
+                    <div class="container">
+                        <h2>Coffee Maker Simulator</h2>
+                        <div class="project-section-meta">
+                            <span><i class="fab fa-apple"></i> iOS simulator</span>
+                            <span><i class="fas fa-sliders-h"></i> Interactive controls</span>
+                            <span><i class="fas fa-mug-hot"></i> Sequence logic</span>
+                        </div>
+                        <div id="carousel-coffee" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-coffee" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-coffee" data-slide-to="1"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active"><img src="images/coffee01.png" alt="Coffee simulator controls"></div>
+                                <div class="item"><img src="images/coffee02.png" alt="Coffee simulator interface"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
+                    <div class="section-title dleft bottom_30">
+                        <h3>Interactive iOS simulator showcasing event-driven UI logic, state management, and polished user feedback loops.</h3>
+                        <div class="project-rich-content">
+                            <div class="coffee-highlights-row" aria-label="Coffee Maker Simulator highlights">
+                                <span class="coffee-highlight"><i class="fas fa-hand-pointer"></i> Direct manipulation UI</span>
+                                <span class="coffee-highlight"><i class="fas fa-cogs"></i> Stateful interaction model</span>
+                                <span class="coffee-highlight"><i class="fab fa-apple"></i> UIKit-driven iOS build</span>
+                            </div>
+                            <div class="project-story">
+                                Coffee Maker Simulator demonstrates product-focused mobile engineering through sequential interactions,
+                                clear control states, and instant visual feedback. Users progress through preparation steps, trigger
+                                brew actions, and observe behavior changes that mirror real machine flow in a compact, intuitive interface.
+                            </div>
+                            <div class="coffee-impact-panel">
+                                <h4>Project Impact</h4>
+                                <ul class="coffee-impact-list">
+                                    <li>Engineered multi-step user flows with guard-state logic before brew operations are allowed.</li>
+                                    <li>Designed tactile controls using sliders, switches, and buttons for a high-engagement iOS experience.</li>
+                                    <li>Structured interaction states for maintainability and predictable UI behavior.</li>
+                                    <li>Translated a physical process into a clean digital simulation, highlighting UX and product thinking.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech-panel">
+                                <h4>Technology display</h4>
+                                <div class="project-tech-list">
+                                    <span>Swift</span>
+                                    <span>UIKit</span>
+                                    <span>iOS Storyboards</span>
+                                    <span>IBActions / IBOutlets</span>
+                                    <span>UISlider</span>
+                                    <span>UISwitch</span>
+                                    <span>UIButton state logic</span>
+                                </div>
+                            </div>
+                            <div class="project-feature-panel">
+                                <h4>Key features</h4>
+                                <ul class="project-feature-list">
+                                    <li>Interactive controls for water, filter, coffee grounds, mug placement, and brew actions.</li>
+                                    <li>State variables track simulator readiness before brewing.</li>
+                                    <li>Cup count interaction and coffee consumption behavior enhance realism.</li>
+                                    <li>Instruction-based flow makes the simulator approachable and visual.</li>
+                                </ul>
+                            </div>
+                            <div class="project-action-row">
+                                <button class="btn btn-primary top_30" onclick="myCoffee()" type="button">Explore Code on GitHub<i class="fab fa-github"></i></button>
+                                <span class="project-link-note">Strong fit for iOS roles requiring hands-on UI engineering, interaction design, and state-driven app logic.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!--App of Apps Simulator-->
-            <section class="app dgray-bg" id="app">
-                    <div class="app type-1 padbot_120">
+    <!-- ===== Project: App of Apps ===== -->
+    <section class="app dgray-bg project-detail-section" id="app">
+        <div class="app type-1 padbot_120">
+            <div class="container">
+                <div class="col-md-4 col-sm-12 about-image top_30">
+                    <div class="container">
+                        <h2>App of Apps</h2>
+                        <div class="project-section-meta">
+                            <span><i class="fas fa-th-large"></i> Multi-tool suite</span>
+                            <span><i class="fas fa-map-marked-alt"></i> Maps + music + tasks</span>
+                            <span><i class="fas fa-gamepad"></i> Game module</span>
+                        </div>
+                        <div id="carousel-app" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-app" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-app" data-slide-to="1"></li>
+                                <li data-target="#carousel-app" data-slide-to="2"></li>
+                                <li data-target="#carousel-app" data-slide-to="3"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active"><img src="images/apa1.png" alt="App of Apps home"></div>
+                                <div class="item"><img src="images/apa2.png" alt="App of Apps module screen"></div>
+                                <div class="item"><img src="images/apa3.png" alt="App of Apps feature screen"></div>
+                                <div class="item"><img src="images/apa4.png" alt="App of Apps workflow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
+                    <div class="section-title dleft bottom_30">
+                        <h3>Multi-module iOS product suite demonstrating scalable feature integration and end-to-end app architecture.</h3>
+                        <div class="project-rich-content">
+                            <div class="app-highlights-row" aria-label="App of Apps highlights">
+                                <span class="app-highlight"><i class="fas fa-cubes"></i> Modular product design</span>
+                                <span class="app-highlight"><i class="fas fa-project-diagram"></i> Multi-framework integration</span>
+                                <span class="app-highlight"><i class="fas fa-mobile-alt"></i> Unified iOS experience</span>
+                            </div>
+                            <div class="project-story">
+                                App of Apps highlights strong system design and integration skills by combining authentication,
+                                productivity, media, mapping, and game modules in one cohesive application shell. The project
+                                demonstrates how distinct feature domains can share a consistent navigation experience and maintainable architecture.
+                            </div>
+                            <div class="app-impact-panel">
+                                <h4>Project Impact</h4>
+                                <ul class="app-impact-list">
+                                    <li>Engineered a modular app structure to support multiple user journeys without fragmenting UX.</li>
+                                    <li>Integrated MapKit, CoreLocation, AVFoundation, SpriteKit, and SQLite3 within a single iOS codebase.</li>
+                                    <li>Balanced feature breadth with usability through clear flow organization and reusable screen patterns.</li>
+                                    <li>Showcased product-minded execution across utility, entertainment, and location-based experiences.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech-panel">
+                                <h4>Technology display</h4>
+                                <div class="project-tech-list">
+                                    <span>Swift</span>
+                                    <span>UIKit</span>
+                                    <span>MapKit</span>
+                                    <span>CoreLocation</span>
+                                    <span>AVFoundation</span>
+                                    <span>SpriteKit</span>
+                                    <span>GameplayKit</span>
+                                    <span>SQLite3</span>
+                                    <span>WatchConnectivity</span>
+                                </div>
+                            </div>
+                            <div class="project-feature-panel">
+                                <h4>Key features</h4>
+                                <ul class="project-feature-list">
+                                    <li>Music player with progress updates, track switching, cover art, and volume control.</li>
+                                    <li>Map flow with geocoding, route rendering, saved locations, and step-by-step directions.</li>
+                                    <li>To-do list management and lightweight sign-up/sign-in experience.</li>
+                                    <li>Pong game with easy, medium, hard, and two-player modes using SpriteKit scenes.</li>
+                                </ul>
+                            </div>
+                            <div class="project-action-row">
+                                <button class="btn btn-primary top_30" onclick="myApps()" type="button">Explore Code on GitHub<i class="fab fa-github"></i></button>
+                                <span class="project-link-note">Strong fit for iOS roles requiring modular architecture, cross-framework integration, and product-scale thinking.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Project: Inventory Management System ===== -->
+    <section class="manage dgray-bg project-detail-section" id="manage">
+        <div class="manage type-1 padbot_120">
+            <div class="container">
+                <div class="col-md-4 col-sm-12 about-image top_30">
+                    <div class="container">
+                        <h2>Inventory Management System</h2>
+                        <div class="project-section-meta">
+                            <span><i class="fas fa-boxes"></i> Operations dashboard</span>
+                            <span><i class="fas fa-user-shield"></i> Auth flow</span>
+                            <span><i class="fas fa-sitemap"></i> Roles + categories</span>
+                        </div>
+                        <div id="carousel-manage" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-manage" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-manage" data-slide-to="1"></li>
+                                <li data-target="#carousel-manage" data-slide-to="2"></li>
+                                <li data-target="#carousel-manage" data-slide-to="3"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active"><img src="images/invent2.png" alt="Inventory dashboard"></div>
+                                <div class="item"><img src="images/invent3.png" alt="Inventory system list view"></div>
+                                <div class="item"><img src="images/invent4.png" alt="Inventory system form"></div>
+                                <div class="item"><img src="images/invent6.png" alt="Inventory system management screen"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
+                    <div class="section-title dleft bottom_30">
+                        <h3>Enterprise-grade ASP.NET MVC platform designed to standardize inventory workflows and enforce role-based access control.</h3>
+                        <div class="project-rich-content">
+                            <div class="manage-highlights-row" aria-label="Inventory System highlights">
+                                <span class="manage-highlight"><i class="fas fa-lock-open"></i> Multi-role access control</span>
+                                <span class="manage-highlight"><i class="fas fa-layer-group"></i> Clean MVC architecture</span>
+                                <span class="manage-highlight"><i class="fas fa-database"></i> Entity Framework ORM</span>
+                            </div>
+                            <div class="project-story">
+                                Inventory Management System demonstrates backend system design and operational thinking through a role-aware,
+                                data-driven ASP.NET MVC application. The project shows how structured entity relationships, authentication flows,
+                                and controller-based workflows can power reliable business administration tools.
+                            </div>
+                            <div class="manage-impact-panel">
+                                <h4>Project Impact</h4>
+                                <ul class="manage-impact-list">
+                                    <li>Architected role and user management systems with Entity Framework to enforce access control at the model layer.</li>
+                                    <li>Built RESTful CRUD controllers for inventory, categories, and user administration with clean separation of concerns.</li>
+                                    <li>Designed Razor Views and layout hierarchy to support both admin and end-user workflows seamlessly.</li>
+                                    <li>Implemented stored procedures and database optimization patterns for operational efficiency at scale.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech-panel">
+                                <h4>Technology display</h4>
+                                <div class="project-tech-list">
+                                    <span>C#</span>
+                                    <span>ASP.NET MVC</span>
+                                    <span>Entity Framework</span>
+                                    <span>Razor Views</span>
+                                    <span>Stored procedures</span>
+                                    <span>Bootstrap</span>
+                                    <span>Relational data model</span>
+                                </div>
+                            </div>
+                            <div class="project-feature-panel">
+                                <h4>Key features</h4>
+                                <ul class="project-feature-list">
+                                    <li>Authenticated entry flow with session-based access control.</li>
+                                    <li>Role, category, and user controllers provide clean CRUD management screens.</li>
+                                    <li>Entity Framework models define relationships for roles, users, and categories.</li>
+                                    <li>Operational focus supports maintainable inventory administration patterns.</li>
+                                </ul>
+                            </div>
+                            <div class="project-action-row">
+                                <button class="btn btn-primary top_30" onclick="myInvent()" type="button">Explore Code on GitHub<i class="fab fa-github"></i></button>
+                                <span class="project-link-note">Strong fit for backend/full-stack roles requiring system design, ORM expertise, and operational thinking.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Project: Expense Tracker ===== -->
+
+        <!-- ===== Project: Pantrio ===== -->
+        <section class="pantrio dgray-bg project-detail-section" id="pantrio">
+            <div class="pantrio type-1 padbot_120">
+                <div class="container">
+                    <div class="col-md-4 col-sm-12 about-image top_30">
                         <div class="container">
-                            <!-- app image -->
-                            <div class="col-md-4 col-sm-12 about-image top_30">
-                                <div class="container">
-                                    <h2>App of Apps</h2>
-                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                        <!-- Indicators -->
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                                        </ol>
-    
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner">
-                                            <div class="item active">
-                                                <img src="images/apa1.png" style="width:25%;height:50%;">
-                                            </div>
-    
-                                            <div class="item">
-                                                <img src="images/apa2.png" style="width:25%;height:50%;">
-                                            </div>
-                                            <div class="item">
-                                                    <img src="images/apa3.png" style="width:25%;height:50%;">
-                                                </div>
-                                                <div class="item">
-                                                        <img src="images/apa4.png" style="width:25%;height:50%;">
-                                                    </div>
-    
-                                        </div>
-    
-                                    </div>
-                                    <!-- about text -->
-                                    <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
-                                        <div class="section-title dleft bottom_30">
-    
-                                                <p>App of Apps<br>
-                                                    <h3> Technologies : Swift, IOS, Java, JSP, MYSQL, Spring MVC framework, JavaScript, Ajax, jQuery, Bootstrap, HTML, CSS5
-                                                        <br>
-                                                  <p>Frameworks used:
-                                                      - Core location 
-                                                      <br>
-                                                      - SQL databases
-                                                      <br>
-                                                      - Spritekit
-                                                      <br>
-                                                      - Gamekit
-                                                  </p>
-                                                        </h3>
-                                                     <br>
-                                                     •	Designed and developed in Swift IOS development
-                                                     <br>
-                                                     •	Project is to motivate user to download one application for a whole-some number of tasks that can be used to replace
-                                                     tasks that otherwise could be done separately.
-                                                     <br>
-                                                     •	App of app's version one has four apps in it: to do list, music player, pong game and location storer.
-                                                    <br>
-                                                     •	The application uses a simple sign in technique, to route the previous route histories of varies users. If in case the user happens
-                                                     to be a new user of the application, they are guided by step to do so. 
-                                                     </p>
-    
-                                            <button class="btn btn-primary top_30" onclick="myApps()" type="button">App of Apps<i
-                                                    class="fas fa-app-simulator"></i></button>
-                                            
-                                </div>
+                            <h2>Pantrio</h2>
+                            <img src="images/pantrio-logo.png" alt="Pantrio logo" style="max-width:120px;margin-bottom:18px;" onerror="this.style.display='none'">
+                            <div class="project-section-meta">
+                                <span><i class="fas fa-utensils"></i> Recipe generator</span>
+                                <span><i class="fas fa-seedling"></i> Meal planner</span>
+                                <span><i class="fas fa-leaf"></i> Dietary filters</span>
                             </div>
-                </section>
-
-
-                  <!--Inventory Management System-->
-            <section class="manage dgray-bg" id="manage">
-                <div class="manage type-1 padbot_120">
-                    <div class="container">
-                        <!-- app image -->
-                        <div class="col-md-4 col-sm-12 about-image top_30">
-                            <div class="container">
-                                <h2>Inventory Management System</h2>
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                    <!-- Indicators -->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                                    </ol>
-
-                                    <!-- Wrapper for slides -->
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <img src="images/invent2.png" style="width:100%;">
-                                        </div>
-
-                                        <div class="item">
-                                            <img src="images/invent3.png" style="width:100%;">
-                                        </div>
-                                        <div class="item">
-                                                <img src="images/invent4.png" style="width:100%;">
-                                            </div>
-                                                <div class="item">
-                                                    <img src="images/invent6.png" style="width:100%;">
-                                                </div>
-
-                                    </div>
-
+                            <div class="pantrio-preview-gallery" style="margin:18px 0;display:flex;flex-direction:column;align-items:center;gap:12px;">
+                                <img src="images/calories.png" alt="Pantrio Meal Calories page preview" style="width:100%;max-width:350px;border-radius:16px;box-shadow:0 2px 16px #8ea2ff22;" loading="lazy" onerror="this.style.display='none'">
+                                <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+                                    <img src="images/Pantrio Home.png" alt="Pantrio Home" style="width:90px;border-radius:10px;box-shadow:0 2px 8px #8ea2ff22;" loading="lazy" onerror="this.style.display='none'">
+                                    <img src="images/generate.png" alt="Pantrio Generate" style="width:90px;border-radius:10px;box-shadow:0 2px 8px #8ea2ff22;" loading="lazy" onerror="this.style.display='none'">
+                                    <img src="images/cuisines.png" alt="Pantrio Cuisines" style="width:90px;border-radius:10px;box-shadow:0 2px 8px #8ea2ff22;" loading="lazy" onerror="this.style.display='none'">
+                                    <img src="images/planner.png" alt="Pantrio Planner" style="width:90px;border-radius:10px;box-shadow:0 2px 8px #8ea2ff22;" loading="lazy" onerror="this.style.display='none'">
+                                    <img src="images/calories.png" alt="Pantrio Calories" style="width:90px;border-radius:10px;box-shadow:0 2px 8px #8ea2ff22;" loading="lazy" onerror="this.style.display='none'">
+                                    <img src="images/daily-calories.png" alt="Pantrio Daily Calories" style="width:90px;border-radius:10px;box-shadow:0 2px 8px #8ea2ff22;" loading="lazy" onerror="this.style.display='none'">
                                 </div>
-                                <!-- about text -->
-                                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
-                                    <div class="section-title dleft bottom_30">
-
-                                            <p>Inventory Management System<br>
-                                                <h3> Technologies : JSP, MYSQL, JavaScript, Ajax, jQuery, Bootstrap, C#, C++, Entity Data Model
-                                                    <br>
-                                                    </h3>
-                                                 <br>
-                                                 •	Designed and developed in Asp.net
-                                                 <br>
-                                                 •	Projects motivation is to help local store owners switch to a system to help manage their inventory in a more timely mannner. 
-                                                 <br>
-                                                 •	The application uses Relational database that updates the system on every sensitive change.
-                                                <br>
-                                                 •	The application allows the owner to keep track of the products as well as create a storing input for their suppliers.  
-                                                 </p>
-
-                                        <button class="btn btn-primary top_30" onclick="myInvent()" type="button">Inventory Management<i
-                                                class="fas fa-inventor-simulator"></i></button>
-                                        
                             </div>
                         </div>
-            </section>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
+                        <div class="section-title dleft bottom_30">
+                            <h3 style="color: white;">Recipe and meal-planning web app that helps users turn pantry ingredients into meal ideas, track favorites, explore cuisines, and plan weekly or calorie-based meals.</h3>
+                            <div class="project-rich-content">
+                                <div class="pantrio-highlights-row" aria-label="Pantrio highlights">
+                                    <span class="pantrio-highlight"><i class="fas fa-utensils" style="color: white;"></i> Pantry-based generation</span>
+                                    <span class="pantrio-highlight"><i class="fas fa-seedling" style="color: white;"></i> Dietary & cuisine filters</span>
+                                    <span class="pantrio-highlight"><i class="fas fa-fire" style="color: white;"></i> Calorie-based planning</span>
+                                </div>
+                                <div style="color: white;"class="project-story">
+                                    Pantrio is a modern web app for meal planning and recipe discovery. Users can generate recipes from their pantry, filter by dietary needs, plan meals for the week, and save favorites—all with a fast, local-first experience.
+                                </div>
+                                <div class="pantrio-recruiter-panel">
+                                    <h4 style="color: white;">Project Impact</h4>
+                                    <ul class="pantrio-recruiter-list">
+                                        <li>Empowers users to reduce food waste by using on-hand ingredients.</li>
+                                        <li>Supports healthy eating with dietary and calorie-based filters.</li>
+                                        <li>Delivers a seamless, account-free experience with local browser storage.</li>
+                                        <li>Demonstrates full-stack React/Next.js and UI/UX skills.</li>
+                                    </ul>
+                                </div>
+                                <div class="project-tech-panel">
+                                    <h4>Technology display</h4>
+                                    <div class="project-tech-list">
+                                        <span>Next.js</span>
+                                        <span>React</span>
+                                        <span>Tailwind CSS</span>
+                                        <span>Local browser storage (localStorage)</span>
+                                    </div>
+                                </div>
+                                <div class="project-feature-panel">
+                                    <h4>Key features</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Pantry-based recipe generation</li>
+                                        <li>Cuisine and dietary filters</li>
+                                        <li>Target calorie recipe generation</li>
+                                        <li>Favorites with local save/import/export</li>
+                                        <li>Recent recipe history</li>
+                                        <li>Weekly meal planner</li>
+                                        <li>Daily calorie planner</li>
+                                        <li>Meal calorie summary page</li>
+                                        <li>Interactive recipe card with copy/share/print/cook mode</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-action-row">
+                                    <button class="btn btn-primary top_30" onclick="window.open('https://github.com/paralkarniki/Pantrio','_blank')" type="button">Explore Code on GitHub<i class="fab fa-github"></i></button>
+                                    <span class="project-link-note">Great fit for full-stack, UI/UX, and product-minded web roles.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section class="expense dgray-bg project-detail-section" id="expense">
+        <div class="expense type-1 padbot_120">
+            <div class="container">
+                <div class="col-md-4 col-sm-12 about-image top_30">
+                    <div class="container">
+                        <h2>Expense Tracker</h2>
+                        <div class="project-section-meta">
+                            <span><i class="fas fa-mobile-alt"></i> React Native app</span>
+                            <span><i class="fas fa-chart-line"></i> Financial analytics</span>
+                            <span><i class="fas fa-sync-alt"></i> Backend sync</span>
+                        </div>
+                        <div id="carousel-expense" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-expense" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-expense" data-slide-to="1"></li>
+                                <li data-target="#carousel-expense" data-slide-to="2"></li>
+                                <li data-target="#carousel-expense" data-slide-to="3"></li>
+                                <li data-target="#carousel-expense" data-slide-to="4"></li>
+                                <li data-target="#carousel-expense" data-slide-to="5"></li>
+                                <li data-target="#carousel-expense" data-slide-to="6"></li>
+                                <li data-target="#carousel-expense" data-slide-to="7"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active"><img src="images/expensetracker1.png" alt="Expense Tracker login screen"></div>
+                                <div class="item"><img src="images/expensetracker2.png" alt="Expense Tracker dashboard"></div>
+                                <div class="item"><img src="images/expensetracker3.png" alt="Expense Tracker monthly view"></div>
+                                <div class="item"><img src="images/expensetracker4.png" alt="Expense Tracker transactions"></div>
+                                <div class="item"><img src="images/expensetracker5.png" alt="Expense Tracker analytics"></div>
+                                <div class="item"><img src="images/expensetracker6.png" alt="Expense Tracker account screen"></div>
+                                <div class="item"><img src="images/expensetracker7.png" alt="Expense Tracker focus view"></div>
+                                <div class="item"><img src="images/expensetracker8.png" alt="Expense Tracker goals screen"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1 col-sm-12 about-text">
+                    <div class="section-title dleft bottom_30">
+                        <h3>Mobile-first personal finance app built with React Native and TypeScript to track income, expenses, and financial trends.</h3>
+                        <div class="project-rich-content">
+                            <div class="expense-highlights-row" aria-label="Expense Tracker highlights">
+                                <span class="expense-highlight"><i class="fas fa-mobile-alt"></i> Mobile-first design</span>
+                                <span class="expense-highlight"><i class="fas fa-code"></i> TypeScript + Expo</span>
+                                <span class="expense-highlight"><i class="fas fa-chart-bar"></i> Analytics &amp; CSV export</span>
+                            </div>
+                            <div class="project-story">
+                                Expense Tracker is a cross-platform mobile application built with React Native and TypeScript using Expo.
+                                Users authenticate, manage accounts, and log income and expense transactions with categories, dates,
+                                and fixed or variable classifications. Monthly summaries, visual analytics, and CSV export give users
+                                clear financial visibility, while an optional Express.js backend enables account sync and persistent cloud storage.
+                            </div>
+                            <div class="expense-impact-panel">
+                                <h4>Project Impact</h4>
+                                <ul class="expense-impact-list">
+                                    <li>Built a full authentication system covering registration, login, and session management across local and backend layers.</li>
+                                    <li>Implemented a dual persistence model — AsyncStorage for offline-first local data and Express.js REST API for backend sync.</li>
+                                    <li>Engineered monthly financial analytics including income, expense, balance, savings rate, trends, and category breakdowns.</li>
+                                    <li>Delivered CSV export functionality for transaction data, enabling users to carry their financial records beyond the app.</li>
+                                    <li>Designed focus items (Cash Flow, Trends, Goals) to surface the most actionable financial insights on the dashboard.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech-panel">
+                                <h4>Technology display</h4>
+                                <div class="project-tech-list">
+                                    <span>React Native</span>
+                                    <span>Expo</span>
+                                    <span>TypeScript</span>
+                                    <span>AsyncStorage</span>
+                                    <span>Express.js</span>
+                                    <span>REST API</span>
+                                    <span>React Navigation</span>
+                                </div>
+                            </div>
+                            <div class="project-feature-panel">
+                                <h4>Key features</h4>
+                                <ul class="project-feature-list">
+                                    <li>Secure auth flows — registration, login, and session persistence with local and backend support.</li>
+                                    <li>Transaction entry with amount, category, date, and fixed or variable expense classification.</li>
+                                    <li>Monthly summaries showing income, expenses, balance, and savings rate at a glance.</li>
+                                    <li>Visual analytics with monthly trend charts and category-level spending breakdowns.</li>
+                                    <li>CSV export for full transaction history and focused reporting by period.</li>
+                                    <li>Backend sync via Express.js for users, accounts, and transactions across devices.</li>
+                                </ul>
+                            </div>
+                            <div class="project-action-row">
+                                <button class="btn btn-primary top_30" onclick="myExpense()" type="button">Explore Code on GitHub<i class="fab fa-github"></i></button>
+                                <span class="project-link-note">Strong fit for mobile and full-stack roles requiring cross-platform development, data persistence, and financial product thinking.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-
-
-
-
-    <!--Footer Page-->
-    <footer>
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
 
         <div class="container">
-            <div class="social">
-                <a href="https://www.linkedin.com/in/nikitaparalkar/"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/paralkarniki?tab=repositorie"><i class="fab fa-github fa-2x"></i></a>
+            <div class="social site-footer-links">
+                <a href="https://www.linkedin.com/in/nikitaparalkar/"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                <a href="https://github.com/paralkarniki?tab=repositories"><i class="fab fa-github"></i><span>GitHub</span></a>
+                <a href="mailto:paralkarnikita@gmail.com"><i class="fas fa-envelope"></i><span>paralkarnikita@gmail.com</span></a>
             </div>
 
         </div>
 
-        <div class="social">
+        <div class="social site-footer-meta">
 
-            <p>Copyright © 2025, All rights Reserved. <br />
+            <p>Copyright © 2026, All rights Reserved. <br />
                 Created by Nikita Paralkar</p>
         </div>
     </footer>
@@ -556,12 +2578,216 @@
         function myInvent() {
             location.replace("https://github.com/paralkarniki/InventoryManage")
         }
+        function myExpense() {
+            location.replace("https://github.com/paralkarniki/ExpenseTracker")
+        }
+
+        // Project picker + deep-link + interactive enhancements
+        (function () {
+            function updateVisibleProjectCount() {
+                var counter = document.getElementById('visibleProjectCount');
+                if (!counter) return;
+                var visible = document.querySelectorAll('.project-open-card:not([hidden])').length;
+                counter.textContent = visible + ' visible';
+            }
+
+            function closeProjectSections() {
+                var sections = document.querySelectorAll('.project-detail-section');
+                var cards = document.querySelectorAll('.project-open-card');
+
+                sections.forEach(function (section) {
+                    section.classList.remove('is-open');
+                });
+
+                cards.forEach(function (card) {
+                    card.classList.remove('active');
+                    card.setAttribute('aria-expanded', 'false');
+                });
+            }
+
+            function openProjectSection(id, shouldScroll) {
+                if (!id) return;
+
+                var cards = document.querySelectorAll('.project-open-card');
+                var target = document.getElementById(id);
+                if (!target) return;
+
+                closeProjectSections();
+
+                // Ensure the corresponding card is visible and active
+                cards.forEach(function (card) {
+                    if (card.getAttribute('data-project') === id) {
+                        card.hidden = false;
+                        card.classList.add('active');
+                        card.setAttribute('aria-expanded', 'true');
+                    }
+                });
+
+                // Ensure the detail section is displayed
+                target.style.display = '';
+                target.classList.add('is-open');
+                if (shouldScroll) {
+                    setTimeout(function () {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 80);
+                }
+            }
+
+            function applyProjectFilter(filterValue) {
+                var cards = document.querySelectorAll('.project-open-card');
+                var hasVisibleActive = false;
+
+                cards.forEach(function (card) {
+                    var stack = (card.getAttribute('data-stack') || '').toLowerCase();
+                    var shouldShow = filterValue === 'all' || stack.indexOf(filterValue) > -1;
+
+                    card.hidden = !shouldShow;
+                    if (!shouldShow) {
+                        card.classList.remove('active');
+                        card.setAttribute('aria-expanded', 'false');
+                    }
+
+                    if (shouldShow && card.classList.contains('active')) {
+                        hasVisibleActive = true;
+                    }
+                });
+
+                if (!hasVisibleActive) {
+                    closeProjectSections();
+                }
+
+                updateVisibleProjectCount();
+            }
+
+            function initProjectFilters() {
+                var filterButtons = document.querySelectorAll('.project-filter-btn');
+                if (!filterButtons.length) return;
+
+                filterButtons.forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        var selected = button.getAttribute('data-filter') || 'all';
+                        filterButtons.forEach(function (b) {
+                            var isActive = b === button;
+                            b.classList.toggle('active', isActive);
+                            b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                        });
+                        applyProjectFilter(selected);
+                    });
+                });
+            }
+
+            function initCardReveal() {
+                var cards = document.querySelectorAll('.project-open-card');
+                if (!cards.length) return;
+
+                cards.forEach(function (card, index) {
+                    card.classList.add('card-pending');
+                    card.style.transitionDelay = (index * 40) + 'ms';
+                });
+
+                if (!('IntersectionObserver' in window)) {
+                    cards.forEach(function (card) {
+                        card.classList.remove('card-pending');
+                        card.classList.add('reveal-in');
+                    });
+                    return;
+                }
+
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.remove('card-pending');
+                        entry.target.classList.add('reveal-in');
+                        observer.unobserve(entry.target);
+                    });
+                }, { threshold: 0.08 });
+
+                cards.forEach(function (card) {
+                    observer.observe(card);
+                });
+            }
+
+            function initHeroRotator() {
+                var el = document.getElementById('workHeroRotator');
+                if (!el) return;
+
+                var labels = [
+                    'Now showcasing: Full-Stack Builds',
+                    'Now showcasing: Mobile Experiences',
+                    'Now showcasing: Recruiter-Ready Case Studies'
+                ];
+                var idx = 0;
+
+                setInterval(function () {
+                    idx = (idx + 1) % labels.length;
+                    el.textContent = labels[idx];
+                }, 2400);
+            }
+
+            function initProjectPicker() {
+                var cards = document.querySelectorAll('.project-open-card');
+                cards.forEach(function (card) {
+                    card.setAttribute('aria-expanded', 'false');
+                    card.addEventListener('click', function () {
+                        var id = card.getAttribute('data-project');
+                        var isOpen = card.classList.contains('active');
+
+                        if (isOpen) {
+                            closeProjectSections();
+                            var closedUrl = new URL(window.location.href);
+                            closedUrl.searchParams.delete('project');
+                            closedUrl.hash = '';
+                            window.history.replaceState({}, '', closedUrl.pathname + closedUrl.search);
+                            return;
+                        }
+
+                        openProjectSection(id, true);
+                        var url = new URL(window.location.href);
+                        url.searchParams.set('project', id);
+                        url.hash = id;
+                        window.history.replaceState({}, '', url.toString());
+                    });
+                });
+            }
+
+            function openFromQueryOrHash() {
+                var params = new URLSearchParams(window.location.search);
+                var project = params.get('project');
+                var hash = window.location.hash ? window.location.hash.replace('#', '') : '';
+                var id = project || hash;
+                if (!id) return;
+                openProjectSection(id, true);
+            }
+
+            window.addEventListener('load', function () {
+                initProjectPicker();
+                initProjectFilters();
+                initCardReveal();
+                initHeroRotator();
+                updateVisibleProjectCount();
+                openFromQueryOrHash();
+            });
+        })();
     </script>
 
-
-</body>
-
-</html>
+    <!-- Add this before the closing </body> tag if not already present -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--
+    <script>
+        // Ensure only one education dropdown is open at a time
+        document.addEventListener('DOMContentLoaded', function () {
+            // Use jQuery for Bootstrap collapse
+            $('.edu-toggle').on('click', function () {
+                var target = $(this).data('target');
+                // Close all other collapses
+                $('.education-course-wrap').not(target).collapse('hide');
+                // Toggle the clicked one
+                $(target).collapse('toggle');
+            });
+        });
+    </script>
+    -->
 </body>
 
 </html>

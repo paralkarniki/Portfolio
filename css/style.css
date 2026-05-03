@@ -118,6 +118,24 @@
     min-width: 120px;
     transition: transform 0.2s;
 }
+
+/* Make images and iframes responsive across the site */
+img, picture, figure, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ensure buttons and inputs scale on small screens */
+button, input, textarea, .btn {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve layout on narrow screens */
+@media (max-width: 760px) {
+    .modern-navbar { padding: 10px 12px; }
+    .modern-navbar .nav-menu a { padding: 8px 10px; font-size: 0.9rem; }
+}
 .resume-stat-card:hover {
     transform: translateY(-6px) scale(1.04);
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);

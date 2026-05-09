@@ -1,4 +1,4 @@
-/* Resume Bouncing Balls Row */
+nt make /* Resume Bouncing Balls Row */
 .resume-balls-row {
     display: flex;
     flex-wrap: wrap;
@@ -2807,26 +2807,11 @@ header {
     box-shadow: 0 0 14px #79c8ff70;
 }
 
-@media (max-width: 860px) {
-    .modern-navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
-    .modern-navbar .nav-menu {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
 
-.engineering-home {
-    padding-top: 8px !important;
-    background:
-    radial-gradient(circle at 12% 18%, #8ea2ff1f 0%, transparent 36%),
-    radial-gradient(circle at 86% 78%, #79c8ff1f 0%, transparent 34%),
-    linear-gradient(135deg, #12182c 0%, #1a2140 50%, #10172b 100%);
-}
+
+/* (Fix) Removed broken nested @media content that invalidated CSS */
+
 
 html, body {
     margin: 0 !important;
@@ -3744,8 +3729,48 @@ footer .social p {
 @media (max-width: 860px) {
     .site-footer .site-footer-links {
         grid-template-columns: 1fr !important;
+        justify-content: stretch !important;
+        width: 100% !important;
+    }
+
+    .site-footer .site-footer-links a {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .modern-navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        min-height: 62px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        row-gap: 8px;
+    }
+
+    .modern-navbar .nav-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 8px;
+        margin-left: 0;
+    }
+
+    .modern-navbar .nav-menu a {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+        white-space: normal;
+        line-height: 1.1;
+        max-width: 42vw;
+        overflow-wrap: anywhere;
+    }
+
+    .modern-navbar .social {
+        margin-left: 0;
+        gap: 10px;
     }
 }
+
 
 .site-footer .site-footer-meta p {
     color: #c4d2ef !important;

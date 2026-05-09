@@ -2036,23 +2036,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-        @media (max-width: 560px) {
-            .resume-stats-row {
-                grid-template-columns: repeat(2, 1fr);
+            @media (max-width: 560px) {
+                .resume-stats-row {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .resume-top {
+                    grid-template-columns: 1fr;
+                }
+
+                .resume-top .resume-download-btn {
+                    justify-self: start;
+                }
+
+                /* Force menubar to stay visible on resume (mobile) */
+                .resume-page-shell .modern-navbar .nav-menu {
+                    display: flex !important;
+                    flex-direction: column;
+                    gap: 6px;
+                    align-items: flex-start;
+                    width: 100%;
+                    margin-top: 6px;
+                    flex-wrap: wrap;
+                }
             }
 
-            .resume-top {
-                grid-template-columns: 1fr;
-            }
 
-            .resume-top .resume-download-btn {
-                justify-self: start;
-            }
-
-            .modern-navbar .nav-menu {
-                display: none;
-            }
-        }
     </style>
 </head>
 
